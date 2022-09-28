@@ -1,0 +1,90 @@
+#include <stdio.h>
+
+void swap(int *x,int *y);
+
+int main(){
+    //dichiarazione variabili
+    int a=1;
+    char b='a';
+    
+    //dichiarazione puntatori
+    int *pa;
+    char *pb;
+    //i puntatori abbiamo detto che contengono un indrizzo
+    //ma come faccio a mettere dentro pa l'indirizzo di a?
+    // si usa la &
+    pa=&a; //vai a prendere l'indirizzo di memoria in cui è contenuta la variabile a
+    pb=&b; //vai a prendere l'indirizzo di memoria in cui è contenuto la variabile b
+
+    printf("Indirizzo di memoria di a: %p - indirizzo di memoria di b: %p\n",pa,pb); // 0x7fffffffdc64 0x7fffffffdc63
+    printf("Indirizzo di memoria di a: %p - indirizzo di memoria di b: %p\n",&a,&b); //0x7fffffffdc64 0x7fffffffdc63
+    
+    //utilizziamo l'indirizzo contenuton rispettivamente in a e b, e con * stampare il contenuto di a e b
+    //prendo l'indirizzo, cerco nell'indirizzo il valore che devo utilizzare
+    printf("Valore di a %d e valore di b %c\n",*pa,*pb); //1 a
+    printf("Valore di a %d e valore di b %c\n",a,b); //1 a
+    printf("indirizzo di memoria del puntatore a %p, indirizzo di memoria del puntatore b %p\n ",&pa,&pb); //0x7fffffffdc68 0x7fffffffdc70
+
+    //se modifico il valore del dato puntato dal puntatore, o il valore della variabile a il puntatore punta verra modificato
+    //entrambi 
+    a=69;
+    printf("valore di a %d, valore di pa %d\n",a,*pa); //69 69
+    //vai alla cella di memoria a cui punta pb, il contenuto di quella cella di memoria viene modificato e mettendo all interno di quella cella memoria il valore da modificare 
+    *pb='m';
+    printf("valore di b %c, valore di pb %c\n",b,*pb);// m m
+    
+    printf("char %lu, int %lu\n",sizeof(b),sizeof(a)); //char 1 int 4
+    printf("\npunct char %lu, punct int %lu\n ",sizeof(char*),sizeof(int*));//char* 8, int* 8
+
+    //Esempio funzione
+    //i puntatori sono fondamentali nel momento in cui si vogliano utilizzare funzioni in cui si vogliono modificare/cambiare i valori a più variabili
+    //in c non possiamo far ritornare da una funzione più variabili
+    //in c le funzioni formalmente sono sempre passate by value, ossia si passa alla funzione una fotocopia delle variabili/parametri e la funzione fa quello che vuole,
+    //quindi con i puntatori possiamo passare per valore l'indirizzo della variabile a cui punta e all'interno della funzione modifcare i conntenuti negli indirizzi in cui il puntatore punta e quindi "modificare anche tali valori all'interno del main"
+    int x=42;
+    int y=69;
+    printf("prima dello swap, valore di x %d, valore di y %d\n",x,y); //42 69
+    swap(&x,&y);
+    printf("dopo lo swap, valore di x %d, valore di y %d\n",x,y); //69 42
+
+    //ARITMETRICA DEI PUNTATORI
+    //assegnamento
+    //uando un puntatore viene dichiarato non punta a nulla!  Per poterlo utilizzare deve puntare a qualcosa! E' infatti un errore comune non assegnare un indirizzo di memoria a un  puntatore prima di usarlo.
+    int c=5;
+    int *pc=&c;
+    int *pc_second;
+    //assegno al puntatore Pc_second l'indirizzo contenuto all'interno del puntatore pc
+    //puntatore come riferimento?
+    pc_second=pc; 
+    printf("indirizzo di pc %p, indirizzo di pc_second %p \n",pc_second,pc); //stesso
+    //modifico valore contenuto della variabile a cui punta pc_second
+    *pc_second=666;
+    printf("valore pc_second %d , valore pc %d, valore c %d\n",*pc_second,*pc,c); //666 666 666 
+
+    //confronto
+    int q=1;
+    int w=1;
+    int *pq=&q;
+    int *pw=&w;
+    //confronto indirizzi di memoria
+    if(pq==pw){
+        printf("gli indirizzi a cui puntano i puntatori sono gli stessi\n");
+    }else{
+        printf("puntatori hanno diversi indirizzi a cui puntano\n");//PRINT THIS
+    }
+    //confronto contenuto degli indirizzi a cui puntano i puntatori
+    if(*pq==*pw){
+        printf("i contenuti degli indirizzi a cui puntano i puntantori hanno lo stesso valore\n");//PRINT THIS
+    }else{
+        printf("i contenuti degli indirizzi a cui puntano i puntaotri NON assumono lo stesso valore\n");
+    }
+
+    return 0;
+}
+
+void swap(int *x,int *y){
+    int tmp;
+    tmp=*x;
+    *x=*y;
+    *y=tmp;
+}
