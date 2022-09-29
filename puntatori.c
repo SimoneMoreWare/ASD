@@ -79,6 +79,21 @@ int main(){
         printf("i contenuti degli indirizzi a cui puntano i puntaotri NON assumono lo stesso valore\n");
     }
 
+    //dualità puntatore vettore
+    int k[100];
+    int i;
+    for(i=0;i<100;i++) k[i]=i; //riempo il vettore
+    //for(i=0;i<100;i++) scanf("%d ",&k[i]); //inserisco valori array 
+
+    //modalità di accesso tramite puntatore
+    int *pk=k; //come scrivere int *pk=&k[0];
+    for(i=0;i<100;i++) printf("%d ",*(pk+i)); //0,1,2,3,4,...,99
+    for(i=0;i<100;i++) *(pk+i)=*(pk+i)*2; //raddoppio tutti i valori del vettore
+    for(i=0;i<100;i++) printf("%d ",*(pk+i)); //0,2,4,6,8,...,198
+    printf("\n %p\n",pk+2);//stampo indirizzo cella di memoria della terza casella dell'array
+    //modalità mista
+    //for(i=0;i<100;i++) scanf("%d ",&pk[i]);//espressione equivalente alla riga 86 , inserisco valori array
+    //for(i=0;i<100;i++) scanf("%d ",k+i);//espressione equivalente alla riga 95 e 86, inserisco valori array
     return 0;
 }
 
