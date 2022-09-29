@@ -87,13 +87,19 @@ int main(){
 
     //modalità di accesso tramite puntatore
     int *pk=k; //come scrivere int *pk=&k[0];
-    for(i=0;i<100;i++) printf("%d ",*(pk+i)); //0,1,2,3,4,...,99
+    for(i=0;i<100;i++) printf("%d",*(pk+i)); //0,1,2,3,4,...,99
+    printf("\n\n\n");
     for(i=0;i<100;i++) *(pk+i)=*(pk+i)*2; //raddoppio tutti i valori del vettore
+    printf("\n\n\n");
     for(i=0;i<100;i++) printf("%d ",*(pk+i)); //0,2,4,6,8,...,198
+    printf("\n\n\n");
+    for(i=0;i<100;i++,pk++) printf("%p ",pk);//stampo indirizzo della cella a cui punta il puntatore, incremento il valore del puntatore (ossia shifto di sizeof cassele) nel for
+    printf("\n\n\n");
+    //for(i=0;i<100;i++;k++) printf("%p ",k); non posso utilizzare la variabile che identifica il vettore in quando il nome della variabile è una costante puntatore e non posso modificare il suo valore
     printf("\n %p\n",pk+2);//stampo indirizzo cella di memoria della terza casella dell'array
     //modalità mista
     //for(i=0;i<100;i++) scanf("%d ",&pk[i]);//espressione equivalente alla riga 86 , inserisco valori array
-    //for(i=0;i<100;i++) scanf("%d ",k+i);//espressione equivalente alla riga 95 e 86, inserisco valori array
+    //for(i=0;i<100;i++) scanf("%d ",k+i);//!! espressione equivalente alla riga 95 e 86, inserisco valori array
     return 0;
 }
 
