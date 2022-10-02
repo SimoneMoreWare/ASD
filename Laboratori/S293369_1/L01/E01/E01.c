@@ -1,6 +1,6 @@
 /*
  //aggiungere maiuscola e minuscola indifferente
-*/
+ */
 #include <stdio.h>
 #include <ctype.h>
 #include <string.h>
@@ -22,13 +22,13 @@ struct tratte {
 };
 
 comando_e leggicomando(void);
+void strtolower(char s[]);
 void menuparola(struct tratte tratta[],int dim);
-void strlower(char s[]);
-void print_rides_in_range_date(struct tratte tratta[],int dim);
-void print_rides_fromstop(struct tratte tratta[],int dim);
-void print_rides_fromend(struct tratte tratta[],int dim);
-void print_rides_in_range_date_delay(struct tratte tratta[],int dim);
-void print_rides_id_totdelay(struct tratte tratta[],int dim);
+void date(struct tratte tratta[], int dim);
+void partenza(struct tratte tratta[], int dim);
+void capolinea(struct tratte tratta[], int dim);
+void destinazioneritardo(struct tratte tratta[], int dim);
+void ritardotot(struct tratte tratta[], int dim);
 
 int main(){
     FILE *fpin;
@@ -50,31 +50,32 @@ int main(){
 
 void menuparola(struct tratte tratta[], int dim){
     comando_e codicecomando;
+    //char riga[MAXN];
     int continua=1;
 
     while(continua){
         codicecomando=leggicomando();
         //fflush(stdin);
+        //scanf("%s",riga);//resto della riga
 
         switch (codicecomando){
             case r_date:
-                print_rides_in_range_date(tratta,dim);
+                date(tratta,dim);
                 break;
             case r_partenza:
-                print_rides_fromstop(tratta,dim);
+                partenza(tratta,dim);
                 break;
             case r_capolinea:
-                print_rides_fromend(tratta,dim);
+                capolinea(tratta,dim);
                 break;
             case r_ritardo:
-                print_rides_in_range_date_delay(tratta,dim);
+                destinazioneritardo(tratta,dim);
                 break;
             case r_ritardo_tot:
-                print_rides_id_totdelay(tratta,dim);
+                ritardotot(tratta,dim);
                 break;
             case r_fine:
                 printf("fine\n");
-
                 continua=0;
                 break;
             default:
@@ -107,89 +108,78 @@ void strtolower(char s[]){
     }
 }
 
-void print_rides_in_range_date(struct tratte tratta[], int dim){
-    char date1[MAXN],date2[MAXN];
+void date(struct tratte tratta[],int dim){
     int i;
-    
-    //input date
+    char datacheckstart[MAXN];
+    char datacheckend[MAXN];
     fflush(stdin);
-    printf("inserisci data 1 e data2\n");
-    scanf("%s %s",date1,date2);
-    
+    printf("inserisci date\n");
+    scanf("%s %s",datacheckstart,datacheckend);
     //scorro su tutta la struct e confronto le date delle corse con le date inserite dagli utenti verificando se sono contenute tra esse. Per il confronto posso usare strcmp in quanto basta capire "quale sia quella che viene prima in ordine alfabetico"
-    //problema nel confrontare date come 2017/12/01 - 2018/01/31 , possibile slz: https://stackoverflow.com/questions/37310050/date-comparison-in-c
     for(i=0;i<dim;i++){
-    	if(strcmp(tratta[i].data,date1)>0 && strcmp(tratta[i].data,date2)<0){
-    	    printf("\n%s %s %s %s %s\n",tratta[i].partenza,tratta[i].destinazione,tratta[i].data,tratta[i].orapartenza,tratta[i].oraarrivo);
-    	}
+        if((strcmp(datacheckstart,tratta[i].data)<0) && (strcmp(datacheckend,tratta[i].data)>0)){
+            printf("%s %s %s %s %s %s %d",tratta[i].codicetratta,tratta[i].partenza,tratta[i].destinazione,tratta[i].data,tratta[i].orapartenza,tratta[i].oraarrivo,tratta[i].ritardo);
+            printf("\n");
+        }
     }
-  
-} 
+}
 
-void print_rides_fromstop(struct tratte tratta[],int dim){
-    char namebusStop[MAXN];
+void partenza(struct tratte tratta[], int dim){
     int i;
-    
-    //input
+    char partenzacheck[MAXN];
     fflush(stdin);
     printf("inserisci partenza\n");
-    scanf("%s ",namebusStop);
-    
+    scanf("%s",partenzacheck);
     for(i=0;i<dim;i++){
-        if(strcmp(tratta[i].partenza,namebusStop)==0){
-            printf("%s %s %s %s %s\n",tratta[i].partenza,tratta[i].destinazione,tratta[i].data,tratta[i].orapartenza,tratta[i].oraarrivo);
+        if(strcmp(partenzacheck,tratta[i].partenza)==0){//aggiungere confronto maiuscola e minuscolo che sia indiferrente
+            printf("%s %s %s %s %s %s %d",tratta[i].codicetratta,tratta[i].partenza,tratta[i].destinazione,tratta[i].data,tratta[i].orapartenza,tratta[i].oraarrivo,tratta[i].ritardo);
+            printf("\n");
         }
     }
-    
 }
 
-void print_rides_fromend(struct tratte tratta[],int dim){
-    char nameendStop[MAXN];
+void capolinea(struct tratte tratta[], int dim){
     int i;
-    
-    //input
+    char capolineacheck[MAXN];
     fflush(stdin);
     printf("inserisci capolinea\n");
-    scanf("%s ",nameendStop);
-    
+    scanf("%s",capolineacheck);
     for(i=0;i<dim;i++){
-        if(strcmp(tratta[i].destinazione,nameendStop)==0){
-            printf("%s %s %s %s %s\n",tratta[i].partenza,tratta[i].destinazione,tratta[i].data,tratta[i].orapartenza,tratta[i].oraarrivo);
+        if(strcmp(capolineacheck,tratta[i].destinazione)==0){//aggiungere confronto maiuscola e minuscolo che sia indiferrente
+            printf("%s %s %s %s %s %s %d",tratta[i].codicetratta,tratta[i].partenza,tratta[i].destinazione,tratta[i].data,tratta[i].orapartenza,tratta[i].oraarrivo,tratta[i].ritardo);
+            printf("\n");
         }
     }
-  
 }
 
-void print_rides_in_range_date_delay(struct tratte tratta[],int dim){
-    char date1[MAXN],date2[MAXN];
+void destinazioneritardo(struct tratte tratta[],int dim){
     int i;
-    
-    //input date
+    char datacheckstart[MAXN];
+    char datacheckend[MAXN];
     fflush(stdin);
-    printf("inserisci data 1 e data2\n");
-    scanf("%s %s",date1,date2);
-    
+    printf("inserisci date\n");
+    scanf("%s %s",datacheckstart,datacheckend);
     for(i=0;i<dim;i++){
-    	if((strcmp(tratta[i].data,date1)>0 && strcmp(tratta[i].data,date2)<0) && tratta[i].ritardo>0){
-    	    printf("\n%s %s %s %s %s\n",tratta[i].partenza,tratta[i].destinazione,tratta[i].data,tratta[i].orapartenza,tratta[i].oraarrivo);
-    	}
+        if((strcmp(datacheckstart,tratta[i].data)<0) && (strcmp(datacheckend,tratta[i].data)>0)){
+            if(tratta[i].ritardo>0){
+                printf("%s %s %s %s %s %s %d",tratta[i].codicetratta,tratta[i].partenza,tratta[i].destinazione,tratta[i].data,tratta[i].orapartenza,tratta[i].oraarrivo,tratta[i].ritardo);
+                printf("\n");
+            }
+        }
     }
-  
 }
 
-void print_rides_id_totdelay(struct tratte tratta[],int dim){
-    char idbus[MAXN];
-    int i,delay=0;
-    
-    //input
+void ritardotot(struct tratte tratta[],int dim){
+    int i;
+    int delay=0;
+    char codicetratta_check[MAXN];
     fflush(stdin);
-    printf("inserisci id bus \n");
-    scanf("%s ",idbus);
-    
+    printf("inserisci codice tratta\n");
+    scanf("%s",codicetratta_check);
     for(i=0;i<dim;i++){
-        if(strcmp(tratta[i].codicetratta,idbus)==0 && tratta[i].ritardo>0) delay+=tratta[i].ritardo;
+        if((strcmp(codicetratta_check,tratta[i].codicetratta)==0)){//aggiungere maiuscola e minuscola indifferente
+            delay=delay+tratta[i].ritardo;
+        }
     }
-  
-    printf("ritardo cmplessivo %s e' di: %d",idbus,delay);
-  
+    printf("%s %d\n",codicetratta_check,delay);
 }
