@@ -1,6 +1,12 @@
 #include <stdio.h>
+#include <string.h>
 
 void swap(int *x,int *y);
+
+struct person{
+   int age;
+   float weight;
+};
 
 int main(){
     //dichiarazione variabili
@@ -88,18 +94,48 @@ int main(){
     //modalità di accesso tramite puntatore
     int *pk=k; //come scrivere int *pk=&k[0];
     for(i=0;i<100;i++) printf("%d",*(pk+i)); //0,1,2,3,4,...,99
-    printf("\n\n\n");
+    printf("1 \n\n\n");
     for(i=0;i<100;i++) *(pk+i)=*(pk+i)*2; //raddoppio tutti i valori del vettore
-    printf("\n\n\n");
+    printf("2 \n\n\n");
     for(i=0;i<100;i++) printf("%d ",*(pk+i)); //0,2,4,6,8,...,198
-    printf("\n\n\n");
+    printf("3 \n\n\n");
     for(i=0;i<100;i++,pk++) printf("%p ",pk);//stampo indirizzo della cella a cui punta il puntatore, incremento il valore del puntatore (ossia shifto di sizeof cassele) nel for
-    printf("\n\n\n");
+    printf("4 \n\n\n");
     //for(i=0;i<100;i++;k++) printf("%p ",k); non posso utilizzare la variabile che identifica il vettore in quando il nome della variabile è una costante puntatore e non posso modificare il suo valore
     printf("\n %p\n",pk+2);//stampo indirizzo cella di memoria della terza casella dell'array
     //modalità mista
     //for(i=0;i<100;i++) scanf("%d ",&pk[i]);//espressione equivalente alla riga 86 , inserisco valori array
     //for(i=0;i<100;i++) scanf("%d ",k+i);//!! espressione equivalente alla riga 95 e 86, inserisco valori array
+    printf("5 \n\n\n");
+    for(i=0;i<100;i++) printf("%d ",*(k+i));//vett[i] equivale a *(vett+i)
+    printf("6 \n\n\n");
+    int l=42;
+    int r=69;
+    int *punt_subarray=&k[l];//assegno al puntatore l'indirizzo di memoria della cella "l" dell'array
+    int n=r-l+1; //quante volte devo iterare
+    for(i=0;i<n;i++) printf("%d ",*(punt_subarray+i)); //stampo i valori del subarray con scrittura equivalente della riga 94
+
+    //puntatori e stringhe
+    char str[]="ciaociaociaociao";
+    char *pstr=&str[0];
+    for(i=0;i<strlen(str);i++){
+        printf("%c ",*(pstr+i));
+    }
+
+    //puntatori e struct
+    struct person *personPtr, person1;
+    personPtr = &person1;   
+
+    printf("Enter age: ");
+    scanf("%d", &personPtr->age);
+
+    printf("Enter weight: ");
+    scanf("%f", &personPtr->weight);
+
+    printf("Displaying:\n");
+    printf("Age: %d\n", personPtr->age);
+    printf("weight: %f", personPtr->weight);
+
     return 0;
 }
 
