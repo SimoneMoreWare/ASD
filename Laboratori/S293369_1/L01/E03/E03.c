@@ -7,7 +7,7 @@
 
 #define MAXN 30
 #define maxrighe 1000
-#define filename "corse.txt"
+#define filename "../corse.txt"
 
 typedef enum comando{
     r_stampa,
@@ -17,7 +17,6 @@ typedef enum comando{
     r_ordina_arrivo,
     r_cerca,
     r_fine,
-    r_err
 } comando_e;
 
 struct tratte{
@@ -34,6 +33,8 @@ comando_e leggicomando(void);
 void strtolower(char s[]);
 void menuparola(struct tratte tratta[], struct tratte *trattaptr[][maxrighe], int dim);
 void stampa(struct tratte tratta[], int dim);
+void ordinadata(struct tratte *trattaptr[maxrighe], int dim);
+int datatoint(char *data,char *ora);
 void ordinatratta(struct tratte *trattaptr[maxrighe], int dim);
 void ordinapartenza(struct tratte *trattaptr[maxrighe], int dim);
 void ordinaarrivo(struct tratte *trattaptr[maxrighe], int dim);
@@ -54,7 +55,7 @@ int main()
             i++;
         }
         for (j = 0; j < dim; j++)
-            trattaptr[0][j] = trattaptr[1][j] = trattaptr[2][j] = trattaptr[3][j] = trattaptr[4][j] = trattaptr[5][j] = &tratta[j];
+            trattaptr[0][j] = trattaptr[1][j] = trattaptr[2][j] = trattaptr[3][j] = trattaptr[4][j] = &tratta[j];
         menuparola(tratta, trattaptr, dim);
     }
     fclose(fpin);
@@ -72,30 +73,30 @@ void menuparola(struct tratte tratta[], struct tratte *trattaptr[][maxrighe], in
         // scanf("%s",riga);//resto della riga
 
         switch (codicecomando){
-        case r_stampa:
-            stampa(tratta, dim);
-            break;
-        case r_ordina_data:
-            //ordinadata(trattaptr[1],dim);
-            break;
-        case r_ordina_tratta:
-            ordinatratta(trattaptr[2], dim);
-            break;
-        case r_ordina_partenza:
-            ordinapartenza(trattaptr[3], dim);
-            break;
-        case r_ordina_arrivo:
-            ordinaarrivo(trattaptr[4], dim);
-            break;
-        case r_cerca:
-            // function
-            break;
-        case r_fine:
-            printf("fine\n");
-            continua = 0;
-            break;
-        default:
-            printf("comando errato");
+            case r_stampa:
+                stampa(tratta, dim);
+                break;
+            case r_ordina_data:
+                ordinadata(trattaptr[0],dim);
+                break;
+            case r_ordina_tratta:
+                ordinatratta(trattaptr[1], dim);
+                break;
+            case r_ordina_partenza:
+                ordinapartenza(trattaptr[2], dim);
+                break;
+            case r_ordina_arrivo:
+                ordinaarrivo(trattaptr[3], dim);
+                break;
+            case r_cerca:
+                // function
+                break;
+            case r_fine:
+                printf("fine\n");
+                continua = 0;
+                break;
+            default:
+                printf("comando errato");
         }
     }
 }
@@ -129,6 +130,42 @@ void stampa(struct tratte tratta[], int dim){
         printf("%s %s %s %s %s %s %d", tratta[i].codicetratta, tratta[i].partenza, tratta[i].destinazione, tratta[i].data, tratta[i].orapartenza, tratta[i].oraarrivo, tratta[i].ritardo);
         printf("\n");
     }
+}
+
+void ordinadata(struct tratte *trattaptr[maxrighe], int dim){
+    struct tratte *tmp;
+    int i, j;
+    // printf("%s ",trattaptr[0]->codicetratta);
+
+    // ordinamento in ordine alfabetico, inserction sort
+    for (i = 1; i < dim; i++){
+        tmp = trattaptr[i];
+        j = i - 1;
+        while (j >= 0 && datatoint(tmp->data,tmp->orapartenza)<datatoint(trattaptr[j]->data,trattaptr[j]->orapartenza)){
+            trattaptr[j + 1] = trattaptr[j];
+            j--;
+        }
+        trattaptr[j + 1] = tmp;
+    }
+
+    // stampa
+    for (i = 0; i < dim; i++){
+        printf("%s %s %s %s %s %s %d", trattaptr[i]->codicetratta, trattaptr[i]->partenza, trattaptr[i]->destinazione, trattaptr[i]->data, trattaptr[i]->orapartenza, trattaptr[i]->oraarrivo, trattaptr[i]->ritardo);
+        printf("\n");
+    }
+}
+
+int datatoint(char *data,char *ora){
+    int res;
+    //trasformo tutto in secondi
+    res=365*(1000*(int)(data[0]-'0')+100*(int)(data[1]-'0')+10*(int)(data[2]-'0')+(int)(data[3]-'0'));
+    res=res+30*(10*(int)(data[5]-'0')+(int)(data[6]-'0'));
+    res=res+(10*(int)(data[8]-'0')+(int)(data[9]-'0'));
+    res=res*24*60*60;
+    res=res+3600*(10*(int)(ora[0]-'0')+(int)(ora[1]-'0'));
+    res=res+60*(10*(int)(ora[3]-'0')+(int)(ora[4]-'0'));
+    res=res+(10*(int)(ora[6]-'0')+(int)(ora[7]-'0'));
+    return res;
 }
 
 void ordinatratta(struct tratte *trattaptr[maxrighe], int dim){
