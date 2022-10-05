@@ -1,7 +1,3 @@
-//
-// Created by Ruggero Nocera on 02/11/2019.
-//
-
 #include <stdio.h>
 #include <ctype.h>
 #define MAX 30
