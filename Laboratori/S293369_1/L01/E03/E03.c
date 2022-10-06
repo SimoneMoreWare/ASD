@@ -38,6 +38,7 @@ int datatoint(char *data,char *ora);
 void ordinatratta(struct tratte *trattaptr[maxrighe], int dim);
 void ordinapartenza(struct tratte *trattaptr[maxrighe], int dim);
 void ordinaarrivo(struct tratte *trattaptr[maxrighe], int dim);
+void ricercalineare(struct tratte tratta[],int dim);
 
 int main()
 {
@@ -89,7 +90,7 @@ void menuparola(struct tratte tratta[], struct tratte *trattaptr[][maxrighe], in
                 ordinaarrivo(trattaptr[3], dim);
                 break;
             case r_cerca:
-                // function
+                ricercalineare(tratta,dim);
                 break;
             case r_fine:
                 printf("fine\n");
@@ -234,5 +235,22 @@ void ordinaarrivo(struct tratte *trattaptr[maxrighe], int dim){
     for (i = 0; i < dim; i++){
         printf("%s %s %s %s %s %s %d", trattaptr[i]->codicetratta, trattaptr[i]->partenza, trattaptr[i]->destinazione, trattaptr[i]->data, trattaptr[i]->orapartenza, trattaptr[i]->oraarrivo, trattaptr[i]->ritardo);
         printf("\n");
+    }
+}
+
+void ricercalineare(struct tratte tratta[],int dim){
+    int i;
+    char partenzaprefix[MAXN];
+    int lenprefix;
+    fflush(stdin);
+    printf("inserisci partenza\n");
+    scanf("%s",partenzaprefix);
+    lenprefix=(int)strlen(partenzaprefix);
+    //scorro su tutta la struct e in seguito effettuo una strncmp (che permette di confrontare una "sottostringa" con la stringa in cui prendo gli n caratteri iniziali
+    for(i=0;i<dim;i++){
+        if(strncmp(partenzaprefix,tratta[i].partenza,lenprefix)==0){
+            printf("%s %s %s %s %s %s %d",tratta[i].codicetratta,tratta[i].partenza,tratta[i].destinazione,tratta[i].data,tratta[i].orapartenza,tratta[i].oraarrivo,tratta[i].ritardo);
+            printf("\n");
+        }
     }
 }
