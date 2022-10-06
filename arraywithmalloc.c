@@ -18,6 +18,7 @@ int main(){
     //output
     for(i=dim-1;i>=0;i--){
         printf("%d ",*(parray+i));
-    }
+    }        
+    free(parray);
     return 0;
 }
