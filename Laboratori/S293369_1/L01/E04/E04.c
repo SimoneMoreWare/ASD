@@ -70,6 +70,7 @@ void menuparola(struct tratte tratta[], struct tratte *trattaptr[][maxrighe], in
     int continua = 1;
     char partenzaprefix[maxrighe];
     int lenprefix;
+    int checkricerca;
     while (continua){
         codicecomando = leggicomando();
         // fflush(stdin);
@@ -100,12 +101,18 @@ void menuparola(struct tratte tratta[], struct tratte *trattaptr[][maxrighe], in
                 break;
             case r_cerca:
                 fflush(stdin);
+                printf("Vuoi effettuare la ricerca e trovare la prima tratta disponibile, se si premi 1 (BS), altrimenti se vuoi cercare piu tratte inserisci 2");
+                scanf("%d",&checkricerca);
+                fflush(stdin);
                 printf("inserisci partenza da cercare\n");
                 scanf("%s",partenzaprefix);
                 lenprefix=(int)strlen(partenzaprefix);
-                //ricercalineare(tratta,dim,partenzaprefix,lenprefix);
-                ordinadata(trattaptr[1],dim);
-                ricercabinaria(trattaptr[1],0,dim-1,dim,partenzaprefix,lenprefix);
+                if(checkricerca==2){
+                    ricercalineare(tratta,dim,partenzaprefix,lenprefix);
+                }else{
+                    ordinadata(trattaptr[1],dim);
+                    ricercabinaria(trattaptr[1],0,dim-1,dim,partenzaprefix,lenprefix);
+                }
                 break;
             case r_fine:
                 printf("fine\n");
@@ -241,6 +248,7 @@ void ricercalineare(struct tratte tratta[],int dim,char partenzaprefix[],int len
 
 void ricercabinaria(struct tratte *trattaptr[maxrighe],int start,int end,int dim,char partenzaprefix[],int lenprefix){
     int m=(start+end)/2;
+    if(start+1>=end) return;
     if(strncmp(partenzaprefix,trattaptr[m]->partenza,lenprefix)==0){
         printf("%s %s %s %s %s %s %d",trattaptr[m]->codicetratta,trattaptr[m]->partenza,trattaptr[m]->destinazione,trattaptr[m]->data,trattaptr[m]->orapartenza,trattaptr[m]->oraarrivo,trattaptr[m]->ritardo);
         printf("\n");
