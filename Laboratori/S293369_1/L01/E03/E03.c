@@ -32,13 +32,14 @@ struct tratte{
 comando_e leggicomando(void);
 void strtolower(char s[]);
 void menuparola(struct tratte tratta[], struct tratte *trattaptr[][maxrighe], int dim);
-void stampa(struct tratte tratta[], int dim);
+void stampa(struct tratte *trattaptr[maxrighe], int dim);
 void ordinadata(struct tratte *trattaptr[maxrighe], int dim);
 int datatoint(char *data,char *ora);
 void ordinatratta(struct tratte *trattaptr[maxrighe], int dim);
 void ordinapartenza(struct tratte *trattaptr[maxrighe], int dim);
 void ordinaarrivo(struct tratte *trattaptr[maxrighe], int dim);
-void ricercalineare(struct tratte tratta[],int dim);
+void ricercalineare(struct tratte tratta[],int dim,char partenzaprefix[],int lenprefix);
+void ricercabinaria(struct tratte *trattaptr[maxrighe],int start,int end,int dim,char partenzaprefix[],int lenprefix);
 
 int main()
 {
@@ -67,7 +68,8 @@ void menuparola(struct tratte tratta[], struct tratte *trattaptr[][maxrighe], in
     comando_e codicecomando;
     // char riga[MAXN];
     int continua = 1;
-
+    char partenzaprefix[maxrighe];
+    int lenprefix;
     while (continua){
         codicecomando = leggicomando();
         // fflush(stdin);
@@ -75,22 +77,35 @@ void menuparola(struct tratte tratta[], struct tratte *trattaptr[][maxrighe], in
 
         switch (codicecomando){
             case r_stampa:
-                stampa(tratta, dim);
+                for(int i=0;i<dim;i++){
+                    printf("%s %s %s %s %s %s %d", tratta[i].codicetratta, tratta[i].partenza, tratta[i].destinazione, tratta[i].data, tratta[i].orapartenza, tratta[i].oraarrivo, tratta[i].ritardo);
+                    printf("\n");
+                }
                 break;
             case r_ordina_data:
                 ordinadata(trattaptr[0],dim);
+                stampa(trattaptr[0],dim);
                 break;
             case r_ordina_tratta:
                 ordinatratta(trattaptr[1], dim);
+                stampa(trattaptr[1], dim);
                 break;
             case r_ordina_partenza:
                 ordinapartenza(trattaptr[2], dim);
+                stampa(trattaptr[2], dim);
                 break;
             case r_ordina_arrivo:
                 ordinaarrivo(trattaptr[3], dim);
+                stampa(trattaptr[3], dim);
                 break;
             case r_cerca:
-                ricercalineare(tratta,dim);
+                fflush(stdin);
+                printf("inserisci partenza da cercare\n");
+                scanf("%s",partenzaprefix);
+                lenprefix=(int)strlen(partenzaprefix);
+                //ricercalineare(tratta,dim,partenzaprefix,lenprefix);
+                ordinadata(trattaptr[1],dim);
+                ricercabinaria(trattaptr[1],0,dim-1,dim,partenzaprefix,lenprefix);
                 break;
             case r_fine:
                 printf("fine\n");
@@ -125,13 +140,6 @@ void strtolower(char s[])
     }
 }
 
-void stampa(struct tratte tratta[], int dim){
-    int i;
-    for (i = 0; i < dim; i++){
-        printf("%s %s %s %s %s %s %d", tratta[i].codicetratta, tratta[i].partenza, tratta[i].destinazione, tratta[i].data, tratta[i].orapartenza, tratta[i].oraarrivo, tratta[i].ritardo);
-        printf("\n");
-    }
-}
 
 void ordinadata(struct tratte *trattaptr[maxrighe], int dim){
     struct tratte *tmp;
@@ -147,12 +155,6 @@ void ordinadata(struct tratte *trattaptr[maxrighe], int dim){
             j--;
         }
         trattaptr[j + 1] = tmp;
-    }
-
-    // stampa
-    for (i = 0; i < dim; i++){
-        printf("%s %s %s %s %s %s %d", trattaptr[i]->codicetratta, trattaptr[i]->partenza, trattaptr[i]->destinazione, trattaptr[i]->data, trattaptr[i]->orapartenza, trattaptr[i]->oraarrivo, trattaptr[i]->ritardo);
-        printf("\n");
     }
 }
 
@@ -184,12 +186,6 @@ void ordinatratta(struct tratte *trattaptr[maxrighe], int dim){
         }
         trattaptr[j + 1] = tmp;
     }
-
-    // stampa
-    for (i = 0; i < dim; i++){
-        printf("%s %s %s %s %s %s %d", trattaptr[i]->codicetratta, trattaptr[i]->partenza, trattaptr[i]->destinazione, trattaptr[i]->data, trattaptr[i]->orapartenza, trattaptr[i]->oraarrivo, trattaptr[i]->ritardo);
-        printf("\n");
-    }
 }
 
 void ordinapartenza(struct tratte *trattaptr[maxrighe], int dim){
@@ -209,10 +205,7 @@ void ordinapartenza(struct tratte *trattaptr[maxrighe], int dim){
     }
 
     // stampa
-    for (i = 0; i < dim; i++){
-        printf("%s %s %s %s %s %s %d", trattaptr[i]->codicetratta, trattaptr[i]->partenza, trattaptr[i]->destinazione, trattaptr[i]->data, trattaptr[i]->orapartenza, trattaptr[i]->oraarrivo, trattaptr[i]->ritardo);
-        printf("\n");
-    }
+
 }
 
 void ordinaarrivo(struct tratte *trattaptr[maxrighe], int dim){
@@ -232,20 +225,11 @@ void ordinaarrivo(struct tratte *trattaptr[maxrighe], int dim){
     }
 
     // stampa
-    for (i = 0; i < dim; i++){
-        printf("%s %s %s %s %s %s %d", trattaptr[i]->codicetratta, trattaptr[i]->partenza, trattaptr[i]->destinazione, trattaptr[i]->data, trattaptr[i]->orapartenza, trattaptr[i]->oraarrivo, trattaptr[i]->ritardo);
-        printf("\n");
-    }
+
 }
 
-void ricercalineare(struct tratte tratta[],int dim){
+void ricercalineare(struct tratte tratta[],int dim,char partenzaprefix[],int lenprefix){
     int i;
-    char partenzaprefix[MAXN];
-    int lenprefix;
-    fflush(stdin);
-    printf("inserisci partenza\n");
-    scanf("%s",partenzaprefix);
-    lenprefix=(int)strlen(partenzaprefix);
     //scorro su tutta la struct e in seguito effettuo una strncmp (che permette di confrontare una "sottostringa" con la stringa in cui prendo gli n caratteri iniziali
     for(i=0;i<dim;i++){
         if(strncmp(partenzaprefix,tratta[i].partenza,lenprefix)==0){
@@ -254,3 +238,24 @@ void ricercalineare(struct tratte tratta[],int dim){
         }
     }
 }
+
+void ricercabinaria(struct tratte *trattaptr[maxrighe],int start,int end,int dim,char partenzaprefix[],int lenprefix){
+    int m=(start+end)/2;
+    if(strncmp(partenzaprefix,trattaptr[m]->partenza,lenprefix)==0){
+        printf("%s %s %s %s %s %s %d",trattaptr[m]->codicetratta,trattaptr[m]->partenza,trattaptr[m]->destinazione,trattaptr[m]->data,trattaptr[m]->orapartenza,trattaptr[m]->oraarrivo,trattaptr[m]->ritardo);
+        printf("\n");
+        return;
+    }
+    if(strncmp(partenzaprefix,trattaptr[m]->partenza,lenprefix)<0) return ricercabinaria(trattaptr,start,m,dim,partenzaprefix,lenprefix);
+    if(strncmp(partenzaprefix,trattaptr[m]->partenza,lenprefix)>0) return ricercabinaria(trattaptr,m,end,dim,partenzaprefix,lenprefix);
+
+}
+
+void stampa(struct tratte *trattaptr[maxrighe],int dim){
+    int i;
+    for(i=0;i<dim;i++){
+        printf("%s %s %s %s %s %s %d", trattaptr[i]->codicetratta, trattaptr[i]->partenza, trattaptr[i]->destinazione, trattaptr[i]->data, trattaptr[i]->orapartenza, trattaptr[i]->oraarrivo, trattaptr[i]->ritardo);
+        printf("\n");
+    }
+}
+
