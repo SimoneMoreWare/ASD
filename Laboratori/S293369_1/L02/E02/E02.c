@@ -31,31 +31,17 @@ int main(){
 void separa(int **matrix,int nr,int nc,int *casellenere,int *casellebianche,FILE *fpin){
     int i,j;//con i vedo le caselle nere dove si trovano ved j vedo le colonne bianche dove si trovano
     int count=0;
-    int index_riga_nere,index_colonna_nere,index_riga_bianche,index_colonne_bianche;
-    int dimensione_scacchiera=nr*nc;
     matrix= malloc2dr(nr,nc,fpin);
 
-    /*stampa matrix
-    for(i=0;i<nr;i++){
-        for(j=0;j<nc;j++){
-            printf("%d ",matrix[i][j]);
-        }
-        printf("\n");
-    }*/
-
     //riempo vettore caselle nere e bianche, sapendo che sono alternate
-    for(i=0;i<dimensione_scacchiera;i=i+2){
-        index_riga_nere=i/nr;
-        index_colonna_nere=i%nc;
-        casellenere[count]=matrix[index_riga_nere][index_colonna_nere];
-        count++;
-    }
-    count=0;
-    for(j=1;j<dimensione_scacchiera;j=j+2){
-        index_riga_bianche=j/nr;
-        index_colonne_bianche=j%nc;
-        casellebianche[count]=matrix[index_riga_bianche][index_colonne_bianche];
-        count++;
+    for(i = 0; i < nr; i++){
+        for(j = 0; j < nc; j++){
+            if((i*nr+j) % 2 == 0){
+                casellenere[count] = matrix[i][j];
+            }else{
+                casellebianche[count++] = matrix[i][j];
+            }
+        }
     }
     free2dr(matrix,nr);
 }
@@ -70,7 +56,6 @@ int **malloc2dr(int nr,int nc, FILE *fpin){
             fscanf(fpin,"%d",&creatematrix[i][j]); // inserisco valore
         }
     }
-
     /*
     for(i=0;i<nr;i++){
 
@@ -78,7 +63,6 @@ int **malloc2dr(int nr,int nc, FILE *fpin){
     }*/ //inserire dopo i valori va bene?
 
     return creatematrix; //ritorno doppio puntatore (aka matrice) alla funzione chiamante
-
 }
 
 void free2dr(int **matrix,int nr){
