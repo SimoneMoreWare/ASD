@@ -51,16 +51,20 @@ int main()
 }
 
 void leggifile(FILE *fpin){
-    struct tratte *tratta, ***trattaptr;
+    struct tratte *tratta, ***trattaptr; //creo un puntatore che userò come array 
+ //allocato dinamicamente, inoltre creo un puntatore a un array di puntatori (costituito da un array verticale in cui ogni casella punta a un array);
+ //il * quindi punta all array di puntatori, il * cosituisce l'array verticale e ogni casella punta all'array (terzo *)
     int i, j, dim;
     fpin = fopen(filename, "r");
     if (fpin != NULL)
     {
         fscanf(fpin,"%d",&dim);
-        tratta=(struct tratte *) malloc(dim*sizeof(struct tratte));
-        trattaptr=(struct tratte ***) malloc(r_cerca*sizeof(struct tratte **));//perchè non va con *trattaptr=(struct tratte **) malloc(r_cerca*sizeof(struct tratte *));
+        tratta=(struct tratte *) malloc(dim*sizeof(struct tratte)); //creo array allocato dinamicamente
+        trattaptr=(struct tratte ***) malloc(r_cerca*sizeof(struct tratte **));//preparo lo spazio per l'array di punatori vericale
+     //perchè non va con *trattaptr=(struct tratte **) malloc(r_cerca*sizeof(struct tratte *));
         for(i=0;i<dim;i++){
-            (trattaptr)[i]=(struct tratte **) malloc(dim*sizeof(struct tratte *));//perchè non va con *(trattaptr)[i]=(struct tratte *) malloc(dim*sizeof(struct tratte));
+            (trattaptr)[i]=(struct tratte **) malloc(dim*sizeof(struct tratte *));//array 
+         //perchè non va con *(trattaptr)[i]=(struct tratte *) malloc(dim*sizeof(struct tratte));
         }
         i = 0;
         while (!feof(fpin))
@@ -244,7 +248,7 @@ void ordinaarrivo(struct tratte **trattaptr, int dim){
 
 }
 
-void ricercalineare(struct tratte tratta[],int dim,char partenzaprefix[],int lenprefix){
+void ricercalineare(struct tratte *tratta,int dim,char partenzaprefix[],int lenprefix){
     int i;
     //scorro su tutta la struct e in seguito effettuo una strncmp (che permette di confrontare una "sottostringa" con la stringa in cui prendo gli n caratteri iniziali
     for(i=0;i<dim;i++){
