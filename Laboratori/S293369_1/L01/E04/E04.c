@@ -110,8 +110,8 @@ void menuparola(struct tratte tratta[], struct tratte *trattaptr[][maxrighe], in
                 if(checkricerca==2){
                     ricercalineare(tratta,dim,partenzaprefix,lenprefix);
                 }else{
-                    ordinadata(trattaptr[1],dim);
-                    ricercabinaria(trattaptr[1],0,dim-1,dim,partenzaprefix,lenprefix);
+                    ordinapartenza(trattaptr[2],dim);
+                    ricercabinaria(trattaptr[2],0,dim-1,dim,partenzaprefix,lenprefix);
                 }
                 break;
             case r_fine:
