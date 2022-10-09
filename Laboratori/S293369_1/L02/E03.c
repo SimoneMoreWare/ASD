@@ -7,7 +7,6 @@
 #include <string.h>
 
 #define MAXN 30
-#define filename "../corse.txt"
 
 typedef enum comando{
     r_stampa,
@@ -16,6 +15,7 @@ typedef enum comando{
     r_ordina_partenza,
     r_ordina_arrivo,
     r_cerca,
+    r_leggifile,
     r_fine,
 } comando_e;
 
@@ -29,7 +29,7 @@ struct tratte{
     int ritardo;
 };
 
-void leggifile(FILE *fpin);
+void leggifile();
 comando_e leggicomando(void);
 void menuparola(struct tratte *tratta, struct tratte ***trattaptr, int dim);
 void strtolower(char s[]);
@@ -39,32 +39,36 @@ int datatoint(char *data,char *ora);
 void ordinatratta(struct tratte **trattaptr, int dim);
 void ordinapartenza(struct tratte **trattaptr, int dim);
 void ordinaarrivo(struct tratte **trattaptr, int dim);
-void ricercalineare(struct tratte tratta[],int dim,char partenzaprefix[],int lenprefix);
+void ricercalineare(struct tratte *tratta,int dim,char partenzaprefix[],int lenprefix);
 void ricercabinaria(struct tratte **trattaptr,int start,int end,int dim,char partenzaprefix[],int lenprefix);
-
 
 int main()
 {
-    FILE *fpin;
-    leggifile(fpin);
+    leggifile();
     return 0;
 }
 
-void leggifile(FILE *fpin){
-    struct tratte *tratta, ***trattaptr; //creo un puntatore che userò come array 
- //allocato dinamicamente, inoltre creo un puntatore a un array di puntatori (costituito da un array verticale in cui ogni casella punta a un array);
- //il * quindi punta all array di puntatori, il * cosituisce l'array verticale e ogni casella punta all'array (terzo *)
+void leggifile(){
+    FILE *fpin;
+    struct tratte *tratta, ***trattaptr; //creo un puntatore che userò come array
+    //allocato dinamicamente, inoltre creo un puntatore a un array di puntatori (costituito da un array verticale in cui ogni casella punta a un array);
+    //il * quindi punta all array di puntatori, il * cosituisce l'array verticale e ogni casella punta all'array (terzo *)
     int i, j, dim;
+    char filename[MAXN];
+    printf("Inserisci il nome del log\n");
+    fflush(stdin);
+    scanf("%s",filename);
     fpin = fopen(filename, "r");
     if (fpin != NULL)
     {
+        fflush(stdin);
         fscanf(fpin,"%d",&dim);
         tratta=(struct tratte *) malloc(dim*sizeof(struct tratte)); //creo array allocato dinamicamente
-        trattaptr=(struct tratte ***) malloc(r_cerca*sizeof(struct tratte **));//preparo lo spazio per l'array di punatori vericale
-     //perchè non va con *trattaptr=(struct tratte **) malloc(r_cerca*sizeof(struct tratte *));
+        trattaptr=(struct tratte ***) malloc(r_leggifile*sizeof(struct tratte **));//preparo lo spazio per l'array di punatori vericale
+        //perchè non va con *trattaptr=(struct tratte **) malloc(r_cerca*sizeof(struct tratte *));
         for(i=0;i<dim;i++){
-            (trattaptr)[i]=(struct tratte **) malloc(dim*sizeof(struct tratte *));//array 
-         //perchè non va con *(trattaptr)[i]=(struct tratte *) malloc(dim*sizeof(struct tratte));
+            (trattaptr)[i]=(struct tratte **) malloc(dim*sizeof(struct tratte *));//array
+            //perchè non va con *(trattaptr)[i]=(struct tratte *) malloc(dim*sizeof(struct tratte));
         }
         i = 0;
         while (!feof(fpin))
@@ -78,6 +82,8 @@ void leggifile(FILE *fpin){
     }
     fclose(fpin);
 }
+
+
 void menuparola(struct tratte *tratta, struct tratte ***trattaptr, int dim){
     comando_e codicecomando;
     // char riga[MAXN];
@@ -98,7 +104,7 @@ void menuparola(struct tratte *tratta, struct tratte ***trattaptr, int dim){
                 }
                 break;
             case r_ordina_data:
-                ordinadata(trattaptr[0],dim);
+                ordinadata(trattaptr[0],dim);//passare del puntatore una solo riga della matrice
                 stampa(trattaptr[0],dim);
                 break;
             case r_ordina_tratta:
@@ -128,6 +134,10 @@ void menuparola(struct tratte *tratta, struct tratte ***trattaptr, int dim){
                     ricercabinaria(trattaptr[2],0,dim-1,dim,partenzaprefix,lenprefix);
                 }
                 break;
+            case r_leggifile:
+                printf("Inserisci il nuovo log da leggere\n");
+                leggifile();
+                break;
             case r_fine:
                 printf("fine\n");
                 continua = 0;
@@ -141,8 +151,8 @@ void menuparola(struct tratte *tratta, struct tratte ***trattaptr, int dim){
 comando_e leggicomando(void){
     comando_e c;
     char cmd[MAXN];
-    char *tabella[7] = {"stampa", "ordina_data", "ordina_tratta", "ordina_partenza", "ordina_arrivo", "cerca", "fine"};
-    printf("Comando (stampa/ordina_data/ordina_tratta/ordina_partenza/ordina_arrivo/cerca): ");
+    char *tabella[8] = {"stampa", "ordina_data", "ordina_tratta", "ordina_partenza", "ordina_arrivo", "cerca", "leggi_file","fine"};
+    printf("Comando (stampa/ordina_data/ordina_tratta/ordina_partenza/ordina_arrivo/cerca/leggi_file): ");
     fflush(stdin);
     scanf("%s", cmd);
     strtolower(cmd);
