@@ -44,7 +44,7 @@ void ricercabinaria(struct tratte *trattaptr[maxrighe],int start,int end,int dim
 int main()
 {
     FILE *fpin;
-    struct tratte tratta[maxrighe], *trattaptr[r_cerca][maxrighe];
+    struct tratte tratta[maxrighe], *trattaptr[r_cerca][maxrighe];//creo array verticale di r_cerca righe, ogni casella punta a un array di puntatori *array[maxrighe]
     int i, j, dim;
     fpin = fopen(filename, "r");
     if (fpin != NULL)
