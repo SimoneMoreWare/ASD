@@ -38,7 +38,7 @@ void Merge(int A[],int B[], int l, int q, int r) {
         else if (j > r)//esaurisco sottovettore dx
             B[k] = A[i++];
 
-        else if (A[j]>A[i] || (A[j]> A[i]) )
+        else if (A[j]<A[i] || (A[j]> A[i]) )
             B[k] = A[i++];
         else
             B[k] = A[j++];
