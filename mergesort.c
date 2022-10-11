@@ -13,36 +13,34 @@ int main(){
     return 0;
 }
 
-void MergeSort(int A[], int B[], int N){
-    int l=0,r=N-1;
+void MergeSort(int A[],int B[],int N){
+    int l=0,r=N-1; //indici
     MergeSortR(A,B,l,r);
 }
-void MergeSortR(int A[],int B[], int l, int r) {
-    int q=(l+r)/2;
-    if(r<=l) return;
 
-    MergeSortR(A,B,l,q);
-    MergeSortR(A,B,q+1,r);
-    Merge(A,B,l,q,r);
+void MergeSortR(int A[],int B[],int l,int r){
+    int q=(l+r)/2; //indice di mezzo, in questo modo definsico vettore di sx e dx
+    if(l>=r) return; //se l'indice sx supera o raggiunge quello destro mi fermo
+    MergeSortR(A,B,l,q);//mergesort sul sottovettore sx
+    MergeSortR(A,B,q+1,r);//mergesort sul sottovettore dx
+    Merge(A,B,l,q,r);//fusione
 }
 
-void Merge(int A[],int B[], int l, int q, int r) {
+void Merge(int A[],int B[],int l,int q,int r){
     int i,j,k;
-    i=l;
-    j=q+1;
+    i=l; //inizio sottovettore sx
+    j=q+1; //inizio sottovettore dx
 
     for(k=l;k<=r;k++){
-        if(i>q){
+        if(i>q){//sottovettore sx terminato, uso l indice del sottovettore dx e riempo sottovettore dx
             B[k]=A[j++];
-        }else if(j>r){
+        }else if(j>r){//sottovettore dx terminato e riempo il sottovettore sx, uso l'indice del sottovettore sx
             B[k]=A[i++];
-        }else if(A[i]<A[j]){
-            B[k]=A[i++];
-        }else{
+        }else if(A[j]>A[i]){ //se a[j]>[i] ricopiare a[i] in B e avanzare i (j resta invariato)
+          B[k]=A[i++];
+        }else{ //altrimenti ricopiare a[j] in b e avanzare j, i resta invariato
             B[k]=A[j++];
         }
     }
-    for(k=l;k<=r;k++){
-        A[k]=B[k];
-    }
+    for(k=l;k<=r;k++) A[k]=B[k];
 }
