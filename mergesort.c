@@ -18,25 +18,27 @@ void MergeSort(int A[], int B[], int N){
     MergeSortR(A,B,l,r);
 }
 void MergeSortR(int A[],int B[], int l, int r){
-    int q = (l + r)/2;
+    int q = (l + r)/2;//indice di mezzo
     if (r <= l)
         return;
-    MergeSortR(A, B, l, q);
-    MergeSortR(A, B, q+1, r);
-    Merge(A, B, l, q, r);
+    MergeSortR(A, B, l, q);//vettore di sx
+    MergeSortR(A, B, q+1, r);//vettore di dx
+    Merge(A, B, l, q, r);//unire i vettori quando arrivo al caso base
 }
 
 void Merge(int A[],int B[], int l, int q, int r) {
     int i, j, k;
-    i = l;
-    j = q+1;
+    i = l;//indice inizio sottovettore sx
+    j = q+1;//indice inizio sottovettore dx
 
-    for (k = l; k <= r; k++)
-        if (i > q)
+    for (k = l; k <= r; k++)//da 0 a r
+
+        if (i > q)//esaurisco sottovettore sx
             B[k] = A[j++];
-        else if (j > r)
+        else if (j > r)//esaurisco sottovettore dx
             B[k] = A[i++];
-        else if (A[j]>A[i] || (A[j]==A[i] && A[j]> A[i]) )
+
+        else if (A[j]>A[i] || (A[j]> A[i]) )
             B[k] = A[i++];
         else
             B[k] = A[j++];
