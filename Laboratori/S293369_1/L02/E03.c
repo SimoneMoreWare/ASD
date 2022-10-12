@@ -7,7 +7,7 @@
 #include <string.h>
 
 #define MAXN 30
-
+#define numerorighe 5
 typedef enum comando{
     r_stampa,
     r_ordina_data,
@@ -41,6 +41,7 @@ void ordinapartenza(struct tratte **trattaptr, int dim);
 void ordinaarrivo(struct tratte **trattaptr, int dim);
 void ricercalineare(struct tratte *tratta,int dim,char partenzaprefix[],int lenprefix);
 void ricercabinaria(struct tratte **trattaptr,int start,int end,int dim,char partenzaprefix[],int lenprefix);
+void dealloca(struct tratte *tratta, struct tratte ***trattaptr,int nrighe);
 
 int main()
 {
@@ -50,7 +51,7 @@ int main()
 
 void leggifile(){
     FILE *fpin;
-    struct tratte *tratta, ***trattaptr; //creo un puntatore che userò come array
+    struct tratte *tratta=NULL, ***trattaptr=NULL; //creo un puntatore che userò come array
     //allocato dinamicamente, inoltre creo un puntatore a un array di puntatori (costituito da un array verticale in cui ogni casella punta a un array);
     //il * quindi punta all array di puntatori, il * cosituisce l'array verticale e ogni casella punta all'array (terzo *)
     int i, j, dim;
@@ -63,11 +64,13 @@ void leggifile(){
     {
         fflush(stdin);
         fscanf(fpin,"%d",&dim);
-        tratta=(struct tratte *) malloc(dim*sizeof(struct tratte)); //creo array allocato dinamicamente
-        trattaptr=(struct tratte ***) malloc(r_leggifile*sizeof(struct tratte **));//preparo lo spazio per l'array di punatori vericale
+        tratta=(struct tratte *)calloc(dim,sizeof(struct tratte)); //creo array allocato dinamicamente
+        trattaptr=(struct tratte ***) calloc(numerorighe,sizeof(struct tratte **));//preparo lo spazio per l'array di punatori vericale
         //perchè non va con *trattaptr=(struct tratte **) malloc(r_cerca*sizeof(struct tratte *));
-        for(i=0;i<dim;i++){
-            (trattaptr)[i]=(struct tratte **) malloc(dim*sizeof(struct tratte *));//array
+        
+        //!!!!! non SI METTE DIM , MA IL NUMERO DI RIGHE DEL VETTORE DI RIGHE!!!!!!!!!!!!!!!!!!!!!!!!! 
+        for(i=0;i<numerorighe;i++){
+            (trattaptr)[i]=(struct tratte **) calloc(dim,sizeof(struct tratte *));//array
             //perchè non va con *(trattaptr)[i]=(struct tratte *) malloc(dim*sizeof(struct tratte));
         }
         i = 0;
@@ -136,6 +139,7 @@ void menuparola(struct tratte *tratta, struct tratte ***trattaptr, int dim){
                 break;
             case r_leggifile:
                 printf("Inserisci il nuovo log da leggere\n");
+                dealloca(tratta,trattaptr,numerorighe);
                 leggifile();
                 break;
             case r_fine:
@@ -146,6 +150,14 @@ void menuparola(struct tratte *tratta, struct tratte ***trattaptr, int dim){
                 printf("comando errato");
         }
     }
+}
+
+void dealloca(struct tratte *tratta, struct tratte ***trattaptr,int nrighe){
+    free((tratta));
+    for(int i=0;i<nrighe;i++){
+        free((trattaptr)[i]);
+    }
+    free(trattaptr);
 }
 
 comando_e leggicomando(void){
