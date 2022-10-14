@@ -63,20 +63,19 @@ void leggifile(){
 //pos indice ricorsione e dimensione soluzione parziale
 //struttura val , ho le scelte possibili insieme al numero di scelte
 //sol, vettore di dimensione n che riempierò man mano nella ricerca di tutte le soluzioni
-//n dimensione delle combinazioni
+//n dimensione del problema
 //cnt conteggio soluzioni
 
 int principiodimoltiplicazione(int pos,Livello *val,char **sol,int n,int cnt){
-    int i;
-    if(pos>=n){//condizione di terminazione, significa che la mia posizione parziale ha oltreppasato l'array
-        for(i=0;i<n;i++) printf("%s ",sol[i]);//stampo tutte le soluzioni che ho trovato (da 0 a n-1)
+    int i,j;
+    if(pos>=n){//condizione di terminazione, significa che la mia posizione parziale ha oltreppasato la dimensione del problema
+        for(j=0;j<n;j++) printf("%s ",sol[j]);//stampo tutte le soluzioni che ho trovato (da 0 a n-1)
         printf("\n");
-        return cnt+1;//soluzione trovata, ritorno cnt+1, "rifaccio il for"
+        return cnt+1;//soluzione trovata, ritorno cnt+1, "rifaccio il for", ritorno alla chiamata precedente che si è congelata nel ciclo for allo stesso indice i
     }
     for(i=0;i<val[pos].num_scelte;i++){//devo interare sul n.scelte in base alla posizione in cui mi trovo
         strcpy(sol[pos],val[pos].scelte[i]);//assegno al vettore sol nella posizione pos il valore che assume la struttura val nella posizione POS nel cassella i delle scelte possibili
         cnt=principiodimoltiplicazione(pos+1,val,sol,n,cnt);//mi sposto ricorsivamente nel vedere le soluzioni in pos+1
     }
-    return cnt;
-
+    return cnt;//ritorno a chi mi aveva chiamato nel for all inizio in un livello "giallo" anziche "verde", mi fa riniziare il for per le altre
 }
