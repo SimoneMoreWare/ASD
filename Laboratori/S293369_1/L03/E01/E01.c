@@ -1,3 +1,19 @@
+/*
+Se conosciamo l'elemento maggioritario nelle metà sinistra e destra di un array, possiamo determinare quale è l'elemento maggioritario 
+
+approccio divide et impera
+si ricorre nelle metà sinistra e destra di un array fino a quando non è possibile ottenere un caso base,
+in questo caso array di lunghezza 1, l'elemento maggioritario è banalmente il suo unico elemento, 
+// quindi la ricorsione si ferma qui. 
+
+Se il sottoarray corrente è più lungo di lunghezza-1, 
+dobbiamo combinare le risposte per le metà sinistra e destra. 
+Se sono d'accordo sull'elemento maggioritario, l'elemento maggioritario per la array complessiva è ovviamente lo stesso. 
+Se non sono d'accordo, solo uno di loro può essere "giusto", quindi dobbiamo contare le occorrenze degli elementi sinistro e destro 
+per determinare quale risposta della sottosezione è globalmente corretta. 
+*/
+
+
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -29,35 +45,42 @@ int main(){
 
 }
 
-int majority(int *a, int N){
-    return majorityR(a,0,N-1,N/2);
+int majorityElement(int* nums, int numsSize){
+    return majorityR(nums,0,numsSize-1);
 }
 
-int majorityR(int *a,int l,int r,int numberofmajor){
+int majorityR(int *a,int l,int r){
+   
+    int m=(r-l)/2+l;
+    int left,right;
+    int leftCount,rightCount;
+     //caso base: ho un solo elemento ed è per definizione maggioritario
+    if(l==r) return a[l];
     
-    //obiettivo: cercare occorenze dx o sx che sia >N/2 tramite la tecnica dei two pointer
+    //per ricorsione procedo nel sottovettore sx e dx, spaccato a metà
+    left=majorityR(a,l,m);
+    right=majorityR(a,m+1,r);
     
-    int countSx=0,countDx=0;
-    int tmpSx=a[l],tmpDx=a[r];//parcheggio in una variabile gli estremi
-    int i=l,j=r;
-
-    if(numberofmajor==0) return a[0]; //nel caso l'array fosse formato da un solo elemento, il maggioritario è l'elemento stesso
-    if(l>=r) return -1; //se l indice di sx è uguale o maggiore a quello di destra significa che non ho trovato nessun elemento maggioritario
-
-    //tecnica two pointer
-    while(i<=j){
-        if (a[i]==tmpDx) countDx++;
-        else if (a[i]==tmpSx) countSx++;
-
-        if (a[j]==tmpDx) countDx++;
-        else if (a[j]==tmpSx) countSx++;
-
-        i++;
-        j--;
-    }
-
-    if(countDx>numberofmajor) return tmpDx;
-    if(countSx>numberofmajor) return tmpSx;
-
-    return majorityR(a,++l,--r,numberofmajor);//se non trova niente shifto gli estremi
+    //se le due metà hanno lo stesso maggiorante ritorna left
+    if(left==right) return left;
+    
+    //altrimenti conta ogni elemento e trova risultato.
+    leftCount=countInRange(a,left,l,r);
+    rightCount=countInRange(a,right,l,r);
+    
+    return leftCount > rightCount ? left : right;
+    
+    
 }
+
+int countInRange(int a[], int num, int l, int r) {
+        int count = 0;
+        for (int i = l; i <= r; i++) {
+            if (a[i] == num) {
+                count++;
+            }
+        }
+        return count;
+}
+
+
