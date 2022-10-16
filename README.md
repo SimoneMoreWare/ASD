@@ -14,3 +14,4 @@ https://www.youtube.com/watch?v=i56B0xN7jSc
 # Calcolo combinatorio
 
 https://sahandsaba.com/combinatorial-generation-for-coding-interviews-in-python.html
+https://www.scaler.com/topics/data-structures/combinatorics/
