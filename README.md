@@ -15,3 +15,7 @@ https://www.youtube.com/watch?v=i56B0xN7jSc
 
 https://sahandsaba.com/combinatorial-generation-for-coding-interviews-in-python.html
 https://www.scaler.com/topics/data-structures/combinatorics/
+
+# backtracking 
+https://www.interviewbit.com/courses/programming/backtracking/
+https://brilliant.org/wiki/recursive-backtracking/
