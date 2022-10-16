@@ -10,3 +10,7 @@ Corso di Algortimi e strutture dati - Polito
 # comprendere il merge sort e come le chiamate ricorsive vanno nello stack
 
 https://www.youtube.com/watch?v=i56B0xN7jSc
+
+# Calcolo combinatorio
+
+https://sahandsaba.com/combinatorial-generation-for-coding-interviews-in-python.html
