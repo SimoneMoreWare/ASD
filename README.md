@@ -31,9 +31,11 @@ https://www.youtube.com/watch?v=i56B0xN7jSc
 * https://github.com/grilloandrea6/algoritmi-strutture-dati
 * https://github.com/RisingZero/asd-2022
 * https://github.com/Vitocuc/Laboratori-ASD
+  
   completi apa
 * https://github.com/lucaceriani/polito-c-apa
 * https://github.com/LilloBarilotto/apa
 * https://github.com/rogierz/APA_Lab
+  
   in corso di aggorionamento
 * https://github.com/perlomeno/laboratori-asd
