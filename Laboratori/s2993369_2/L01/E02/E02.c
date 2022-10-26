@@ -207,12 +207,12 @@ void inseriscielementodatastiera(struct anagraficanode** head){
     Item dettagliaanagrafica;
     printf("inserisci lista: ");
     scanf("%s %s %s %s %s %s %d",dettagliaanagrafica.codice,
-                   dettagliaanagrafica.nome,
-                   dettagliaanagrafica.cognome,
-                   dettagliaanagrafica.datadinascita,
-                   dettagliaanagrafica.via,
-                   dettagliaanagrafica.citta,
-                   &(dettagliaanagrafica.cap));
+          dettagliaanagrafica.nome,
+          dettagliaanagrafica.cognome,
+          dettagliaanagrafica.datadinascita,
+          dettagliaanagrafica.via,
+          dettagliaanagrafica.citta,
+          &(dettagliaanagrafica.cap));
     (*head)=SortListIns(*head,dettagliaanagrafica);
     //menuparola(*head);
 }
@@ -236,11 +236,18 @@ link ricercacodice(struct anagraficanode* head){
 }
 
 link SortListDel(link head, link tmp) {
+    printf("%s\n",head->val.codice);
+    printf("%s\n",tmp->val.codice);
+    link x,p;
     if(head==NULL) return NULL;
-    if(tmp->next==NULL) head->next=NULL;
-    if(head==tmp) head=tmp->next;
-    else head->next=tmp->next;
-    free(tmp);
+    for(x=head,p=NULL;x!=NULL;p=x,x=x->next){
+        if(x==tmp){
+            if(x==head) head=x->next;
+            else p->next=x->next;
+            free(tmp);
+            break;
+        }
+    }
     return head;
 }
 
