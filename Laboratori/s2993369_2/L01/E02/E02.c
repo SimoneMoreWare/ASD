@@ -65,7 +65,10 @@ int keygreater(Item a,Item b);
 int datatoint(char *data);
 void inseriscielementodatastiera(struct anagraficanode** head);
 link ricercacodice(struct anagraficanode* head);
+link ricercadata(struct anagraficanode* head,char *data);
 link SortListDel(link h,link tmp);
+link SortListDelData(link h,link *tmp, link end, int *found);
+void dealloca_tutto(struct anagraficanode* head);
 
 
 int main(){
@@ -102,7 +105,10 @@ void leggifile(struct anagraficanode** head){
 void menuparola(struct anagraficanode* head){
     comando_e codicecomando;
     struct anagraficanode* tmp;
+    struct anagraficanode* end;
+    char data1[maxndatanascita],data2[maxndatanascita];
     int continua=1;
+    int found=1;
 
     while(continua){
         codicecomando=leggicomando();
@@ -126,13 +132,22 @@ void menuparola(struct anagraficanode* head){
                 list_display(head);
                 break;
             case r_cancelladata:
-                printf("Inserire la funzione a livello di code 2");
+                printf("Inserire le date");
+                fflush(stdin);
+                scanf("%s %s",data1,data2);
+                tmp=ricercadata(head,data1);
+                end=ricercadata(head,data2);
+                while(found!=0){
+                    head=SortListDelData(head,&tmp,end,&found);
+                }
+                list_display(head);
                 break;
             case r_stampa:
                 list_display(head);
                 break;
             case r_fine:
                 printf("fine\n");
+                dealloca_tutto(head);
                 continua=0;
                 break;
             default:
@@ -190,6 +205,8 @@ link SortListIns(struct anagraficanode* head, Item new_data){
     return head;
 }
 
+
+
 int keygreater(Item a,Item b){
     return datatoint(a.datadinascita)>  datatoint(b.datadinascita);
 }
@@ -235,9 +252,21 @@ link ricercacodice(struct anagraficanode* head){
     return NULL;
 }
 
+link ricercadata(struct anagraficanode* head, char *data){
+    //codice univoco, appena trovo un valore esco dal while
+    if(head==NULL){
+        printf("Non c'e' nessun elemento\n");
+        return NULL;
+    }
+    while(head!=NULL){
+        if(datatoint(data)<datatoint(head->val.datadinascita)) return head;
+        head=head->next;
+    }
+    printf("Il codice da te inserito non e' presente in lista\n");
+    return NULL;
+}
+
 link SortListDel(link head, link tmp) {
-    printf("%s\n",head->val.codice);
-    printf("%s\n",tmp->val.codice);
     link x,p;
     if(head==NULL) return NULL;
     for(x=head,p=NULL;x!=NULL;p=x,x=x->next){
@@ -251,10 +280,36 @@ link SortListDel(link head, link tmp) {
     return head;
 }
 
+link SortListDelData(link head, link *tmp, link end, int *found) {
+    printf("%s",(*tmp)->val.codice);
+    link x,p,appoggio;
+    if(head==NULL) return NULL;
+    for(x=head,p=NULL;x!=NULL;p=x,x=x->next){
+        if(x==end) *found=0;
+        if(x==(*tmp) && x!=end ){
+            appoggio=x;
+            if(x==head) head=x->next;
+            else p->next=x->next;
+            *tmp=(*tmp)->next;
+            free(appoggio);
+            break;
+        }
+    }
+    return head;
+
+}
+
 void list_display(struct anagraficanode *p){
     printf("\n");
     while(p!=NULL){
         printf("%s %s %s %s %s %s %d\n",p->val.codice,p->val.nome,p->val.cognome,p->val.datadinascita,p->val.via,p->val.citta,p->val.cap);
         p=p->next;
     }
+}
+
+void dealloca_tutto(struct anagraficanode* head){
+    if(head==NULL)
+        return;
+    dealloca_tutto(head->next);
+    free(head);
 }
