@@ -41,6 +41,7 @@
 typedef struct{
     char col1,col2;
     int val1,val2;
+    int mark;
 }tessere_t;
 
 typedef struct{
@@ -51,20 +52,25 @@ typedef struct{
 
 tessere_t* leggitessere(int *ntessere);
 cella_t** leggiboard(tessere_t *tessere,int *R,int *C);
+int dispripetute(int pos, cella_t **board,tessere_t *tessere,int R,int C,int cnt);
+void stampa(cella_t **board,int R,int C);
+void swaprot(tessere_t *tessera);
 
 int main(){
     int ntessere,R,C;
     tessere_t *tessere;
     cella_t **board;
+    int pos=0;
+    int cnt=0;
     tessere=leggitessere(&ntessere);
     board=leggiboard(tessere,&R,&C);
-
-
+    cnt=dispripetute(pos,board,tessere,R,C,cnt);
+    printf("%d",cnt);
 
     /*for(int i=0;i<R;i++){
         for(int j=0;j<C;j++){
             if(board[i][j].used==1){
-                printf("%c %d %c %d ",(board[i][j].tessere.col1),(board[i][j].tessere.val1),(board[i][j].tessere.col2),(board[i][j].tessere.val2));
+                printf("%c%d%c%d ",(board[i][j].tessere.col1),(board[i][j].tessere.val1),(board[i][j].tessere.col2),(board[i][j].tessere.val2));
             }else{
                 printf("0 ");
             }
@@ -110,14 +116,18 @@ cella_t** leggiboard(tessere_t *tessere, int *R,int *C){
                 if(t==-1 && r==-1){
                     ret[i][j].rot=-1;
                     ret[i][j].used=0;
+                    tessere[t].mark=0;
                 }else if(r==0){
                     ret[i][j].tessere=tessere[t];
                     ret[i][j].rot=0;
                     ret[i][j].used=1;
+                    tessere[t].mark=1;
                 }else if(r==1){
+                    swaprot(&(tessere[t]));
                     ret[i][j].tessere=tessere[t];
-                    ret[i][j].rot=1;
+                    ret[i][j].rot=0;
                     ret[i][j].used=1;
+                    tessere[t].mark=1;
                 }
             }
         }
@@ -128,3 +138,55 @@ cella_t** leggiboard(tessere_t *tessere, int *R,int *C){
     fclose(fp);
     return ret;
 }
+
+int dispripetute(int pos, cella_t **board,tessere_t *tessere,int R, int C, int cnt){
+    int i,j,k;
+    if(pos>=(R*C)){
+        stampa(board,R,C);
+        return cnt+1;
+    }
+    i=pos/R; j=pos%R;
+    if(board[i][j].used!=0){
+        cnt=dispripetute(pos+1,board,tessere,R,C,cnt);
+        return cnt;
+    }
+    for(k=0;k<(R*C);k++){
+        if(!(tessere[k].mark)){
+            board[i][j].used=1;
+            board[i][j].tessere=tessere[k];
+            tessere[k].mark=1;
+
+            cnt=dispripetute(pos+1,board,tessere,R,C,cnt);
+
+            board[i][j].used=0;
+            tessere[k].mark=0;
+
+        }
+    }
+    return cnt;
+}
+
+void stampa(cella_t **board,int R,int C){
+    for(int i=0;i<R;i++){
+        for(int j=0;j<C;j++){
+            if(board[i][j].used==1){
+                printf("%c%d%c%d ",(board[i][j].tessere.col1),(board[i][j].tessere.val1),(board[i][j].tessere.col2),(board[i][j].tessere.val2));
+            }else{
+                printf("0 ");
+            }
+        }
+        printf("\n");
+    }
+    printf("\n");
+}
+
+void swaprot(tessere_t *tessera){
+    int tmpval; char tmpcol;
+    tmpval=(*tessera).val1;
+    (*tessera).val1=(*tessera).val2;
+    (*tessera).val2=tmpval;
+    tmpcol=(*tessera).col1;
+    (*tessera).col1=(*tessera).col2;
+    (*tessera).col2=tmpcol;
+}
+
