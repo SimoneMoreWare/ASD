@@ -52,21 +52,27 @@ typedef struct{
 
 tessere_t* leggitessere(int *ntessere);
 cella_t** leggiboard(tessere_t *tessere,int *R,int *C);
-int dispripetute(int pos, cella_t **board,tessere_t *tessere,int R,int C,int cnt);
+int dispripetute(int pos, cella_t **board,tessere_t *tessere,int R, int C, int maxpunti,cella_t ***sol);
 void stampa(cella_t **board,int R,int C);
 void swaprot(tessere_t *tessera);
-int controllapunteggio(cella_t  **board,int R,int C,tessere_t *tessere, int maxpunti);
+int controllapunteggio(cella_t  **board,int R,int C,tessere_t *tessere, int maxpunti, cella_t ****sol);
 
 int main(){
     int ntessere,R,C;
+    int i;
     tessere_t *tessere;
-    cella_t **board;
+    cella_t **board,**sol;
     int pos=0;
     int maxpunti=0;
     tessere=leggitessere(&ntessere);
     board=leggiboard(tessere,&R,&C);
-    maxpunti=dispripetute(pos,board,tessere,R,C,maxpunti);
-    printf("%d",maxpunti);
+
+    sol=(cella_t **) malloc(R*sizeof(cella_t*));
+    for(i=0;i<C;i++) sol[i]=(cella_t *) malloc(C*sizeof(cella_t));
+
+    maxpunti=dispripetute(pos,board,tessere,R,C,maxpunti,&sol);
+    printf("Miglior punteggio %d\n",maxpunti);
+    stampa(sol,R,C);
 
     /*for(int i=0;i<R;i++){
         for(int j=0;j<C;j++){
@@ -140,16 +146,16 @@ cella_t** leggiboard(tessere_t *tessere, int *R,int *C){
     return ret;
 }
 
-int dispripetute(int pos, cella_t **board,tessere_t *tessere,int R, int C, int maxpunti){
+int dispripetute(int pos, cella_t **board,tessere_t *tessere,int R, int C, int maxpunti,cella_t ***sol){
     int i,j,k;
     if(pos>=(R*C)){
         //stampa(board,R,C);
-        maxpunti=controllapunteggio(board,R,C,tessere,maxpunti);
+        maxpunti=controllapunteggio(board,R,C,tessere,maxpunti,&sol);
         return maxpunti;
     }
     i=pos/R; j=pos%R;
     if(board[i][j].used!=0){
-        maxpunti=dispripetute(pos+1,board,tessere,R,C,maxpunti);
+        maxpunti=dispripetute(pos+1,board,tessere,R,C,maxpunti,sol);
         return maxpunti;
     }
     for(k=0;k<(R*C);k++){
@@ -159,9 +165,9 @@ int dispripetute(int pos, cella_t **board,tessere_t *tessere,int R, int C, int m
             tessere[k].mark=1;
 
             board[i][j].rot=0;
-            maxpunti=dispripetute(pos+1,board,tessere,R,C,maxpunti);
+            maxpunti=dispripetute(pos+1,board,tessere,R,C,maxpunti,sol);
             board[i][j].rot=1;
-            maxpunti=dispripetute(pos+1,board,tessere,R,C,maxpunti);
+            maxpunti=dispripetute(pos+1,board,tessere,R,C,maxpunti,sol);
             //2^cellevuote + cellevuote!
             board[i][j].used=0;
             tessere[k].mark=0;
@@ -175,7 +181,8 @@ void stampa(cella_t **board,int R,int C){
     for(int i=0;i<R;i++){
         for(int j=0;j<C;j++){
             if(board[i][j].used==1){
-                printf("%c%d%c%d ",(board[i][j].tessere.col1),(board[i][j].tessere.val1),(board[i][j].tessere.col2),(board[i][j].tessere.val2));
+                if(board[i][j].rot==0) printf("%c%d%c%d ",(board[i][j].tessere.col1),(board[i][j].tessere.val1),(board[i][j].tessere.col2),(board[i][j].tessere.val2));
+                else if(board[i][j].rot==1) printf("%c%d%c%d ",(board[i][j].tessere.col2),(board[i][j].tessere.val2),(board[i][j].tessere.col1),(board[i][j].tessere.val1));
             }else{
                 printf("0 ");
             }
@@ -195,7 +202,7 @@ void swaprot(tessere_t *tessera){
     (*tessera).col2=tmpcol;
 }
 
-int controllapunteggio(cella_t  **board,int R,int C,tessere_t *tessere, int maxpunti){
+int controllapunteggio(cella_t  **board,int R,int C,tessere_t *tessere, int maxpunti,cella_t ****sol){
     int i,j;
     int orizzontale,verticale,totaleorizzontale=0,totaleverticale=0;
     char checkcolor;
@@ -217,9 +224,9 @@ int controllapunteggio(cella_t  **board,int R,int C,tessere_t *tessere, int maxp
             }
         }
         totaleorizzontale=totaleorizzontale+orizzontale;
-        printf("%d ",orizzontale);
+        //printf("%d ",orizzontale);
     }
-    printf("\n");
+    //printf("\n");
 
     for(j=0;j<C;j++){
 
@@ -238,12 +245,13 @@ int controllapunteggio(cella_t  **board,int R,int C,tessere_t *tessere, int maxp
             }
         }
         totaleverticale=totaleverticale+verticale;
-        printf("%d ",verticale);
+        //printf("%d ",verticale);
     }
-    printf("\n");
-    stampa(board,R,C);
+    //printf("\n");
+    //stampa(board,R,C);
     if((totaleorizzontale+totaleverticale)>maxpunti){
         maxpunti=totaleverticale+totaleorizzontale;
+        for(i=0;i<R;i++) for(j=0;j<C;j++) (**sol)[i][j]=board[i][j];
         return maxpunti;
     }
     return maxpunti;
