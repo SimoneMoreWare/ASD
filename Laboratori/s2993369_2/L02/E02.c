@@ -56,6 +56,7 @@ int dispripetute(int pos, cella_t **board,tessere_t *tessere,int R, int C, int m
 void stampa(cella_t **board,int R,int C);
 void swaprot(tessere_t *tessera);
 int controllapunteggio(cella_t  **board,int R,int C,tessere_t *tessere, int maxpunti, cella_t ****sol);
+void deallocatutto(cella_t **sol,cella_t **board,tessere_t *tessere,int C);
 
 int main(){
     int ntessere,R,C;
@@ -64,6 +65,7 @@ int main(){
     cella_t **board,**sol;
     int pos=0;
     int maxpunti=0;
+
     tessere=leggitessere(&ntessere);
     board=leggiboard(tessere,&R,&C);
 
@@ -74,17 +76,8 @@ int main(){
     printf("Miglior punteggio %d\n",maxpunti);
     stampa(sol,R,C);
 
-    /*for(int i=0;i<R;i++){
-        for(int j=0;j<C;j++){
-            if(board[i][j].used==1){
-                printf("%c%d%c%d ",(board[i][j].tessere.col1),(board[i][j].tessere.val1),(board[i][j].tessere.col2),(board[i][j].tessere.val2));
-            }else{
-                printf("0 ");
-            }
-        }
-        printf("\n");
-    }*/
-    //for(int i=0;i<ntessere;i++) printf("%c %d %c %d\n",(tessere[i].col1),(tessere[i].val1),(tessere[i].col2),(tessere[i].val2));
+    deallocatutto(sol,board,tessere,C);
+    
     return 0;
 }
 
@@ -148,6 +141,7 @@ cella_t** leggiboard(tessere_t *tessere, int *R,int *C){
 
 int dispripetute(int pos, cella_t **board,tessere_t *tessere,int R, int C, int maxpunti,cella_t ***sol){
     int i,j,k;
+    //disp ripetute come il sodoku
     if(pos>=(R*C)){
         //stampa(board,R,C);
         maxpunti=controllapunteggio(board,R,C,tessere,maxpunti,&sol);
@@ -255,4 +249,15 @@ int controllapunteggio(cella_t  **board,int R,int C,tessere_t *tessere, int maxp
         return maxpunti;
     }
     return maxpunti;
+}
+
+void deallocatutto(cella_t **sol,cella_t **board,tessere_t *tessere, int C){
+    int i;
+    for(i=0;i<C;i++){
+        free(sol[i]);
+        free(board[i]);
+    }
+    free(tessere);
+    free(sol);
+    free(board);
 }
