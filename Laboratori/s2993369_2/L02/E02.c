@@ -55,17 +55,18 @@ cella_t** leggiboard(tessere_t *tessere,int *R,int *C);
 int dispripetute(int pos, cella_t **board,tessere_t *tessere,int R,int C,int cnt);
 void stampa(cella_t **board,int R,int C);
 void swaprot(tessere_t *tessera);
+int controllapunteggio(cella_t  **board,int R,int C,tessere_t *tessere, int maxpunti);
 
 int main(){
     int ntessere,R,C;
     tessere_t *tessere;
     cella_t **board;
     int pos=0;
-    int cnt=0;
+    int maxpunti=0;
     tessere=leggitessere(&ntessere);
     board=leggiboard(tessere,&R,&C);
-    cnt=dispripetute(pos,board,tessere,R,C,cnt);
-    printf("%d",cnt);
+    maxpunti=dispripetute(pos,board,tessere,R,C,maxpunti);
+    printf("%d",maxpunti);
 
     /*for(int i=0;i<R;i++){
         for(int j=0;j<C;j++){
@@ -139,16 +140,17 @@ cella_t** leggiboard(tessere_t *tessere, int *R,int *C){
     return ret;
 }
 
-int dispripetute(int pos, cella_t **board,tessere_t *tessere,int R, int C, int cnt){
+int dispripetute(int pos, cella_t **board,tessere_t *tessere,int R, int C, int maxpunti){
     int i,j,k;
     if(pos>=(R*C)){
-        stampa(board,R,C);
-        return cnt+1;
+        //stampa(board,R,C);
+        maxpunti=controllapunteggio(board,R,C,tessere,maxpunti);
+        return maxpunti;
     }
     i=pos/R; j=pos%R;
     if(board[i][j].used!=0){
-        cnt=dispripetute(pos+1,board,tessere,R,C,cnt);
-        return cnt;
+        maxpunti=dispripetute(pos+1,board,tessere,R,C,maxpunti);
+        return maxpunti;
     }
     for(k=0;k<(R*C);k++){
         if(!(tessere[k].mark)){
@@ -156,14 +158,17 @@ int dispripetute(int pos, cella_t **board,tessere_t *tessere,int R, int C, int c
             board[i][j].tessere=tessere[k];
             tessere[k].mark=1;
 
-            cnt=dispripetute(pos+1,board,tessere,R,C,cnt);
-
+            board[i][j].rot=0;
+            maxpunti=dispripetute(pos+1,board,tessere,R,C,maxpunti);
+            board[i][j].rot=1;
+            maxpunti=dispripetute(pos+1,board,tessere,R,C,maxpunti);
+            //2^cellevuote + cellevuote!
             board[i][j].used=0;
             tessere[k].mark=0;
 
         }
     }
-    return cnt;
+    return maxpunti;
 }
 
 void stampa(cella_t **board,int R,int C){
@@ -190,3 +195,56 @@ void swaprot(tessere_t *tessera){
     (*tessera).col2=tmpcol;
 }
 
+int controllapunteggio(cella_t  **board,int R,int C,tessere_t *tessere, int maxpunti){
+    int i,j;
+    int orizzontale,verticale,totaleorizzontale=0,totaleverticale=0;
+    char checkcolor;
+    int flag;
+    for(i=0;i<R;i++){
+
+        if(board[i][0].rot==0) checkcolor=board[i][0].tessere.col1;
+        else checkcolor=board[i][0].tessere.col2;
+        flag=1;
+        orizzontale=0;
+        for(j=0;j<R;j++){
+            if(board[i][j].rot==0 && checkcolor==board[i][j].tessere.col1 && flag==1){
+                orizzontale=orizzontale+board[i][j].tessere.val1;
+            }else if(board[i][j].rot==1 && checkcolor==board[i][j].tessere.col2 && flag==1){
+                orizzontale=orizzontale+board[i][j].tessere.val2;
+            }else{
+                orizzontale=0;
+                flag=0;
+            }
+        }
+        totaleorizzontale=totaleorizzontale+orizzontale;
+        printf("%d ",orizzontale);
+    }
+    printf("\n");
+
+    for(j=0;j<C;j++){
+
+        if(board[0][j].rot==0) checkcolor=board[0][j].tessere.col2;
+        else checkcolor=board[0][j].tessere.col1;
+        flag=1;
+        verticale=0;
+        for(i=0;i<R;i++){
+            if(board[i][j].rot==0 && checkcolor==board[i][j].tessere.col2 && flag==1){
+                verticale=verticale+board[i][j].tessere.val2;
+            }else if(board[i][j].rot==1 && checkcolor==board[i][j].tessere.col1 && flag==1){
+                verticale=verticale+board[i][j].tessere.val1;
+            }else{
+                verticale=0;
+                flag=0;
+            }
+        }
+        totaleverticale=totaleverticale+verticale;
+        printf("%d ",verticale);
+    }
+    printf("\n");
+    stampa(board,R,C);
+    if((totaleorizzontale+totaleverticale)>maxpunti){
+        maxpunti=totaleverticale+totaleorizzontale;
+        return maxpunti;
+    }
+    return maxpunti;
+}
