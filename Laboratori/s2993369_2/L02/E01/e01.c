@@ -1,24 +1,6 @@
 /*
- * attivita i
- *      caratterizaata da un intervallo aperto (si,fi)
- *          si tempo di inizio
- *          fi tempo di fine
- *      durata attività di=fi-si
- *      tempo di inizio,fine e durata sono interi
- *
- *
- *  una collezione di attività S è memorizzata
- *  in un vettore V di strutture att aventi come campi
- *      tempo di inzio
- *      tempo di fine
- *
- * due attività i e j sono incompatibili se e solo se si intersecano o sovrappongono
- *      sono incompatibili se si < fi && sj<fi
- *
- * obiettivo
- * scrivere una funzione wrapper e una funzione ricorsiva in c in grado di
- * determinare e visualizzare
- * un sottoinsieme di attività compatibili che massimizza la somma delle durate
+ * nlogn se implemento la binary search ma non ingozza
+ * ho usato la dinamic
  */
 
 #include <stdio.h>
@@ -29,6 +11,7 @@
 typedef struct{
     int s;
     int f;
+    int durata;
 }att;
 
 att* caricastruct(int *dim);
@@ -43,7 +26,7 @@ int main(){
     //for(int i=0;i<dim;i++) printf("%d %d\n",attivita[i].s,attivita[i].f);
     //INSERIRE ORDINAMENTO PER ESTREMO DI FINE
     qsort(attivita,dim,sizeof(att),comparator);
-    for(int i=0;i<dim;i++) printf("%d %d\n",attivita[i].s,attivita[i].f);
+    for(int i=1;i<=dim;i++) printf("%d %d %d\n",attivita[i].s,attivita[i].f,attivita[i].durata);
     attSel(dim,attivita);
     free(attivita);//ricordati della free
     return 0;
@@ -56,8 +39,13 @@ att* caricastruct(int *dim){
     fp=fopen(filename,"r");
     if(fp!=NULL){
         fscanf(fp,"%d\n",&(*dim));
-        vet=(att *) malloc((*dim)*sizeof(att));
-        for(i=0;i<(*dim);i++) fscanf(fp,"%d %d",&(vet[i].s),&(vet[i].f));
+        vet=(att *) malloc((*dim+1)*sizeof(att));
+        for(i=1;i<=(*dim);i++){
+            fscanf(fp,"%d %d",&(vet[i].s),&(vet[i].f));
+            vet[i].durata=vet[i].f-vet[i].s;
+        }
+        //sentinel
+        vet[0].s=vet[0].f=vet[0].durata=0;
     }else{
         printf("Errore file");
         exit(1);
@@ -75,9 +63,9 @@ int comparator(const void* p0, const void* p1){
 void predecessor(int **pred,att *attivita,int dim){
     int i,j;
     (*pred)[0]=0;
-    for(i=1;i<dim;i++){
+    for(i=1;i<=dim;i++){
         j=i-1;
-        while(j>0 && (attivita[j].f)>(attivita[i].s)) j=j-1;
+        while(j>0 && (attivita[i].s)<(attivita[j].f)) j=j-1;
         (*pred)[i]=j;
     }
 }
@@ -85,23 +73,31 @@ void predecessor(int **pred,att *attivita,int dim){
 void attSel(int dim,att *attivita){
     int *pred;
     int *dp;
+    int *res;
+    int k;
     int i;
-    dp=(int*) malloc(dim*sizeof(int));
-    pred=(int*) malloc(dim*sizeof(int));
-    predecessor(&pred,attivita,dim);
-    dp[0]=0;
-    for(i=1;i<dim;i++) dp[i]=massimo(dp[i-1],dp[pred[i]]+(attivita[i].f-attivita[i].s));
-    i=dim;
+    dp=(int*) calloc(dim,sizeof(int));
+    pred=(int*) calloc(dim,sizeof(int));
+    res=(int*) calloc(dim,sizeof(int));
     printf("\n");
-    while(i>0){
-        if((dp[i-1])>(dp[pred[i]]+(attivita[i].f-attivita[i].s))){
-            i--;
-        }else{
-            printf("%d %d\n",attivita[i].s,attivita[i].f);
+    predecessor(&pred,attivita,dim);
+    for(i=0;i<dim;i++) printf("%d %d\n",i,pred[i]);
+    dp[0]=0;
+    for(i=1;i<=dim;i++) dp[i]=massimo(dp[i-1],dp[pred[i]]+(attivita[i].durata));
+    printf("\n");
+    k=0;
+    for(i=dim;i>0;){
+        if(attivita[i].durata+dp[pred[i]]>=dp[i-1]){
+            res[k]=i;
+            k++;
             i=pred[i];
+        }else{
+            i--;
         }
     }
-    printf("%d %d\n",attivita[i].s,attivita[i].f);
+    for(i=k;i>=0;i--){
+        if(attivita[res[i]].s!=0 && attivita[res[i]].f!=0) printf("%d %d\n",attivita[res[i]].s,attivita[res[i]].f);
+    }
     free(dp);
     free(pred);
 }
