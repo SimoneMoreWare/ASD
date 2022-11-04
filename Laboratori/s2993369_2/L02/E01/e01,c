@@ -1,0 +1,111 @@
+/*
+ * attivita i
+ *      caratterizaata da un intervallo aperto (si,fi)
+ *          si tempo di inizio
+ *          fi tempo di fine
+ *      durata attività di=fi-si
+ *      tempo di inizio,fine e durata sono interi
+ *
+ *
+ *  una collezione di attività S è memorizzata
+ *  in un vettore V di strutture att aventi come campi
+ *      tempo di inzio
+ *      tempo di fine
+ *
+ * due attività i e j sono incompatibili se e solo se si intersecano o sovrappongono
+ *      sono incompatibili se si < fi && sj<fi
+ *
+ * obiettivo
+ * scrivere una funzione wrapper e una funzione ricorsiva in c in grado di
+ * determinare e visualizzare
+ * un sottoinsieme di attività compatibili che massimizza la somma delle durate
+ */
+
+#include <stdio.h>
+#include <stdlib.h>
+
+#define filename "../log.txt"
+
+typedef struct{
+    int s;
+    int f;
+}att;
+
+att* caricastruct(int *dim);
+void attSel(int dim,att *attivita);
+int comparator(const void* p0, const void* p1);
+void predecessor(int **pred,att *attivita,int dim);
+int massimo(int a,int b);
+int main(){
+    att *attivita=NULL;
+    int dim;
+    attivita=caricastruct(&dim);
+    //for(int i=0;i<dim;i++) printf("%d %d\n",attivita[i].s,attivita[i].f);
+    //INSERIRE ORDINAMENTO PER ESTREMO DI FINE
+    qsort(attivita,dim,sizeof(att),comparator);
+    for(int i=0;i<dim;i++) printf("%d %d\n",attivita[i].s,attivita[i].f);
+    attSel(dim,attivita);
+    free(attivita);//ricordati della free
+    return 0;
+}
+
+att* caricastruct(int *dim){
+    FILE *fp;
+    att *vet;
+    int i;
+    fp=fopen(filename,"r");
+    if(fp!=NULL){
+        fscanf(fp,"%d\n",&(*dim));
+        vet=(att *) malloc((*dim)*sizeof(att));
+        for(i=0;i<(*dim);i++) fscanf(fp,"%d %d",&(vet[i].s),&(vet[i].f));
+    }else{
+        printf("Errore file");
+        exit(1);
+    }
+    fclose(fp);
+    return vet;
+}
+
+int comparator(const void* p0, const void* p1){
+    att* ps0 = (att*) p0;
+    att* ps1 = (att*) p1;
+    return ((ps0->f)>=(ps1->f));
+}
+
+void predecessor(int **pred,att *attivita,int dim){
+    int i,j;
+    (*pred)[0]=0;
+    for(i=1;i<dim;i++){
+        j=i-1;
+        while(j>0 && (attivita[j].f)>(attivita[i].s)) j=j-1;
+        (*pred)[i]=j;
+    }
+}
+
+void attSel(int dim,att *attivita){
+    int *pred;
+    int *dp;
+    int i;
+    dp=(int*) malloc(dim*sizeof(int));
+    pred=(int*) malloc(dim*sizeof(int));
+    predecessor(&pred,attivita,dim);
+    dp[0]=0;
+    for(i=1;i<dim;i++) dp[i]=massimo(dp[i-1],dp[pred[i]]+(attivita[i].f-attivita[i].s));
+    i=dim;
+    printf("\n");
+    while(i>0){
+        if((dp[i-1])>(dp[pred[i]]+(attivita[i].f-attivita[i].s))){
+            i--;
+        }else{
+            printf("%d %d\n",attivita[i].s,attivita[i].f);
+            i=pred[i];
+        }
+    }
+    printf("%d %d\n",attivita[i].s,attivita[i].f);
+    free(dp);
+    free(pred);
+}
+
+int massimo(int a,int b){
+    return a>b ? a:b;
+}
