@@ -1,3 +1,5 @@
+//si puo fare con formula zaffiri + smeraldi + 2*minimo(topazio,rubino) + minimo(abs(topazi-rubini),1) con vari corner case
+
 #include <stdio.h>
 #include <stdlib.h>
 
