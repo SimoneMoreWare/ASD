@@ -7,32 +7,33 @@ typedef enum {
     zaffiro,rubino,topazio,smeraldo
 } Item;
 
-int disp_rip(int pos,int *mark,int *sol,int n,int k,int prec);
+int disp_rip(int pos,int *mark,int *sol,int n,int k,int prec, int found);
 int check(int prec,int att);
 
 int main(){
-    int val[4]={19 ,6, 8, 5};
-    int mark[4]={19 ,6, 8, 5};
+    int val[4]={2 ,1, 2, 2};
+    int mark[4]={2 ,1, 2, 2};
     int k=val[0]+val[1]+val[2]+val[3];
     int *sol;
     int n=4;
     int pos=0;
     int i;
+    int found=0;
     int prec=-1;
     sol=(int *) malloc(k*sizeof(int));
-    for(i=k;i>=1 && cnt==0;i--) cnt= disp_rip(pos,mark,sol,n,i,cnt,prec);
+    for(i=k;i>=1 && found==0;i--) found=disp_rip(pos,mark,sol,n,i,prec,found);
     printf("TEST \nzaffiro = %d, rubino = %d, topazio = %d, smeraldo = %d, TOT = %d\n",
            val[zaffiro],
            val[rubino],
            val[topazio],
            val[smeraldo],
            k);
-    printf("Collana massima di lunghezza %d\n",i + 1);
+    printf("Collana massima di lunghezza %d\n",i+1);
     free(sol);
     return 0;
 }
 
-int disp_rip(int pos,int *mark,int *sol,int n,int k,int prec){
+int disp_rip(int pos,int *mark,int *sol,int n,int k,int prec,int found){
     int i;
     if (pos >= k) {//terminazione
         for (i=0; i<k; i++) printf("%d ", sol[i]);
@@ -43,7 +44,7 @@ int disp_rip(int pos,int *mark,int *sol,int n,int k,int prec){
         if (mark[i] > 0 && check(prec,i)) {//mark non registra l uso o non l uso ma registra quante sono le sitanze disponibili da utilizzare, se c'è ne ancora una significa che la prendiamo
             mark[i]--;//scelta decrementate
             sol[pos] = i;//scelta e poi vado sulla successiva
-            if(disp_rip(pos+1, mark, sol, n, k,i)) return 1;//backtrack implicit
+            if(disp_rip(pos+1, mark, sol, n, k,i,found)) return 1;//backtrack implicit
             mark[i]++;//fase backtrack, annullo ultima scelta, rimetto in gioco quella scelta, incremento il vettore mark nella posizione i
         }
     }
