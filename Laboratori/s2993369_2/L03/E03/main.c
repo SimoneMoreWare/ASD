@@ -78,24 +78,77 @@
  */
 
 #include <stdio.h>
+#include <string.h>
 #include "personaggi.h"
-#define MAXN 50
 
-/*typedef enum{
-    hp,mp,atk,def,mag,spr
-} stat;*/
+#define MAXL 50
+typedef enum comando{
+    r_leffiile,
+    r_aggiungipersonaggio,
+    r_eliminapersonaggio,
+    r_ricercacodicepersonaggio,
+    r_fine
+} comando_e;
+
+void menuparola();
+comando_e leggicomando(void);
 
 int main(void){
-    linkP headP=NULL;
-    linkO headO=NULL;
-    int c=4;
-    int b=5;
-    int a=21;
-    listInsHeadP(&headP,c);
-    listDisplayP(headP);
-    listInsHeadP(&headP,b);
-    listDisplayP(headP);
-    listInsHeadO(&headO,a);
-    listDisplayO(headO);
+    menuparola();
     return 0;
+}
+
+void menuparola(void){
+    comando_e codicecomando;
+    int continua=1;
+    tabPg *tabp;
+    tabp=allocazioneinizialepersonaggio();
+
+    while(continua){
+        codicecomando=leggicomando();
+        //fflush(stdin);
+        //scanf("%s",riga);//resto della riga
+
+        switch (codicecomando){
+            case r_leffiile:
+                tabp=leggifilepersonaggi(tabp);
+                stampapersonaggi(tabp);
+                break;
+            case r_aggiungipersonaggio:
+                tabp= leggitastierapersonaggio(tabp);
+                stampapersonaggi(tabp);
+                break;
+            case r_eliminapersonaggio:
+                eliminapersonaggio(tabp);
+                stampapersonaggi(tabp);
+                break;
+            case r_ricercacodicepersonaggio:
+                ricercacodicepersonaggio(tabp);
+                break;
+            case r_fine:
+                printf("fine\n");
+                continua=0;
+                break;
+            default:
+                printf("comando errato");
+        }
+    }
+}
+
+comando_e leggicomando(void){
+    comando_e c;
+    char cmd[MAXL];
+    char *tabella[r_fine+1]={
+            "0","1","2","3"
+    };
+    printf("Inserisci comando\n"
+           "0 per inserire personaggi da file\n"
+           "1 per aggiungere un personaggio\n"
+           "2 per eliminare un personaggio\n"
+           "3 per ricerca codice personaggio\n");
+    fflush(stdin);
+    scanf("%s",cmd);
+    c=r_leffiile;
+    while(c<r_fine && strcmp(cmd,tabella[c])!=0) c++;
+    return c;
 }
