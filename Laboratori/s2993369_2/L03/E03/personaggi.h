@@ -7,16 +7,54 @@
 
 #include "inventario.h"
 #include <stdlib.h>
+#include <stdio.h>
+#define MAXN 50
+#define MAXNEQ 8
 
-// Lista non ordinata come quasi ADT in violazione della regola 2
-//manca il typedef e non c'è il parametro list l...
-typedef struct nodeP* linkP;
-struct nodeP{
-    int val;
-    linkP next;
-};
+typedef struct{
+    unsigned int hp;
+    unsigned int mp;
+    unsigned int atk;
+    unsigned int def;
+    unsigned int nag;
+    unsigned int spr;
+}statP_t;
 
-void listInsHeadP(linkP *head,int val);
-void listDisplayP(linkP p);
+typedef struct{
+    int inUso;
+    ItemO *vettEq;
+}tabEquip_t;
+
+typedef struct{
+    char codice[MAXN];
+    char nome[MAXN];
+    char classe[MAXN];
+    tabEquip_t equip;
+    statP_t stat;
+}ItemP;
+
+
+typedef struct nodoPg *nodePg_t;
+typedef struct{
+    ItemP val;
+    nodePg_t next;
+}nodoPg;
+
+typedef struct tabPg_t* nodeptabPg;
+typedef struct{
+    int nPg;
+    nodoPg* headPg;
+    nodoPg* tailPg;
+}tabPg;
+
+tabPg* leggifilepersonaggi(tabPg *tabp);
+tabPg *leggitastierapersonaggio(tabPg *tabp);
+void stampapersonaggi(tabPg *tabp);
+void inputpersonaggifile(FILE *fp,ItemP *personaggi);
+void inputpersonaggitastiera(ItemP *personaggi);
+tabPg* allocazioneinizialepersonaggio();
+void aggiungipersonaggio(tabPg *tabp,ItemP personaggi);
+void ricercacodicepersonaggio(tabPg *tabp);
+void eliminapersonaggio(tabPg *tabp);
 #endif //UNTITLED3_PERSONAGGI_H
 
