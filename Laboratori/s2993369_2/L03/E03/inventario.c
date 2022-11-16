@@ -62,30 +62,37 @@ void stampainventario(tabInv_t *tabi){
     printf("Dimensioni oggetti %d\n",tabi->nlnv);
 }
 
-void ricercanomeoggetto(tabInv_t *tabi){
+int ricercanomeoggetto(tabInv_t *tabi){
     int i;
     char ricercato[MAXN];
-    int flag=1;
-    if(tabi==NULL){
-        printf("inventario vuoto\n");
-        return;
-    }
+    if(tabi==NULL) return -1;//inventario vuoto
     printf("Inserisci nome oggetto: ");
     scanf("%s",ricercato);
     for(i=0;i<(tabi->nlnv);i++){ //nel caso ci sono duplicati ne stampo tutti
         if(strcmp(ricercato,tabi->vettInv[i].nome)==0){
-            flag=0;
-            printf("%s %s %d %d %d %d %d %d\n",
-                   (tabi)->vettInv[i].nome,
-                   (tabi)->vettInv[i].tipo,
-                   ((tabi)->vettInv[i].stat.hp),
-                   ((tabi)->vettInv[i].stat.mp),
-                   ((tabi)->vettInv[i].stat.atk),
-                   ((tabi)->vettInv[i].stat.def),
-                   ((tabi)->vettInv[i].stat.nag),
-                   ((tabi)->vettInv[i].stat.spr)
-            );
+            return i;
         }
     }
-    if(flag==1) printf("Il nome inserito non è presente in lista\n");
+    return -2; //valore non presente in lista
+}
+
+void stampaoggettotrovato(tabInv_t *tabi,int index){
+    if(index==-1){
+        printf("inventario vuoto\n");
+        return;
+    }
+    if(index==-2){
+        printf("nome non trovato nell'inventario\n");
+        return;
+    }
+    printf("%s %s %d %d %d %d %d %d\n",
+           (tabi)->vettInv[index].nome,
+           (tabi)->vettInv[index].tipo,
+           ((tabi)->vettInv[index].stat.hp),
+           ((tabi)->vettInv[index].stat.mp),
+           ((tabi)->vettInv[index].stat.atk),
+           ((tabi)->vettInv[index].stat.def),
+           ((tabi)->vettInv[index].stat.nag),
+           ((tabi)->vettInv[index].stat.spr)
+    );
 }
