@@ -32,7 +32,6 @@ typedef struct{
     statO_t stat;
 }ItemO;
 
-typedef struct tabInv_t* nodetabInv;
 typedef struct{
     ItemO *vettInv;
     int nlnv;
@@ -43,6 +42,7 @@ tabInv_t* leggifileinventario();
 tabInv_t *allocainventario (int dim_inventario);
 void inputinventariofile(FILE *fp,tabInv_t **tutto,int i);
 void stampainventario(tabInv_t *tabi);
-void ricercanomeoggetto(tabInv_t *tabi);
+int ricercanomeoggetto(tabInv_t *tabi);
+void stampaoggettotrovato(tabInv_t *tabi,int index);
 
 #endif //UNTITLED3_INVENTARIO_H
