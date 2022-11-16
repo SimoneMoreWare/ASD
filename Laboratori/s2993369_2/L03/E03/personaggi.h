@@ -12,17 +12,17 @@
 #define MAXNEQ 8
 
 typedef struct{
-    unsigned int hp;
-    unsigned int mp;
-    unsigned int atk;
-    unsigned int def;
-    unsigned int nag;
-    unsigned int spr;
+    int hp;
+    int mp;
+    int atk;
+    int def;
+    int nag;
+    int spr;
 }statP_t;
 
 typedef struct{
     int inUso;
-    ItemO *vettEq;
+    ItemO vettEq[MAXNEQ];
 }tabEquip_t;
 
 typedef struct{
@@ -40,7 +40,6 @@ typedef struct{
     nodePg_t next;
 }nodoPg;
 
-typedef struct tabPg_t* nodeptabPg;
 typedef struct{
     int nPg;
     nodoPg* headPg;
@@ -49,12 +48,21 @@ typedef struct{
 
 tabPg* leggifilepersonaggi(tabPg *tabp);
 tabPg *leggitastierapersonaggio(tabPg *tabp);
+tabPg *aggiungereequipaggiamento(tabPg *tabp, tabInv_t *tabi);
+tabPg *rimuovereequipaggiamento(tabPg *tabp, tabInv_t *tabi);
 void stampapersonaggi(tabPg *tabp);
+void stampaequippagiamentopersonaggio(nodoPg *nodo,int i);
 void inputpersonaggifile(FILE *fp,ItemP *personaggi);
 void inputpersonaggitastiera(ItemP *personaggi);
 tabPg* allocazioneinizialepersonaggio();
 void aggiungipersonaggio(tabPg *tabp,ItemP personaggi);
 void ricercacodicepersonaggio(tabPg *tabp);
 void eliminapersonaggio(tabPg *tabp);
+void inserireoggettonellequipaggiamento(nodoPg *nodo,tabInv_t *tabi, int indexfind, char *ricercato);
+void eliminareoggettonellequipaggiamento(nodoPg *nodo, int indexfind, char *ricercato);
+void calcolostat(tabPg *tabp);
+void freeTabella(tabPg *tabp);
+void stampapersonaggiosingolo(nodoPg *nodo);
+int ifemptylist(tabPg *tabp);
 #endif //UNTITLED3_PERSONAGGI_H
 
