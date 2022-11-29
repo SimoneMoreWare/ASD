@@ -1,0 +1,21 @@
+5
+A
+B
+C
+D
+E
+A E 5
+A B 3
+B E 6
+B D 4
+B C 5
+C D 7
+D E 1
+G H 1
+H I 7
+A H 8
+B H 11
+I G 6
+C I 2
+C F 4
+D F 14

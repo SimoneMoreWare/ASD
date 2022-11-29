@@ -1,0 +1,10 @@
+camicia  cravatta 	 
+camicia  cintura 	 
+cravatta  giacca 	 
+cintura  giacca 	 
+orologio  orologio 	 
+slip  scarpe 	 
+slip  pantaloni 	 
+pantaloni  cintura 	 
+pantaloni  scarpe 	 
+calzini  scarpe 	 
