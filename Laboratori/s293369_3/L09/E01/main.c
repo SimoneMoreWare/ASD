@@ -18,22 +18,26 @@ in teoria ti basta rimuovere dei set di archi , devi trovare il numero minimo di
 #define MAXC 11
 
 int main(void) {
-    int i, cont, sel, id1, id2, wt;
-    char name[MAXC], label[MAXC];
+    int i, cont, sel;
+    char name[MAXC];
     Graph G;
     FILE *fin, *fout;
+    Edge *dagedge;
     int flag_back=0;
+    int flag_test6=0;
+    int flag_test7=0;
+    int cnt=0;
+    int countbackedge=0;
     cont = 1;
     while(cont) {
         printf("\nOperations on weighted directed graphs\n");
         printf("===============\n");
         printf("1.Load graph from file\n");
-        printf("2.Edge insertion\n");
-        printf("3.Edge removal\n");
-        printf("4.Store graph to file\n");
-        printf("5.Shortest path with Dijkstra's algorithm\n");
-        printf("6.DFS\n");
-        printf("7.Free graph and exit\n");
+        printf("2.Store graph to file\n");
+        printf("3.Edge Min for DAG\n");
+        printf("4.Remove EDGE MAX \n");
+        printf("5. Longest Path\n");
+        printf("6.Free graph and exit\n");
         printf("Enter your choice : ");
         if(scanf("%d",&i)<=0) {
             printf("Integers only!\n");
@@ -42,6 +46,7 @@ int main(void) {
         else {
             switch(i) {
                 case 1:     printf("Input file name: ");
+                    cnt=0;
                     scanf("%s", name);
                     fin = fopen(name, "r");
                     if (fin == NULL)
@@ -50,25 +55,7 @@ int main(void) {
                     fclose(fin);
                     flag_back=0;
                     break;
-                case 2:     printf("Insert first node = ");
-                    scanf("%s", label);
-                    id1 = GRAPHgetIndex(G, label);
-                    printf("Insert second node = ");
-                    scanf("%s", label);
-                    id2 = GRAPHgetIndex(G, label);
-                    printf("Insert weight = ");
-                    scanf("%d", &wt);
-                    GRAPHinsertE(G, id1, id2, wt);
-                    break;
-                case 3:     printf("Insert first node = ");
-                    scanf("%s", label);
-                    id1 = GRAPHgetIndex(G, label);
-                    printf("Insert second node = ");
-                    scanf("%s", label);
-                    id2 = GRAPHgetIndex(G, label);
-                    GRAPHremoveE(G, id1, id2);
-                    break;
-                case 4:     printf("File (0) or Screen (1)? ");
+                case 2:     printf("File (0) or Screen (1)? ");
                     scanf("%d", &sel);
                     if (sel==0) {
                         printf("Input file name: ");
@@ -82,19 +69,30 @@ int main(void) {
                     else
                         GRAPHstore(G,stdout);
                     break;
-                case 5:     printf("Insert start node = ");
-                    scanf("%s", label);
-                    id1 = GRAPHgetIndex(G, label);
-                    GRAPHspBF(G, id1);
-                    break;
-                case 6:
+                case 3:
+                    flag_test6=1;
+                    dagedge=malloc(GRAPHfvertexdim(G)*sizeof(Edge));
                     for(i=0;i< GRAPHfvertexdim(G);i++){
-                        printf("Numero %d\n",i);
-                        GRAPHdfs(G,i,&flag_back);
+                        GRAPHdfs(G,i,&flag_back,&dagedge,&cnt,&countbackedge);
                     }
                     if(flag_back==0) printf("Grafo è gia un DAG");
                     break;
-                case 7:     cont = 0;
+                case 4:
+                    if(flag_test6==1){
+                        flag_test7=1;
+                        if(flag_back!=0) EDGEdag(G,dagedge,cnt,countbackedge);
+                    }else{
+                        printf("Devi effettuare prima la dfs, premere 6");
+                    }
+                    break;
+                case 5:
+                    if(flag_test7==1){
+                        DAGrts(G);
+                    }else{
+                        printf("Devi creare prima il DAG");
+                    }
+                    break;
+                case 6:     cont = 0;
                     break;
                 default:    printf("Invalid option\n");
             }
