@@ -1,10 +1,8 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include <string.h>
-#include <limits.h>
 #include "Graph.h"
 
-#define maxWT INT_MAX
 #define MAXC 10
 
 typedef struct node *link;
@@ -15,6 +13,8 @@ static Edge  EDGEcreate(int v, int w, int wt);
 static link  NEW(int v, int wt, link next);
 static void  insertE(Graph G, Edge e);
 static void  removeE(Graph G, Edge e);
+
+//var globale contatore dagedges
 
 static Edge EDGEcreate(int v, int w, int wt) {
     Edge e;
@@ -112,18 +112,9 @@ void GRAPHstore(Graph G, FILE *fout) {
     GRAPHedges(G, a);
 
     for (i = 0; i < G->E; i++) fprintf(fout, "(%s, %s) | Peso: %d\n", STsearchByIndex(G->tab, a[i].v), STsearchByIndex(G->tab, a[i].w), a[i].wt);
-
+    free(a);
 }
 
-int GRAPHgetIndex(Graph G, char *label) {
-    int id;
-    id = STsearch(G->tab, label);
-    if (id == -1) {
-        id = STsize(G->tab);
-        STinsert(G->tab, label, id);
-    }
-    return id;
-}
 
 void GRAPHinsertE(Graph G, int id1, int id2, int wt) {
     insertE(G, EDGEcreate(id1, id2, wt));
@@ -155,64 +146,26 @@ static void  removeE(Graph G, Edge e) {
             }
 }
 
-void GRAPHspBF(Graph G, int id){
-    int v, w, negcycfound;
-    link t;
-    int *st, *mindist;
 
-    st = malloc(G->V*sizeof(int));
-    mindist = malloc(G->V*sizeof(int));
-    if ((st == NULL) || (mindist == NULL))
-        return;
 
-    for ( v = 0; v < G->V; v++) {
-        st[v]= -1;
-        mindist[v] = maxWT;
-    }
-
-    mindist[id] = 0;
-    st[id] = id;
-
-    for (w = 0; w < G->V - 1; w++)
-        for (v = 0; v < G->V; v++)
-            if (mindist[v] < maxWT)
-                for (t = G->ladj[v]; t != G->z ; t = t->next)
-                    if (mindist[t->v] > mindist[v] + t->wt) {
-                        mindist[t->v] = mindist[v] + t->wt;
-                        st[t->v] = v;
-                    }
-    negcycfound = 0;
-    for (v = 0; v < G->V; v++)
-        if (mindist[v] < maxWT)
-            for (t = G->ladj[v]; t != G->z ; t = t->next)
-                if (mindist[t->v] > mindist[v] + t->wt)
-                    negcycfound = 1;
-    if (negcycfound == 0) {
-        printf("\n Shortest path tree\n");
-        for (v = 0; v < G->V; v++)
-            printf("Parent of %s is %s \n", STsearchByIndex(G->tab, v), STsearchByIndex(G->tab, st[v]));
-
-        printf("\n Minimum distances from node %s\n", STsearchByIndex(G->tab, id));
-        for (v = 0; v < G->V; v++)
-            printf("mindist[%s] = %d \n", STsearchByIndex(G->tab, v), mindist[v]);
-    }
-    else
-        printf("\n Negative cycle found!\n");
-}
-
-void dfsR(Graph G, Edge e, int *time, int *pre, int *post, int *st, int **flag_back) {
+void dfsR(Graph G, Edge e, int *time, int *pre, int *post, int *st, int **flag_back,Edge ***dagedges, int **cnt, int **countedgeback) {
     link t; int v, w = e.w; Edge x;
     //if (e.v != e.w) printf("edge (%s, %s) is tree \n", STsearchByIndex(G->tab, e.v), STsearchByIndex(G->tab, e.w)) ;
     st[e.w] = e.v;
     pre[w] = (*time)++;
     for (t = G->ladj[w]; t != G->z; t = t->next)
         if (pre[t->v] == -1)
-            dfsR(G, EDGEcreate(w, t->v,t->wt), time, pre, post, st,&(*flag_back));
+            dfsR(G, EDGEcreate(w, t->v,t->wt), time, pre, post, st,&(*flag_back),dagedges,&(*cnt),&(*countedgeback));
         else {
             v = t->v;
             x = EDGEcreate(w, v,t->wt);
             if (post[v] == -1){
                 **flag_back=1;
+                (**dagedges)[**cnt].w=x.w;
+                (**dagedges)[**cnt].v=x.v;
+                (**dagedges)[**cnt].wt=t->wt;
+                (**cnt)++;
+                (**countedgeback)++;
                 printf("(%s, %s) | Peso: %d\n", STsearchByIndex(G->tab, x.v), STsearchByIndex(G->tab, x.w),t->wt);
             }
             /*else
@@ -224,7 +177,7 @@ void dfsR(Graph G, Edge e, int *time, int *pre, int *post, int *st, int **flag_b
     post[w] = (*time)++;
 }
 
-void GRAPHdfs(Graph G, int id,int *flag_back) {
+void GRAPHdfs(Graph G, int id,int *flag_back, Edge **dagedges,int *cnt,int *countbackedge) {
     int v, time=0, *pre, *post, *st;
     pre = malloc(G->V * sizeof(int));
     post = malloc(G->V * sizeof(int));
@@ -237,12 +190,10 @@ void GRAPHdfs(Graph G, int id,int *flag_back) {
         post[v] = -1;
         st[v] =  -1;
     }
+    *countbackedge=0;
+    dfsR(G, EDGEcreate(id,id,0), &time, pre, post, st,&flag_back,&(dagedges),&cnt,&countbackedge);
 
-    dfsR(G, EDGEcreate(id,id,0), &time, pre, post, st,&flag_back);
-
-    for (v=0; v < G->V; v++)
-        if (pre[v]== -1)
-            dfsR(G, EDGEcreate(v,v,0), &time, pre, post, st,&flag_back);
+    for (v=0; v < G->V; v++) if (pre[v]== -1) dfsR(G, EDGEcreate(v,v,0), &time, pre, post, st,&flag_back,&dagedges,&cnt,&countbackedge);
 
     /*printf("discovery/endprocessing time labels \n");
     for (v=0; v < G->V; v++)
@@ -257,3 +208,75 @@ int GRAPHfvertexdim(Graph G){
     return STsize(G->tab);
 }
 
+void EDGEdag(Graph G,Edge *dagedges,int cnt,int countedgeback){
+    int i;
+    int j;
+    int k=0;
+    int massimo=0;
+    int sommapeso;
+    int rmb;
+    for(i=0;i<(cnt/countedgeback);i++){
+        sommapeso=0;
+        for(j=0;j<countedgeback;j++){
+            sommapeso=sommapeso+dagedges[k].wt;
+            k++;
+        }
+        if(sommapeso>massimo){
+            massimo=sommapeso;
+            rmb=i;
+        }
+    }
+    printf("MAX %d %d %d\n",dagedges[rmb].v,dagedges[rmb].w,dagedges[rmb].wt);
+    GRAPHremoveE(G,dagedges[rmb].v,dagedges[rmb].w);
+    GRAPHstore(G,stdout);
+
+}
+
+void TSdfsR(Graph D, int v, int *ts, int *pre, int *time) {
+    link t; pre[v] = 0;
+    for (t = D->ladj[v]; t != D->z; t = t->next)
+        if (pre[t->v] == -1)
+            TSdfsR(D, t->v, ts, pre, time);
+    ts[(*time)--] = v;
+}
+void DAGrts(Graph D) {
+    int v,i, time = (D->V)-1, *pre, *ts;
+    pre=malloc((D->V)*sizeof(Graph));
+    ts=malloc((D->V)*sizeof(Graph));
+    for (v=0; v < D->V; v++) { pre[v] = -1; ts[v] = -1; }
+    for (v=0; v < D->V; v++) if (pre[v]== -1) TSdfsR(D, v, ts, pre, &time);
+    printf("DAG nodes in topological order \n");
+    for (v=0; v<D->V; v++) printf("%s ", STsearchByIndex(D->tab, ts[v]));printf("\n");
+    free(pre);
+    for(i=0;i<(D->V);i++) DAGlongestpath(D,ts,ts[i],i);
+}
+
+void DAGlongestpath(Graph D,int *ts,int id,int i){
+    int *d;
+    int j;
+    int w;
+    int v=id;
+    link t;
+    d=malloc((D->V)*sizeof(int));
+    for(j=0;j<(D->V);j++){
+        d[j]=-1;
+    }
+    d[v]=0;
+    for(j=i;j<D->V;j++){
+        w=ts[j];
+        printf("longest %d\n",w);
+        if(d[w]==-1) continue;
+        for (t = D->ladj[w]; t != D->z; t = t->next){
+            printf("Ti prego %d %d | %d\n",w,t->v,t->wt);
+            if(d[t->v]==-1 || d[w]+t->wt>d[t->v]){
+                d[t->v] = d[w] + t->wt;
+                for (v = 0; v < D->V; v++) printf("stima %s: %d\n", STsearchByIndex(D->tab, v), d[v]);
+            }
+        }
+    }
+
+    for (v = 0; v < D->V; v++)
+        printf("%s: %d\n", STsearchByIndex(D->tab, v), d[v]);
+    printf("\n------\n");
+    free(ts);
+}
