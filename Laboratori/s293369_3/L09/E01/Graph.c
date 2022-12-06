@@ -227,7 +227,8 @@ void EDGEdag(Graph G,Edge *dagedges,int cnt,int countedgeback){
         }
     }
     printf("MAX %d %d %d\n",dagedges[rmb].v,dagedges[rmb].w,dagedges[rmb].wt);
-    GRAPHremoveE(G,dagedges[rmb].v,dagedges[rmb].w);
+
+    for(k=0;k<countedgeback;k++) GRAPHremoveE(G,dagedges[rmb+k].v,dagedges[rmb+k].w);
     GRAPHstore(G,stdout);
 
 }
@@ -278,5 +279,4 @@ void DAGlongestpath(Graph D,int *ts,int id,int i){
     for (v = 0; v < D->V; v++)
         printf("%s: %d\n", STsearchByIndex(D->tab, v), d[v]);
     printf("\n------\n");
-    free(ts);
 }
