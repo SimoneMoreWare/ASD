@@ -9,13 +9,14 @@ struct BSTnode { Quotazione item; link p; link l; link  r; int N; } ;
 struct binarysearchtree { link root;  link z; };
 static link NEW(Quotazione item, link p, link l, link r, int N);
 static void treePrintR(link h, link z);
+static void searchR(link h, Quotazione k, link z,BST bst);
 
 void readbst(BST bstq,FILE *fp){
     Quotazione X;
     bstq=BSTinit();
     while(!feof(fp)){
         X=QuotazioneScan(fp);
-        BSTinsert_leafI(bstq,X);
+        BSTsearch(bstq,X);
     }
     treePrintR(bstq->root,bstq->z);
 }
@@ -23,7 +24,7 @@ void readbst(BST bstq,FILE *fp){
 void BSTinsert_leafI(BST bst, Quotazione x) {
     link p = bst->root, h = p;
     if (bst->root == bst->z) {
-        bst->root = NEW(x, bst->z, bst->z, bst->z, 1);
+        bst->root = NEW(x, bst->z, bst->z, bst->z, x.quantitatransiozioni);
         return;
     }
     while (h != bst->z) {
@@ -31,7 +32,7 @@ void BSTinsert_leafI(BST bst, Quotazione x) {
         h->N++;
         h = (KEYcmp(KEYget(x.data), KEYget(h->item.data))==-1) ? h->l : h->r;
     }
-    h = NEW(x, p, bst->z, bst->z, 1);
+    h = NEW(x, p, bst->z, bst->z, x.quantitatransiozioni);
     if (KEYcmp(KEYget(x.data), KEYget(p->item.data))==-1)
         p->l = h;
     else
@@ -48,11 +49,11 @@ Quotazione QuotazioneScan(FILE *fp){
 
 BST BSTinit() {
     BST bst = malloc(sizeof *bst) ;
-    bst->root = ( bst->z = NEW(ITEMsetNull(), NULL, NULL, NULL, 0));
+    bst->root = ( bst->z = NEW(QuotazionesetNull(), NULL, NULL, NULL, 0));
     return bst;
 }
 
-Quotazione ITEMsetNull() {
+Quotazione QuotazionesetNull() {
     Quotazione val = {0,0,0,0,0};
     return val;
 }
@@ -73,4 +74,33 @@ static void treePrintR(link h, link z) {
     treePrintR(h->l, z);
     QuotationStore(h->item);
     treePrintR(h->r, z);
+}
+
+static void searchR(link h, Quotazione k, link z,BST bst) {
+    int cmp;
+    if (h == z){
+        BSTinsert_leafI(bst,k);
+        return;
+    }
+    cmp = KEYcmp(KEYget(k.data), KEYget(h->item.data));
+    if (cmp==0){
+        //printf("nodo gia trovato, come lo modifico?\n");
+        editnodebst(&(h->item),k);
+        return;
+    }
+    if (cmp==-1)
+        return searchR(h->l, k, z,bst);
+    else
+        return searchR(h->r, k, z,bst);
+}
+
+void BSTsearch(BST bst, Quotazione k) {
+    searchR(bst->root, k, bst->z,bst);
+}
+
+void editnodebst(Quotazione *item, Quotazione k){
+    float res;
+    res =  (float)(( (item->valore * (float)item->quantitatransiozioni ) + (k.valore * (float)k.quantitatransiozioni)) / ((float)item->quantitatransiozioni + (float)k.quantitatransiozioni));
+    item->quantitatransiozioni=item->quantitatransiozioni+k.quantitatransiozioni;
+    item->valore=res;
 }
