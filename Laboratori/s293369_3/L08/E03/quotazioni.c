@@ -11,6 +11,9 @@ static link NEW(Quotazione item, link p, link l, link r, int N);
 static void treePrintR(link h, link z);
 static void searchR(link h, Quotazione k, link z,BST bst);
 static void searchRQuotation(link h,datetime k,link z);
+static void InOrderRangePeriod(link h, link z,datetime date1,datetime date2,link *quotamax,link *quotamin,float *massimo, float *minimo);
+static void checkmaxmin(link h,link **quotamax, link **quotamin, float **massimo, float **minimo);
+static void InOrderAllPeriod(link h, link z,link *quotamax,link *quotamin,float *massimo, float *minimo);
 
 void readbst(BST *bstq,FILE *fp){
     Quotazione X;
@@ -121,7 +124,6 @@ void SearchBSTQuotationFromdate(BST bst,char *date){
 void searchRQuotation(link h,datetime k,link z){
     int cmp;
     if (h == z){
-        printf("La data da te inserita non è presente nel BST\n");
         return;
     }
     cmp = KEYcmp(KEYget(k), KEYget(h->item.data));
@@ -132,3 +134,78 @@ void searchRQuotation(link h,datetime k,link z){
     else
         return searchRQuotation(h->r, k, z);
 }
+
+void SearchBSTQuotationMINMAXFromRangeDate(BST bst,char *date1,char *date2){
+    datetime tmp1;
+    datetime tmp2;
+    float massimo=(float)0.0;
+    float minimo=(float)100000000.0;
+    link quotamax=NULL;
+    link quotmin=NULL;
+    sscanf (date1,"%d/%d/%d",&tmp1.anno,&tmp1.mese,&tmp1.giorno);
+    sscanf (date2,"%d/%d/%d",&tmp2.anno,&tmp2.mese,&tmp2.giorno);
+    InOrderRangePeriod(bst->root,bst->z,tmp1,tmp2,&quotamax,&quotmin,&massimo,&minimo);
+    if(quotamax!=NULL && quotmin!=NULL){
+        printf("Quotazione massima: \n");
+        QuotationStore(quotamax->item);
+        printf("Quotazione minima: \n");
+        QuotationStore(quotmin->item);
+    }else{
+        printf("Non c'è nessuna quotazione in questo range di date\n");
+    }
+
+}
+
+static void InOrderRangePeriod(link h, link z,datetime date1,datetime date2,link *quotamax,link *quotamin,float *massimo, float *minimo) {
+
+    if (h == z) return;
+    InOrderRangePeriod(h->l, z,date1,date2,quotamax,quotamin,massimo,minimo);
+    if(KEYcmp(KEYget(date1), KEYget(h->item.data))<=0 && KEYcmp(KEYget(h->item.data) ,KEYget(date2))<=0) checkmaxmin(h,&(quotamax),&(quotamin),&(massimo),&(minimo));
+    InOrderRangePeriod(h->r, z,date1,date2,quotamax,quotamin,massimo,minimo);
+}
+
+static void checkmaxmin(link h,link **quotamax, link **quotamin, float **massimo, float **minimo){
+    if((h->item.valore)>=(**massimo)){
+        (**massimo)=(h->item.valore);
+        (**quotamax)=h;
+    }
+    if(h->item.valore<=(**minimo)){
+        (**minimo)=(h->item.valore);
+        (**quotamin)=h;
+    }
+}
+
+void SearchBSTQuotationMINMAXFromAllPeriod(BST bst){
+    float massimo=(float)0.0;
+    float minimo=(float)100000000.0;
+    link quotamax=NULL;
+    link quotmin=NULL;
+    InOrderAllPeriod(bst->root,bst->z,&quotamax,&quotmin,&massimo,&minimo);
+    if(quotamax!=NULL && quotmin!=NULL){
+        printf("Quotazione massima: \n");
+        QuotationStore(quotamax->item);
+        printf("Quotazione minima: \n");
+        QuotationStore(quotmin->item);
+    }else{
+        printf("Non c'è nessuna quotazione in questo range di date\n");
+    }
+
+}
+
+/*
+ * void treePrintR(link h, link z) {
+    if (h == z) return;
+    treePrintR(h->l, z);
+    QuotationStore(h->item);
+    treePrintR(h->r, z);
+}
+ */
+
+static void InOrderAllPeriod(link h, link z,link *quotamax,link *quotamin,float *massimo, float *minimo) {
+
+    if (h == z) return;
+    InOrderAllPeriod(h->l, z,quotamax,quotamin,massimo,minimo);
+    checkmaxmin(h,&(quotamax),&(quotamin),&(massimo),&(minimo));
+    InOrderAllPeriod(h->r, z,quotamax,quotamin,massimo,minimo);
+}
+
