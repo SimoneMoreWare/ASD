@@ -57,10 +57,12 @@ int main(void) {
                     else printf("Inserisci prima file premendo 1\n");
                     break;
                 case 4:
-                    printf("inserire funzione 4");
+                    if(flagtest1==1) SearchTitleQuotationMINMAXFromRangeDate(l);
+                    else printf("Inserisci prima file premendo 1\n");
                     break;
                 case 5:
-                    printf("inserire funzione 5");
+                    if(flagtest1==1) SearchTitleQuotationMINMAXFromAllPeriod(l);
+                    else printf("Inserisci prima file premendo 1\n");
                     break;
                 case 6:
                     printf("inserire funzione 2");
