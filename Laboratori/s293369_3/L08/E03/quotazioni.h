@@ -27,4 +27,6 @@ void BSTsearch(BST bst, Quotazione k);
 void treePrintWrapper(BST bstq);
 void editnodebst(Quotazione *item, Quotazione k);
 void SearchBSTQuotationFromdate(BST bst,char *date);
+void SearchBSTQuotationMINMAXFromRangeDate(BST bst,char *date1,char *date2);
+void SearchBSTQuotationMINMAXFromAllPeriod(BST bst);
 #endif //UNTITLED16_QUOTAZIONI_H
