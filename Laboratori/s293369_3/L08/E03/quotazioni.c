@@ -10,15 +10,19 @@ struct binarysearchtree { link root;  link z; };
 static link NEW(Quotazione item, link p, link l, link r, int N);
 static void treePrintR(link h, link z);
 static void searchR(link h, Quotazione k, link z,BST bst);
+static void searchRQuotation(link h,datetime k,link z);
 
-void readbst(BST bstq,FILE *fp){
+void readbst(BST *bstq,FILE *fp){
     Quotazione X;
-    bstq=BSTinit();
-    while(!feof(fp)){
-        X=QuotazioneScan(fp);
-        BSTsearch(bstq,X);
+    //(*bstq)=BSTinit();
+    int dimensionitransizioni;
+    fscanf(fp,"%d\n",&dimensionitransizioni);
+    for(int i=0;i<dimensionitransizioni;i++) {
+        X = QuotazioneScan(fp);
+        BSTsearch(*bstq, X);
     }
-    treePrintR(bstq->root,bstq->z);
+    //treePrintR((*bstq)->root,(*bstq)->z);
+
 }
 
 void BSTinsert_leafI(BST bst, Quotazione x) {
@@ -68,9 +72,8 @@ void QuotationStore(Quotazione val) {
     printf("year: %d month: %d day: %d value: %.2f number: %d\n", val.data.anno, val.data.mese,val.data.giorno,val.valore,val.quantitatransiozioni);
 }
 
-static void treePrintR(link h, link z) {
-    if (h == z)
-        return;
+void treePrintR(link h, link z) {
+    if (h == z) return;
     treePrintR(h->l, z);
     QuotationStore(h->item);
     treePrintR(h->r, z);
@@ -103,4 +106,29 @@ void editnodebst(Quotazione *item, Quotazione k){
     res =  (float)(( (item->valore * (float)item->quantitatransiozioni ) + (k.valore * (float)k.quantitatransiozioni)) / ((float)item->quantitatransiozioni + (float)k.quantitatransiozioni));
     item->quantitatransiozioni=item->quantitatransiozioni+k.quantitatransiozioni;
     item->valore=res;
+}
+
+void treePrintWrapper(BST bstq){
+    treePrintR(bstq->root,bstq->z);
+}
+
+void SearchBSTQuotationFromdate(BST bst,char *date){
+    datetime tmp;
+    sscanf (date,"%d/%d/%d",&tmp.anno,&tmp.mese,&tmp.giorno);
+    searchRQuotation(bst->root,tmp,bst->z);
+}
+
+void searchRQuotation(link h,datetime k,link z){
+    int cmp;
+    if (h == z){
+        printf("La data da te inserita non è presente nel BST\n");
+        return;
+    }
+    cmp = KEYcmp(KEYget(k), KEYget(h->item.data));
+    if (cmp==0)
+        QuotationStore(h->item);
+    if (cmp==-1)
+        return searchRQuotation(h->l, k, z);
+    else
+        return searchRQuotation(h->r, k, z);
 }
