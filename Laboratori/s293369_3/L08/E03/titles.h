@@ -22,4 +22,6 @@ void list_display(LISTTITLE l);
 Title title_init();
 void SearchTitle(LISTTITLE l);
 void SearchTitleQuotationFromDate(LISTTITLE l);
+void SearchTitleQuotationMINMAXFromRangeDate(LISTTITLE l);
+void SearchTitleQuotationMINMAXFromAllPeriod(LISTTITLE l);
 #endif //UNTITLED16_TITLES_H
