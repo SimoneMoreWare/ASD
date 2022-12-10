@@ -15,13 +15,14 @@ in teoria ti basta rimuovere dei set di archi , devi trovare il numero minimo di
 #include <stdio.h>
 #include <stdlib.h>
 #include "titles.h"
-#define MAXC 11
 
 int main(void) {
     int i, cont;
     char name[MAXC];
     FILE *fin, *fout;
+    LISTTITLE l=LISTinit();
     cont = 1;
+    int flagtest1=0;
     while(cont) {
         printf("===============\n");
         printf("1.Load title from file\n");
@@ -38,18 +39,22 @@ int main(void) {
         }
         else {
             switch(i) {
-                case 1:     printf("Input file name: ");
+                case 1:
+                    flagtest1=1;
+                    printf("Input file name: ");
                     scanf("%s", name);
                     fin = fopen(name, "r");
                     if (fin == NULL) exit(-1);
-                    readfile(fin);
+                    l=readfile(fin,l);
                     fclose(fin);
                     break;
                 case 2:
-                    printf("inserire funzione 2");
+                    if(flagtest1==1) SearchTitle(l);
+                    else printf("Inserisci prima file premendo 1\n");
                     break;
                 case 3:
-                    printf("inserire funzione 3");
+                    if(flagtest1==1) SearchTitleQuotationFromDate(l);
+                    else printf("Inserisci prima file premendo 1\n");
                     break;
                 case 4:
                     printf("inserire funzione 4");
