@@ -96,7 +96,7 @@ void SearchTitle(LISTTITLE l){
     printf("Inserisci titolo da ricercare: ");
     scanf("%s",searchtitle);
 
-    while(tmp!=NULL && keygreater(searchtitle,tmp->val->name)<=0){
+    while(tmp!=NULL && keygreater(searchtitle,tmp->val->name)>=0){
         if(strcmp(searchtitle,tmp->val->name)==0){
             printf("Titolo trovato\n");
             printf("%s\n",(tmp->val->name));
@@ -117,11 +117,55 @@ void SearchTitleQuotationFromDate(LISTTITLE l){
     scanf("%s",searchtitle);
 
     while(tmp!=NULL){
-        if(strcmp(searchtitle,tmp->val->name)==0 && keygreater(searchtitle,tmp->val->name)<=0){
+        if(strcmp(searchtitle,tmp->val->name)==0 && keygreater(searchtitle,tmp->val->name)>=0){
             printf("Titolo trovato\n");
             printf("Inserisci data: ");
             scanf("%s",date);
             SearchBSTQuotationFromdate(tmp->val->quotazioni,date);
+            return;
+        }
+        (tmp)=(tmp)->next;
+    }
+    printf("Il titolo inserito non è presente nella lista\n");
+}
+
+void SearchTitleQuotationMINMAXFromRangeDate(LISTTITLE l){
+
+    char searchtitle[MAXC];
+    char date1[11];
+    char date2[11];
+    link tmp=l->head;
+
+    printf("Inserisci titolo da ricercare: ");
+    scanf("%s",searchtitle);
+
+    while(tmp!=NULL){
+        if(strcmp(searchtitle,tmp->val->name)==0 && keygreater(searchtitle,tmp->val->name)<=0){
+            printf("Titolo trovato\n");
+            printf("Inserisci data 1: ");
+            scanf("%s",date1);
+            printf("\nInserisci data 2: ");
+            scanf("%s",date2);
+            SearchBSTQuotationMINMAXFromRangeDate(tmp->val->quotazioni,date1,date2);
+            return;
+        }
+        (tmp)=(tmp)->next;
+    }
+    printf("Il titolo inserito non è presente nella lista\n");
+}
+
+void SearchTitleQuotationMINMAXFromAllPeriod(LISTTITLE l){
+
+    char searchtitle[MAXC];
+    link tmp=l->head;
+
+    printf("Inserisci titolo da ricercare: ");
+    scanf("%s",searchtitle);
+
+    while(tmp!=NULL){
+        if(strcmp(searchtitle,tmp->val->name)==0 && keygreater(searchtitle,tmp->val->name)<=0){
+            printf("Titolo trovato\n");
+            SearchBSTQuotationMINMAXFromAllPeriod(tmp->val->quotazioni);
             return;
         }
         (tmp)=(tmp)->next;
