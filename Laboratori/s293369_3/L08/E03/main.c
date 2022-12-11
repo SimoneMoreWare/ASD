@@ -19,7 +19,7 @@ in teoria ti basta rimuovere dei set di archi , devi trovare il numero minimo di
 int main(void) {
     int i, cont;
     char name[MAXC];
-    FILE *fin, *fout;
+    FILE *fin;
     LISTTITLE l=LISTinit();
     cont = 1;
     int flagtest1=0;
@@ -65,7 +65,8 @@ int main(void) {
                     else printf("Inserisci prima file premendo 1\n");
                     break;
                 case 6:
-                    printf("inserire funzione 2");
+                    if(flagtest1==1) BalanceWrapper(l);
+                    else printf("Inserisci prima file premendo 1\n");
                     break;
                 case 7:     cont = 0;
                     break;
@@ -73,5 +74,6 @@ int main(void) {
             }
         }
     }
+    LISTfree(l);
     return 0;
 }
