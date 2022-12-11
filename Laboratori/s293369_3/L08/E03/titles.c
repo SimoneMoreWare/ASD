@@ -172,3 +172,48 @@ void SearchTitleQuotationMINMAXFromAllPeriod(LISTTITLE l){
     }
     printf("Il titolo inserito non è presente nella lista\n");
 }
+
+void BalanceWrapper(LISTTITLE l){
+    char searchtitle[MAXC];
+    link tmp=l->head;
+    int altezzamassima,altezzaminima,soglia;
+    printf("Inserisci titolo da ricercare: ");
+    scanf("%s",searchtitle);
+
+    while(tmp!=NULL){
+        if(strcmp(searchtitle,tmp->val->name)==0 && keygreater(searchtitle,tmp->val->name)<=0){
+            printf("Titolo trovato\n");
+            printf("Inserisci soglia S: ");
+            scanf("%d",&soglia);
+            altezzamassima=AltezzaAlberoMassimaWrapper(tmp->val->quotazioni);
+            altezzaminima=AltezzaAlberoMinimaWrapper(tmp->val->quotazioni);
+            if(altezzamassima/altezzaminima > soglia){
+                printf("Altezza finale: %d: | Altezza mnima: %d \n",altezzamassima-1,altezzaminima-1);
+                BalanceBST(tmp->val->quotazioni);
+            }else {
+                printf("Non c'è bisogno di bilanciare\n");
+            }
+            return;
+        }
+        (tmp)=(tmp)->next;
+    }
+    printf("Il titolo inserito non è presente nella lista\n");
+}
+
+
+void TITOLOfree(Title t){
+    BSTQUOTfree(t->quotazioni);
+}
+
+void LISTfree(LISTTITLE l){
+    link x, y,tmp;
+    for(x = l->head; x != NULL; x = y){
+        tmp=x;
+        y = x->next;
+        TITOLOfree(tmp->val);
+        free(tmp);
+    }
+    free(l);
+}
+
+
