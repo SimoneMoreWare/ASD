@@ -5,15 +5,23 @@
 #include "quotazioni.h"
 
 typedef struct BSTnode* link;
-struct BSTnode { Quotazione item; link p; link l; link  r; int N; } ;
+struct BSTnode { Quotazione item; link p; link l; link  r; int N; int NumDate;};
 struct binarysearchtree { link root;  link z; };
-static link NEW(Quotazione item, link p, link l, link r, int N);
+static link NEW(Quotazione item, link p, link l, link r, int N,int NumDate);
+
 static void treePrintR(link h, link z);
 static void searchR(link h, Quotazione k, link z,BST bst);
 static void searchRQuotation(link h,datetime k,link z);
 static void InOrderRangePeriod(link h, link z,datetime date1,datetime date2,link *quotamax,link *quotamin,float *massimo, float *minimo);
 static void checkmaxmin(link h,link **quotamax, link **quotamin, float **massimo, float **minimo);
 static void InOrderAllPeriod(link h, link z,link *quotamax,link *quotamin,float *massimo, float *minimo);
+static link balanceR(link h, link z);
+static link partR(link h, int r);
+static link rotR(link h);
+static link rotL(link h);
+static int AltezzaAlberoMassima(link root);
+static int AltezzaAlberoMinima(link root);
+static void freeR(link h, link z);
 
 void readbst(BST *bstq,FILE *fp){
     Quotazione X;
@@ -31,15 +39,16 @@ void readbst(BST *bstq,FILE *fp){
 void BSTinsert_leafI(BST bst, Quotazione x) {
     link p = bst->root, h = p;
     if (bst->root == bst->z) {
-        bst->root = NEW(x, bst->z, bst->z, bst->z, x.quantitatransiozioni);
+        bst->root = NEW(x, bst->z, bst->z, bst->z, x.quantitatransiozioni,1);
         return;
     }
     while (h != bst->z) {
         p = h;
         h->N++;
+        h->NumDate++;
         h = (KEYcmp(KEYget(x.data), KEYget(h->item.data))==-1) ? h->l : h->r;
     }
-    h = NEW(x, p, bst->z, bst->z, x.quantitatransiozioni);
+    h = NEW(x, p, bst->z, bst->z, x.quantitatransiozioni,1);
     if (KEYcmp(KEYget(x.data), KEYget(p->item.data))==-1)
         p->l = h;
     else
@@ -56,7 +65,7 @@ Quotazione QuotazioneScan(FILE *fp){
 
 BST BSTinit() {
     BST bst = malloc(sizeof *bst) ;
-    bst->root = ( bst->z = NEW(QuotazionesetNull(), NULL, NULL, NULL, 0));
+    bst->root = ( bst->z = NEW(QuotazionesetNull(), NULL, NULL, NULL, 0,0));
     return bst;
 }
 
@@ -65,9 +74,9 @@ Quotazione QuotazionesetNull() {
     return val;
 }
 
-static link NEW(Quotazione item, link p, link l, link r, int N) {
+static link NEW(Quotazione item, link p, link l, link r, int N,int numdate) {
     link x = malloc(sizeof *x);
-    x->item = item; x->p = p; x->l = l; x->r = r; x->N = N;
+    x->item = item; x->p = p; x->l = l; x->r = r; x->N = N; x->NumDate=numdate;
     return x;
 }
 
@@ -207,5 +216,115 @@ static void InOrderAllPeriod(link h, link z,link *quotamax,link *quotamin,float 
     InOrderAllPeriod(h->l, z,quotamax,quotamin,massimo,minimo);
     checkmaxmin(h,&(quotamax),&(quotamin),&(massimo),&(minimo));
     InOrderAllPeriod(h->r, z,quotamax,quotamin,massimo,minimo);
+}
+
+void BalanceBST(BST bst){
+    bst->root=balanceR(bst->root,bst->z);
+}
+
+static link balanceR(link h, link z) {
+    int r;
+    if (h == NULL) return h;
+    r = (h->NumDate+1)/2-1;
+    h = partR(h, r);
+    h->l = balanceR(h->l,z);
+    h->r = balanceR(h->r,z);
+    return h;
+}
+
+link partR(link h, int r) {
+    if(h == NULL || (h->l == NULL && h->r == NULL)) return h;
+    int t;
+    if(h->l != NULL)
+        t = h->l->NumDate;
+    else
+        t = 0;
+    if ( t > r) {
+        h->l = partR(h->l, r);
+        h = rotR(h);
+    }
+    if ( t < r) {
+        h->r = partR(h->r, r-t-1);
+        h = rotL(h);
+    }
+    return h;
+}
+
+link rotR(link h) {
+    link x = h->l;
+    h->l = x->r;
+    x->r = h;
+    x->NumDate = h->NumDate;
+    //x->N=h->N;
+    h->NumDate = 1;
+    h->NumDate += (h->l) ? h->l->NumDate : 0;
+    h->NumDate += (h->r) ? h->r->NumDate : 0;
+    return x;
+}
+
+link rotL(link h) {
+    link x = h->r;
+    h->r = x->l;
+    x->l = h;
+    x->NumDate = h->NumDate;
+    h->NumDate = 1;
+    h->NumDate += (h->l) ? h->l->NumDate : 0;
+    h->NumDate += (h->r) ? h->r->NumDate : 0;
+    return x;
+}
+
+int AltezzaAlberoMassimaWrapper(BST bst){
+    return AltezzaAlberoMassima(bst->root);
+}
+
+static int AltezzaAlberoMassima(link root){
+    int u, v;
+    if (root == NULL) return 0;
+    if (root->l==NULL && root->r==NULL) return 1;
+
+    u = AltezzaAlberoMassima(root->l);
+    v = AltezzaAlberoMassima(root->r);
+
+    if (u>v){
+        //printf("Boh :%d\n",u+1);
+        return u+1;
+    }
+    //printf("Boh2 :%d\n",v+1);
+
+    return v+1;
+
+}
+
+int AltezzaAlberoMinimaWrapper(BST bst){
+    return AltezzaAlberoMinima(bst->root);
+}
+
+static int AltezzaAlberoMinima(link root){
+    int u, v;
+    if (root == NULL) return 0;
+    if (root->l==NULL && root->r==NULL) return 1;
+
+    u = AltezzaAlberoMinima(root->l);
+    v = AltezzaAlberoMinima(root->r);
+
+    if (u<=v){
+        //printf("Boh :%d\n",u+1);
+        return u+1;
+    }
+    //printf("Boh2 :%d\n",v+1);
+
+    return v+1;
+
+}
+
+static void freeR(link h, link z){
+    if(h == z)
+        return;
+    freeR(h->l, z);
+    freeR(h->r, z);
+    free(h);
+}
+void BSTQUOTfree(BST bst){
+    freeR(bst->root, bst->z);
 }
 
