@@ -24,4 +24,7 @@ void SearchTitle(LISTTITLE l);
 void SearchTitleQuotationFromDate(LISTTITLE l);
 void SearchTitleQuotationMINMAXFromRangeDate(LISTTITLE l);
 void SearchTitleQuotationMINMAXFromAllPeriod(LISTTITLE l);
+void BalanceWrapper(LISTTITLE l);
+void TITOLOfree(Title t);
+void LISTfree(LISTTITLE l);
 #endif //UNTITLED16_TITLES_H
