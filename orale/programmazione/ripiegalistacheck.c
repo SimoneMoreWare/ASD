@@ -1,3 +1,12 @@
+/*
+La funzione utilizza due puntatori, slow e fast, che scorrono la lista. Il puntatore slow avanza di un nodo alla volta,
+mentre il puntatore fast avanza di due nodi alla volta. Se i due puntatori si incontrano, significa che c'è un ciclo nella lista. 
+A questo punto, la funzione riposiziona il puntatore slow all'inizio della lista e li fa scorrere entrambi di un nodo alla volta finché non 
+si incontrano di nuovo. Il nodo in cui si incontrano è il punto di ripiegamento della lista.
+
+Se la lista non ha un ciclo, i due puntatori si fermeranno alla fine della lista e la funzione restituirà NULL.
+*/
+
 #include <stdio.h>
 #include <stdlib.h>
 
