@@ -1,0 +1,106 @@
+# depslib dependency file v1.0
+1426846432 source:c:\users\paolo\current\didattica\02mno algoritmi e programmazione\aa 2015 16\adt i categoria\priority queue\pq item\item.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<math.h>
+	"Item.h"
+
+1426846432 c:\users\paolo\current\didattica\02mno algoritmi e programmazione\aa 2015 16\adt i categoria\priority queue\pq item\item.h
+
+1426846475 source:c:\users\paolo\current\didattica\02mno algoritmi e programmazione\aa 2015 16\adt i categoria\priority queue\pq item\pq.c
+	<stdlib.h>
+	"Item.h"
+	"PQ.h"
+
+1426598362 c:\users\paolo\current\didattica\02mno algoritmi e programmazione\aa 2015 16\adt i categoria\priority queue\pq item\pq.h
+
+1426603649 source:c:\users\paolo\current\didattica\02mno algoritmi e programmazione\aa 2015 16\adt i categoria\priority queue\pq item\main.c
+	<stdio.h>
+	<stdlib.h>
+	"Item.h"
+	"PQ.h"
+
+1426846432 source:c:\users\paolo\current\didattica\02mno algoritmi e programmazione\aa 2015 16\adt i categoria\priority queue\pqitem\item.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<math.h>
+	"Item.h"
+
+1426846432 c:\users\paolo\current\didattica\02mno algoritmi e programmazione\aa 2015 16\adt i categoria\priority queue\pqitem\item.h
+
+1426603649 source:c:\users\paolo\current\didattica\02mno algoritmi e programmazione\aa 2015 16\adt i categoria\priority queue\pqitem\main.c
+	<stdio.h>
+	<stdlib.h>
+	"Item.h"
+	"PQ.h"
+
+1426598362 c:\users\paolo\current\didattica\02mno algoritmi e programmazione\aa 2015 16\adt i categoria\priority queue\pqitem\pq.h
+
+1426846475 source:c:\users\paolo\current\didattica\02mno algoritmi e programmazione\aa 2015 16\adt i categoria\priority queue\pqitem\pq.c
+	<stdlib.h>
+	"Item.h"
+	"PQ.h"
+
+1426842834 source:c:\users\paolo\current\didattica\03mno algoritmi e programmazione\aa 2016 17\adt i categoria\priority queue\pqitem\item.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<math.h>
+	"Item.h"
+
+1426842834 c:\users\paolo\current\didattica\03mno algoritmi e programmazione\aa 2016 17\adt i categoria\priority queue\pqitem\item.h
+
+1426600050 source:c:\users\paolo\current\didattica\03mno algoritmi e programmazione\aa 2016 17\adt i categoria\priority queue\pqitem\main.c
+	<stdio.h>
+	<stdlib.h>
+	"Item.h"
+	"PQ.h"
+
+1426594764 c:\users\paolo\current\didattica\03mno algoritmi e programmazione\aa 2016 17\adt i categoria\priority queue\pqitem\pq.h
+
+1512988877 source:c:\users\paolo\current\didattica\03mno algoritmi e programmazione\aa 2017 18\adt i categoria\priority queues\pqitem\main.c
+	<stdio.h>
+	<stdlib.h>
+	"Item.h"
+	"PQ.h"
+
+1512988566 c:\users\paolo\current\didattica\03mno algoritmi e programmazione\aa 2017 18\adt i categoria\priority queues\pqitem\item.h
+
+1426594764 c:\users\paolo\current\didattica\03mno algoritmi e programmazione\aa 2017 18\adt i categoria\priority queues\pqitem\pq.h
+
+1480504236 source:c:\users\paolo\current\didattica\03mno algoritmi e programmazione\aa 2017 18\adt i categoria\priority queues\pqitem\pq.c
+	<stdlib.h>
+	"Item.h"
+	"PQ.h"
+
+1512988816 source:c:\users\paolo\current\didattica\03mno algoritmi e programmazione\aa 2017 18\adt i categoria\priority queues\pqitem\item.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<math.h>
+	"Item.h"
+
+1538036207 source:c:\users\paolo\current\didattica\03mno algoritmi e programmazione\aa 2018 19\adt i categoria\priority queues\pqitem\pq.c
+	<stdlib.h>
+	"Item.h"
+	"PQ.h"
+
+1538125228 c:\users\paolo\current\didattica\03mno algoritmi e programmazione\aa 2018 19\adt i categoria\priority queues\pqitem\item.h
+
+1537872547 c:\users\paolo\current\didattica\03mno algoritmi e programmazione\aa 2018 19\adt i categoria\priority queues\pqitem\pq.h
+
+1538125212 source:c:\users\paolo\current\didattica\03mno algoritmi e programmazione\aa 2018 19\adt i categoria\priority queues\pqitem\item.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<math.h>
+	"Item.h"
+
+1537872715 source:c:\users\paolo\current\didattica\03mno algoritmi e programmazione\aa 2018 19\adt i categoria\priority queues\pqitem\main.c
+	<stdio.h>
+	<stdlib.h>
+	"Item.h"
+	"PQ.h"
+
