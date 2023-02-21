@@ -1,0 +1,172 @@
+# depslib dependency file v1.0
+1370417718 source:c:\users\paolo camurati\current\didattica\02mno algoritmi e programmazione\aa 2013 14\lucidi 2013 14\11 gli alberi binari di ricerca\ibst\item.c
+	<stdio.h>
+	<stdlib.h>
+	"Item.h"
+
+1370417718 c:\users\paolo camurati\current\didattica\02mno algoritmi e programmazione\aa 2013 14\lucidi 2013 14\11 gli alberi binari di ricerca\ibst\item.h
+
+1370417727 source:c:\users\paolo camurati\current\didattica\02mno algoritmi e programmazione\aa 2013 14\lucidi 2013 14\11 gli alberi binari di ricerca\ibst\main.c
+	<stdio.h>
+	<stdlib.h>
+	"Item.h"
+	"IBST.h"
+
+1370417718 c:\users\paolo camurati\current\didattica\02mno algoritmi e programmazione\aa 2013 14\lucidi 2013 14\11 gli alberi binari di ricerca\ibst\ibst.h
+
+1370418142 source:c:\users\paolo camurati\current\didattica\02mno algoritmi e programmazione\aa 2013 14\lucidi 2013 14\11 gli alberi binari di ricerca\ibst\ibst.c
+	<stdlib.h>
+	<stdio.h>
+	"Item.h"
+	"IBST.h"
+
+1370417718 source:c:\users\paolo camurati\current\didattica\02mno algoritmi e programmazione\aa 2013 14\lucidi 2013 14\11 gli alberi binari di ricerca\tree\ibst\item.c
+	<stdio.h>
+	<stdlib.h>
+	"Item.h"
+
+1370528526 c:\users\paolo camurati\current\didattica\02mno algoritmi e programmazione\aa 2013 14\lucidi 2013 14\11 gli alberi binari di ricerca\tree\ibst\item.h
+
+1370528526 source:c:\users\paolo camurati\current\didattica\02mno algoritmi e programmazione\aa 2013 14\lucidi 2013 14\11 gli alberi binari di ricerca\tree\ibst\main.c
+	<stdio.h>
+	<stdlib.h>
+	"Item.h"
+	"IBST.h"
+
+1370417718 c:\users\paolo camurati\current\didattica\02mno algoritmi e programmazione\aa 2013 14\lucidi 2013 14\11 gli alberi binari di ricerca\tree\ibst\ibst.h
+
+1370528628 source:c:\users\paolo camurati\current\didattica\02mno algoritmi e programmazione\aa 2013 14\lucidi 2013 14\11 gli alberi binari di ricerca\tree\ibst\ibst.c
+	<stdlib.h>
+	<stdio.h>
+	"Item.h"
+	"IBST.h"
+
+1370417718 source:c:\users\paolo camurati\current\didattica\02mno algoritmi e programmazione\aa 2013 14\adt i categoria\tree\ibst\item.c
+	<stdio.h>
+	<stdlib.h>
+	"Item.h"
+
+1371113950 c:\users\paolo camurati\current\didattica\02mno algoritmi e programmazione\aa 2013 14\adt i categoria\tree\ibst\item.h
+
+1370528526 source:c:\users\paolo camurati\current\didattica\02mno algoritmi e programmazione\aa 2013 14\adt i categoria\tree\ibst\main.c
+	<stdio.h>
+	<stdlib.h>
+	"Item.h"
+	"IBST.h"
+
+1371113950 c:\users\paolo camurati\current\didattica\02mno algoritmi e programmazione\aa 2013 14\adt i categoria\tree\ibst\ibst.h
+
+1370528628 source:c:\users\paolo camurati\current\didattica\02mno algoritmi e programmazione\aa 2013 14\adt i categoria\tree\ibst\ibst.c
+	<stdlib.h>
+	<stdio.h>
+	"Item.h"
+	"IBST.h"
+
+1426144502 source:c:\users\paolo\current\didattica\02mno algoritmi e programmazione\aa 2015 16\adt i categoria\tree\ibst\ibst.c
+	<stdlib.h>
+	<stdio.h>
+	"Item.h"
+	"IBST.h"
+
+1426144502 c:\users\paolo\current\didattica\02mno algoritmi e programmazione\aa 2015 16\adt i categoria\tree\ibst\item.h
+
+1426067644 c:\users\paolo\current\didattica\02mno algoritmi e programmazione\aa 2015 16\adt i categoria\tree\ibst\ibst.h
+
+1426144502 source:c:\users\paolo\current\didattica\02mno algoritmi e programmazione\aa 2015 16\adt i categoria\tree\ibst\item.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<math.h>
+	"Item.h"
+
+1426069449 source:c:\users\paolo\current\didattica\02mno algoritmi e programmazione\aa 2015 16\adt i categoria\tree\ibst\main.c
+	<stdio.h>
+	<stdlib.h>
+	"Item.h"
+	"IBST.h"
+
+1426140904 source:c:\users\paolo\current\didattica\03mno algoritmi e programmazione\aa 2016 17\adt i categoria\tree\ibst\ibst.c
+	<stdlib.h>
+	<stdio.h>
+	"Item.h"
+	"IBST.h"
+
+1426140904 c:\users\paolo\current\didattica\03mno algoritmi e programmazione\aa 2016 17\adt i categoria\tree\ibst\item.h
+
+1426064046 c:\users\paolo\current\didattica\03mno algoritmi e programmazione\aa 2016 17\adt i categoria\tree\ibst\ibst.h
+
+1426140904 source:c:\users\paolo\current\didattica\03mno algoritmi e programmazione\aa 2016 17\adt i categoria\tree\ibst\item.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<math.h>
+	"Item.h"
+
+1426065850 source:c:\users\paolo\current\didattica\03mno algoritmi e programmazione\aa 2016 17\adt i categoria\tree\ibst\main.c
+	<stdio.h>
+	<stdlib.h>
+	"Item.h"
+	"IBST.h"
+
+1426140904 source:c:\users\paolo\current\didattica\03mno algoritmi e programmazione\aa 2017 18\adt i categoria\trees\ibst\ibst.c
+	<stdlib.h>
+	<stdio.h>
+	"Item.h"
+	"IBST.h"
+
+1512811044 c:\users\paolo\current\didattica\03mno algoritmi e programmazione\aa 2017 18\adt i categoria\trees\ibst\item.h
+
+1426064046 c:\users\paolo\current\didattica\03mno algoritmi e programmazione\aa 2017 18\adt i categoria\trees\ibst\ibst.h
+
+1426065850 source:c:\users\paolo\current\didattica\03mno algoritmi e programmazione\aa 2017 18\adt i categoria\trees\ibst\main.c
+	<stdio.h>
+	<stdlib.h>
+	"Item.h"
+	"IBST.h"
+
+1426069450 source:d:\users\paolo\current\didattica\03mno algoritmi e programmazione\aa 2018 19\adt i categoria\trees\ibst\main.c
+	<stdio.h>
+	<stdlib.h>
+	"Item.h"
+	"IBST.h"
+
+1526984131 d:\users\paolo\current\didattica\03mno algoritmi e programmazione\aa 2018 19\adt i categoria\trees\ibst\item.h
+
+1426067646 d:\users\paolo\current\didattica\03mno algoritmi e programmazione\aa 2018 19\adt i categoria\trees\ibst\ibst.h
+
+1526984131 source:d:\users\paolo\current\didattica\03mno algoritmi e programmazione\aa 2018 19\adt i categoria\trees\ibst\ibst.c
+	<stdlib.h>
+	<stdio.h>
+	"Item.h"
+	"IBST.h"
+
+1526984131 source:d:\users\paolo\current\didattica\03mno algoritmi e programmazione\aa 2018 19\adt i categoria\trees\ibst\item.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<math.h>
+	"Item.h"
+
+1537455120 source:c:\users\paolo\current\didattica\03mno algoritmi e programmazione\aa 2018 19\adt i categoria\trees\ibst\ibst.c
+	<stdlib.h>
+	<stdio.h>
+	"Item.h"
+	"IBST.h"
+
+1537350620 c:\users\paolo\current\didattica\03mno algoritmi e programmazione\aa 2018 19\adt i categoria\trees\ibst\item.h
+
+1537439202 c:\users\paolo\current\didattica\03mno algoritmi e programmazione\aa 2018 19\adt i categoria\trees\ibst\ibst.h
+
+1537350911 source:c:\users\paolo\current\didattica\03mno algoritmi e programmazione\aa 2018 19\adt i categoria\trees\ibst\item.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<math.h>
+	"Item.h"
+
+1537350601 source:c:\users\paolo\current\didattica\03mno algoritmi e programmazione\aa 2018 19\adt i categoria\trees\ibst\main.c
+	<stdio.h>
+	<stdlib.h>
+	"Item.h"
+	"IBST.h"
+
