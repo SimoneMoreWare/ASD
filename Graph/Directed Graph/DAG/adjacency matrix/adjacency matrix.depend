@@ -1,0 +1,75 @@
+# depslib dependency file v1.0
+1516465672 source:c:\users\paolo\current\didattica\03mno algoritmi e programmazione\aa 2017 18\adt i categoria\graphs\directed graph\dag\adjacency matrix\dag.c
+	<stdlib.h>
+	<stdio.h>
+	<string.h>
+	"Dag.h"
+
+1516463029 c:\users\paolo\current\didattica\03mno algoritmi e programmazione\aa 2017 18\adt i categoria\graphs\directed graph\dag\adjacency matrix\dag.h
+	"Edge.h"
+	"ST.h"
+
+1427718986 c:\users\paolo\current\didattica\03mno algoritmi e programmazione\aa 2017 18\adt i categoria\graphs\directed graph\dag\adjacency matrix\edge.h
+
+1427461124 c:\users\paolo\current\didattica\03mno algoritmi e programmazione\aa 2017 18\adt i categoria\graphs\directed graph\dag\adjacency matrix\st.h
+
+1427533372 source:c:\users\paolo\current\didattica\03mno algoritmi e programmazione\aa 2017 18\adt i categoria\graphs\directed graph\dag\adjacency matrix\edge.c
+	<stdio.h>
+	<stdlib.h>
+	"Edge.h"
+
+1427461444 source:c:\users\paolo\current\didattica\03mno algoritmi e programmazione\aa 2017 18\adt i categoria\graphs\directed graph\dag\adjacency matrix\st.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"ST.h"
+
+1516463029 source:c:\users\paolo\current\didattica\03mno algoritmi e programmazione\aa 2017 18\adt i categoria\graphs\directed graph\dag\adjacency matrix\main.c
+	<stdio.h>
+	<stdlib.h>
+	"Dag.h"
+
+1532161189 source:c:\users\paolo\current\didattica\03mno algoritmi e programmazione\aa 2018 19\adt i categoria\graphs\directed graph\dag\adjacency matrix\dag.c
+	<stdlib.h>
+	<stdio.h>
+	<string.h>
+	"DAG.h"
+
+1532161177 c:\users\paolo\current\didattica\03mno algoritmi e programmazione\aa 2018 19\adt i categoria\graphs\directed graph\dag\adjacency matrix\dag.h
+	"ST.h"
+
+1532096532 c:\users\paolo\current\didattica\03mno algoritmi e programmazione\aa 2018 19\adt i categoria\graphs\directed graph\dag\adjacency matrix\st.h
+
+1532161195 source:c:\users\paolo\current\didattica\03mno algoritmi e programmazione\aa 2018 19\adt i categoria\graphs\directed graph\dag\adjacency matrix\main.c
+	<stdio.h>
+	<stdlib.h>
+	"DAG.h"
+
+1532098200 source:c:\users\paolo\current\didattica\03mno algoritmi e programmazione\aa 2018 19\adt i categoria\graphs\directed graph\dag\adjacency matrix\st.c
+	<stdlib.h>
+	<stdio.h>
+	<string.h>
+	"ST.h"
+
+1532157595 source:c:\users\paolo\current\didattica\03mno algoritmi e programmazione\aa 2018 19\adt i categoria\graphs\directed graphs\dag\adjacency matrix\main.c
+	<stdio.h>
+	<stdlib.h>
+	"DAG.h"
+
+1532157577 c:\users\paolo\current\didattica\03mno algoritmi e programmazione\aa 2018 19\adt i categoria\graphs\directed graphs\dag\adjacency matrix\dag.h
+	"ST.h"
+
+1532092932 c:\users\paolo\current\didattica\03mno algoritmi e programmazione\aa 2018 19\adt i categoria\graphs\directed graphs\dag\adjacency matrix\st.h
+
+1532094600 source:c:\users\paolo\current\didattica\03mno algoritmi e programmazione\aa 2018 19\adt i categoria\graphs\directed graphs\dag\adjacency matrix\st.c
+	<stdlib.h>
+	<stdio.h>
+	<string.h>
+	"ST.h"
+
+1537946828 source:c:\users\paolo\current\didattica\03mno algoritmi e programmazione\aa 2018 19\adt i categoria\graphs\directed graphs\dag\adjacency matrix\dag.c
+	<stdlib.h>
+	<stdio.h>
+	<string.h>
+	"DAG.h"
+
