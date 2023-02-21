@@ -1,0 +1,31 @@
+28
+AOI Ancona, Marche
+BRI Bari, Palese
+BGY Bergamo, Orio al Serio
+BLQ Bologna, G. Marconi
+ZBN Bolzano, Dolomiti
+MON Brescia, Montichiari
+BDS Brindisi, Casale
+CAG Cagliari, Elmas
+CTA Catania, Fontanarossa
+CUF Cuneo, Levaldigi
+FLR Firenze, Amerigo Vespucci
+GRS Grosseto, Baccarini
+LCC Lecce, Lepore
+LIN Milano, Linate
+MXP Milano, Malpensa
+NAP Napoli, Capodichino
+PMO Palermo, Falcone Borsellino
+PEG Perugia, S. Egidip
+PSR Pescara, Aeroporto d'Abruzzo
+PSA Pisa, G. Galilei
+CIA Roma, Ciampino
+FCO Roma, Fiumicino
+QXE Salerno, Pontecagnano
+TAR Taranto, Grottaglie
+TPS Trapani, Birgi
+TRN Torino, S. Pertini
+VCE Venezia, Marco Polo
+VRN Verona, Catullo
+
+
