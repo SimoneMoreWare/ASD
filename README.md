@@ -30,6 +30,9 @@ https://www.youtube.com/watch?v=i56B0xN7jSc
 * https://brilliant.org/wiki/recursive-backtracking/
 * https://www.youtube.com/watch?v=Zq4upTEaQyM
 
+# slide unite
+https://github.com/SimoneMoreWare/ASD/blob/main/asdslide.pdf
+
 # esami
 * https://github.com/SimoneMoreWare/ASD/tree/main/temidiesame
 
