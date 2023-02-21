@@ -1,0 +1,11 @@
+5 Salumi Battuto Carpaccio Cozze_Marinara Bruschetta
+
+4 Pappardelle_Ragu Timballo Bucatini_Amatriciana Spaghetti_Carbonara
+
+3 Spaghetti_Vongole Penne_Zucchine_Gamberetti Gnocchetti_Nero_Seppia
+
+6 Spezzatino Stinco Pollo Cotoletta Costine Fiorentina
+
+8 Pesce_Spada Salmone_Affumicato Tonno Branzino Polpo Astice Aragosta Fritto_Misto
+
+7 Pannacotta Profiteroles Tiramisu Zeppole Pastiera Crostata Macedonia
