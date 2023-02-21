@@ -1,0 +1,81 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include "Item.h"
+#include "ST.h"
+
+int main(void) {
+  int maxN;
+  Item item;
+  Key k;
+  int i,  cont;
+  ST st;
+  printf("Maximum number of items you plan to insert: ");
+  scanf("%d", &maxN);
+
+  st = STinit(maxN);
+  cont = 1;
+  while(cont) {
+    printf("\nOperations on hash tables\n");
+    printf("===============\n");
+    printf("1.Insert\n");
+    printf("2.Search item with given key\n");
+    printf("3.Delete item with given key\n");
+    printf("4.Number of entries\n");
+    printf("5.Display\n");
+    printf("6.Destroy\n");
+    printf("7.Exit\n");
+    printf("Enter your choice : ");
+    if(scanf("%d",&i)<=0) {
+      printf("Integers only!\n");
+      exit(0);
+    }
+    else {
+      switch(i) {
+                case 1:     printf("Enter item: \n");
+                            item = ITEMscan();
+                            if (ITEMcheckNull(STsearch(st, KEYget(&item))))
+                              STinsert(st, item);
+                            break;
+                case 2:     printf("Enter item: \n");
+                            item = ITEMscan();
+                            if (ITEMcheckNull(STsearch(st, KEYget(&item))))
+                              printf("key not found!\n");
+                            else
+                              printf("key found!\n");
+                            break;
+                case 3:     printf("Enter item: \n");
+                            item = ITEMscan();
+                            k = KEYget(&item);
+                            if (ITEMcheckNull(STsearch(st, k)))
+                              printf("data not found!\n");
+                            else
+                              STdelete(st, k);
+                            break;
+                case 4:     if (st==NULL)
+                              printf("Symbol table doesn't exist!\n");
+                            else if (STempty(st)==1)
+                              printf("\nSymbol Table empty!\n");
+                            else
+                              printf("\nSymbol Table currently contains %d entries\n", STcount(st));
+                            break;
+                case 5:     if (st==NULL)
+                              printf("Symbol table doesn't exist!\n");
+                            else
+                              if (STempty(st)==1)
+                                printf("\nSymbol Table empty!\n");
+                            else
+                              STdisplay(st);
+                            break;
+                case 6:     printf("\nSymbol Table destroyed!\n");
+                            STfree(st);
+                            cont = 0;
+                            break;
+                case 7:     cont = 0;
+                            break;
+                default:    printf("Invalid option\n");
+            }
+      }
+    }
+  return 0;
+}

@@ -1,0 +1,386 @@
+# depslib dependency file v1.0
+1352458761 source:c:\users\paolo camurati\current\didattica\02mno algoritmi e programmazione\aa 2012 13\lucidi 2011 12\08 le tabelle di simboli\symbol table\main.c
+	<stdio.h>
+	<stdlib.h>
+	"Item.h"
+	"ST.h"
+
+1342612344 c:\users\paolo camurati\current\didattica\02mno algoritmi e programmazione\aa 2012 13\lucidi 2011 12\08 le tabelle di simboli\symbol table\item.h
+
+1178951614 c:\users\paolo camurati\current\didattica\02mno algoritmi e programmazione\aa 2012 13\lucidi 2011 12\08 le tabelle di simboli\symbol table\st.h
+
+1352459095 source:c:\users\paolo camurati\current\didattica\02mno algoritmi e programmazione\aa 2012 13\lucidi 2011 12\08 le tabelle di simboli\symbol table\st.c
+	<stdlib.h>
+	"Item.h"
+	"ST.h"
+
+1352459411 source:c:\users\paolo camurati\current\didattica\02mno algoritmi e programmazione\aa 2012 13\lucidi 2011 12\08 le tabelle di simboli\symbol table\item.c
+	<stdio.h>
+	<stdlib.h>
+	"Item.h"
+
+1352459095 source:c:\users\paolo camurati\current\didattica\02mno algoritmi e programmazione\aa 2012 13\lucidi 2011 12\08 le tabelle di simboli\st con tabella ad accesso diretto\st.c
+	<stdlib.h>
+	"Item.h"
+	"ST.h"
+
+1352460745 c:\users\paolo camurati\current\didattica\02mno algoritmi e programmazione\aa 2012 13\lucidi 2011 12\08 le tabelle di simboli\st con tabella ad accesso diretto\item.h
+
+1178951614 c:\users\paolo camurati\current\didattica\02mno algoritmi e programmazione\aa 2012 13\lucidi 2011 12\08 le tabelle di simboli\st con tabella ad accesso diretto\st.h
+
+1352460308 source:c:\users\paolo camurati\current\didattica\02mno algoritmi e programmazione\aa 2012 13\lucidi 2011 12\08 le tabelle di simboli\st con tabella ad accesso diretto\main.c
+	<stdio.h>
+	<stdlib.h>
+	"Item.h"
+	"ST.h"
+
+1352459411 source:c:\users\paolo camurati\current\didattica\02mno algoritmi e programmazione\aa 2012 13\lucidi 2011 12\08 le tabelle di simboli\st con tabella ad accesso diretto\item.c
+	<stdio.h>
+	<stdlib.h>
+	"Item.h"
+
+1352460849 source:c:\users\paolo camurati\current\didattica\02mno algoritmi e programmazione\aa 2012 13\lucidi 2012 13\09 le tabelle di simboli\st con tabella ad accesso diretto\st.c
+	<stdlib.h>
+	"Item.h"
+	"ST.h"
+
+1352717392 c:\users\paolo camurati\current\didattica\02mno algoritmi e programmazione\aa 2012 13\lucidi 2012 13\09 le tabelle di simboli\st con tabella ad accesso diretto\item.h
+
+1178951614 c:\users\paolo camurati\current\didattica\02mno algoritmi e programmazione\aa 2012 13\lucidi 2012 13\09 le tabelle di simboli\st con tabella ad accesso diretto\st.h
+
+1352459411 source:c:\users\paolo camurati\current\didattica\02mno algoritmi e programmazione\aa 2012 13\lucidi 2012 13\09 le tabelle di simboli\st con tabella ad accesso diretto\item.c
+	<stdio.h>
+	<stdlib.h>
+	"Item.h"
+
+1352717465 source:c:\users\paolo camurati\current\didattica\02mno algoritmi e programmazione\aa 2012 13\lucidi 2012 13\09 le tabelle di simboli\st con tabella ad accesso diretto\main.c
+	<stdio.h>
+	<stdlib.h>
+	"Item.h"
+	"ST.h"
+
+1341831516 source:c:\users\paolo camurati\current\didattica\02mno algoritmi e programmazione\aa 2012 13\lucidi 2012 13\09 le tabelle di simboli\st con array ordinato\st.c
+	<stdlib.h>
+	"Item.h"
+	"ST.h"
+
+1352717392 c:\users\paolo camurati\current\didattica\02mno algoritmi e programmazione\aa 2012 13\lucidi 2012 13\09 le tabelle di simboli\st con array ordinato\item.h
+
+1178951614 c:\users\paolo camurati\current\didattica\02mno algoritmi e programmazione\aa 2012 13\lucidi 2012 13\09 le tabelle di simboli\st con array ordinato\st.h
+
+1352717465 source:c:\users\paolo camurati\current\didattica\02mno algoritmi e programmazione\aa 2012 13\lucidi 2012 13\09 le tabelle di simboli\st con array ordinato\main.c
+	<stdio.h>
+	<stdlib.h>
+	"Item.h"
+	"ST.h"
+
+1352459411 source:c:\users\paolo camurati\current\didattica\02mno algoritmi e programmazione\aa 2012 13\lucidi 2012 13\09 le tabelle di simboli\st con array ordinato\item.c
+	<stdio.h>
+	<stdlib.h>
+	"Item.h"
+
+1341831402 source:c:\users\paolo camurati\current\didattica\02mno algoritmi e programmazione\aa 2012 13\lucidi 2012 13\09 le tabelle di simboli\st con lista  non ordinata\st.c
+	<stdlib.h>
+	"Item.h"
+	"ST.h"
+
+1352717392 c:\users\paolo camurati\current\didattica\02mno algoritmi e programmazione\aa 2012 13\lucidi 2012 13\09 le tabelle di simboli\st con lista  non ordinata\item.h
+
+1178951614 c:\users\paolo camurati\current\didattica\02mno algoritmi e programmazione\aa 2012 13\lucidi 2012 13\09 le tabelle di simboli\st con lista  non ordinata\st.h
+
+1352717465 source:c:\users\paolo camurati\current\didattica\02mno algoritmi e programmazione\aa 2012 13\lucidi 2012 13\09 le tabelle di simboli\st con lista  non ordinata\main.c
+	<stdio.h>
+	<stdlib.h>
+	"Item.h"
+	"ST.h"
+
+1352459411 source:c:\users\paolo camurati\current\didattica\02mno algoritmi e programmazione\aa 2012 13\lucidi 2012 13\09 le tabelle di simboli\st con lista  non ordinata\item.c
+	<stdio.h>
+	<stdlib.h>
+	"Item.h"
+
+1354206318 source:d:\didattica\02mno algoritmi e programmazione\aa 2012 13\lucidi 2012 13\11 le tabelle di hash\hash con linear chaining\main.c
+	<stdio.h>
+	<stdlib.h>
+	"Item.h"
+	"ST.h"
+
+1354205648 d:\didattica\02mno algoritmi e programmazione\aa 2012 13\lucidi 2012 13\11 le tabelle di hash\hash con linear chaining\item.h
+
+1354205890 d:\didattica\02mno algoritmi e programmazione\aa 2012 13\lucidi 2012 13\11 le tabelle di hash\hash con linear chaining\st.h
+
+1354206496 source:d:\didattica\02mno algoritmi e programmazione\aa 2012 13\lucidi 2012 13\11 le tabelle di hash\hash con linear chaining\item.c
+	<stdio.h>
+	<stdlib.h>
+	"Item.h"
+
+1354206444 source:d:\didattica\02mno algoritmi e programmazione\aa 2012 13\lucidi 2012 13\11 le tabelle di hash\hash con linear chaining\st.c
+	<stdlib.h>
+	"Item.h"
+	"ST.h"
+
+1354206628 source:c:\users\paolo camurati\current\didattica\02mno algoritmi e programmazione\aa 2012 13\lucidi 2012 13\11 le tabelle di hash\hash con linear chaining\main.c
+	<stdio.h>
+	<stdlib.h>
+	"Item.h"
+	"ST.h"
+
+1354205648 c:\users\paolo camurati\current\didattica\02mno algoritmi e programmazione\aa 2012 13\lucidi 2012 13\11 le tabelle di hash\hash con linear chaining\item.h
+
+1354205890 c:\users\paolo camurati\current\didattica\02mno algoritmi e programmazione\aa 2012 13\lucidi 2012 13\11 le tabelle di hash\hash con linear chaining\st.h
+
+1354206496 source:c:\users\paolo camurati\current\didattica\02mno algoritmi e programmazione\aa 2012 13\lucidi 2012 13\11 le tabelle di hash\hash con linear chaining\item.c
+	<stdio.h>
+	<stdlib.h>
+	"Item.h"
+
+1354262311 source:c:\users\paolo camurati\current\didattica\02mno algoritmi e programmazione\aa 2012 13\lucidi 2012 13\11 le tabelle di hash\hash con linear chaining\st.c
+	<stdio.h>
+	<stdlib.h>
+	"Item.h"
+	"ST.h"
+
+1354284035 source:c:\users\paolo camurati\current\didattica\02mno algoritmi e programmazione\aa 2012 13\lucidi 2012 13\11 le tabelle di hash\hash con open addressing e linear probing\main.c
+	<stdio.h>
+	<stdlib.h>
+	"Item.h"
+	"ST.h"
+
+1354205648 c:\users\paolo camurati\current\didattica\02mno algoritmi e programmazione\aa 2012 13\lucidi 2012 13\11 le tabelle di hash\hash con open addressing e linear probing\item.h
+
+1354205890 c:\users\paolo camurati\current\didattica\02mno algoritmi e programmazione\aa 2012 13\lucidi 2012 13\11 le tabelle di hash\hash con open addressing e linear probing\st.h
+
+1354206496 source:c:\users\paolo camurati\current\didattica\02mno algoritmi e programmazione\aa 2012 13\lucidi 2012 13\11 le tabelle di hash\hash con open addressing e linear probing\item.c
+	<stdio.h>
+	<stdlib.h>
+	"Item.h"
+
+1354285748 source:c:\users\paolo camurati\current\didattica\02mno algoritmi e programmazione\aa 2012 13\lucidi 2012 13\11 le tabelle di hash\hash con open addressing e linear probing\st.c
+	<stdio.h>
+	<stdlib.h>
+	"Item.h"
+	"ST.h"
+
+1367308551 source:c:\users\paolo camurati\current\didattica\02mno algoritmi e programmazione\aa 2013 14\lucidi 2013 14\12 le tabelle di hash\hash con open addressing e linear probing\st.c
+	<stdio.h>
+	<stdlib.h>
+	"Item.h"
+	"ST.h"
+
+1367305533 c:\users\paolo camurati\current\didattica\02mno algoritmi e programmazione\aa 2013 14\lucidi 2013 14\12 le tabelle di hash\hash con open addressing e linear probing\item.h
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
+1367239481 c:\users\paolo camurati\current\didattica\02mno algoritmi e programmazione\aa 2013 14\lucidi 2013 14\12 le tabelle di hash\hash con open addressing e linear probing\st.h
+
+1367304908 source:c:\users\paolo camurati\current\didattica\02mno algoritmi e programmazione\aa 2013 14\lucidi 2013 14\12 le tabelle di hash\hash con open addressing e linear probing\main.c
+	<stdio.h>
+	<stdlib.h>
+	"Item.h"
+	"ST.h"
+
+1367244245 source:c:\users\paolo camurati\current\didattica\02mno algoritmi e programmazione\aa 2013 14\lucidi 2013 14\12 le tabelle di hash\hash con open addressing e linear probing\item.c
+	<stdio.h>
+	<stdlib.h>
+	"Item.h"
+
+1367304908 source:c:\users\paolo camurati\current\didattica\02mno algoritmi e programmazione\aa 2013 14\lucidi 2013 14\12 le tabelle di hash\hash con open addressing e quadratic probing\main.c
+	<stdio.h>
+	<stdlib.h>
+	"Item.h"
+	"ST.h"
+
+1367305533 c:\users\paolo camurati\current\didattica\02mno algoritmi e programmazione\aa 2013 14\lucidi 2013 14\12 le tabelle di hash\hash con open addressing e quadratic probing\item.h
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
+1367239481 c:\users\paolo camurati\current\didattica\02mno algoritmi e programmazione\aa 2013 14\lucidi 2013 14\12 le tabelle di hash\hash con open addressing e quadratic probing\st.h
+
+1367244245 source:c:\users\paolo camurati\current\didattica\02mno algoritmi e programmazione\aa 2013 14\lucidi 2013 14\12 le tabelle di hash\hash con open addressing e quadratic probing\item.c
+	<stdio.h>
+	<stdlib.h>
+	"Item.h"
+
+1367318526 source:c:\users\paolo camurati\current\didattica\02mno algoritmi e programmazione\aa 2013 14\lucidi 2013 14\12 le tabelle di hash\hash con open addressing e quadratic probing\st.c
+	<stdio.h>
+	<stdlib.h>
+	"Item.h"
+	"ST.h"
+
+1371121140 source:c:\users\paolo camurati\current\didattica\02mno algoritmi e programmazione\aa 2013 14\quasi adt\hashtable\hash con open addressing e quadratic probing\st.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"Item.h"
+	"ST.h"
+
+1371114134 c:\users\paolo camurati\current\didattica\02mno algoritmi e programmazione\aa 2013 14\quasi adt\hashtable\hash con open addressing e quadratic probing\item.h
+
+1371114134 c:\users\paolo camurati\current\didattica\02mno algoritmi e programmazione\aa 2013 14\quasi adt\hashtable\hash con open addressing e quadratic probing\st.h
+
+1371117710 source:c:\users\paolo camurati\current\didattica\02mno algoritmi e programmazione\aa 2013 14\quasi adt\hashtable\hash con open addressing e quadratic probing\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<math.h>
+	"Item.h"
+	"ST.h"
+
+1370434267 source:c:\users\paolo camurati\current\didattica\02mno algoritmi e programmazione\aa 2013 14\quasi adt\hashtable\hash con open addressing e quadratic probing\item.c
+	<stdio.h>
+	<string.h>
+	"Item.h"
+
+1370434267 source:c:\users\paolo camurati\current\didattica\02mno algoritmi e programmazione\aa 2013 14\adt i categoria\hash table\hash con open addressing e quadratic probing\item.c
+	<stdio.h>
+	<string.h>
+	"Item.h"
+
+1371114134 c:\users\paolo camurati\current\didattica\02mno algoritmi e programmazione\aa 2013 14\adt i categoria\hash table\hash con open addressing e quadratic probing\item.h
+
+1371123301 source:c:\users\paolo camurati\current\didattica\02mno algoritmi e programmazione\aa 2013 14\adt i categoria\hash table\hash con open addressing e quadratic probing\st.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"Item.h"
+	"ST.h"
+
+1371123294 c:\users\paolo camurati\current\didattica\02mno algoritmi e programmazione\aa 2013 14\adt i categoria\hash table\hash con open addressing e quadratic probing\st.h
+
+1371122911 source:c:\users\paolo camurati\current\didattica\02mno algoritmi e programmazione\aa 2013 14\adt i categoria\hash table\hash con open addressing e quadratic probing\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<math.h>
+	"Item.h"
+	"ST.h"
+
+1370430668 source:c:\users\paolo\current\didattica\02mno algoritmi e programmazione\aa 2013 14\adt i categoria\hash table\hash con open addressing e quadratic probing\item.c
+	<stdio.h>
+	<string.h>
+	"Item.h"
+
+1371110536 c:\users\paolo\current\didattica\02mno algoritmi e programmazione\aa 2013 14\adt i categoria\hash table\hash con open addressing e quadratic probing\item.h
+
+1371119312 source:c:\users\paolo\current\didattica\02mno algoritmi e programmazione\aa 2013 14\adt i categoria\hash table\hash con open addressing e quadratic probing\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<math.h>
+	"Item.h"
+	"ST.h"
+
+1371119696 c:\users\paolo\current\didattica\02mno algoritmi e programmazione\aa 2013 14\adt i categoria\hash table\hash con open addressing e quadratic probing\st.h
+
+1371122156 source:c:\users\paolo\current\didattica\02mno algoritmi e programmazione\aa 2013 14\adt i categoria\hash table\hash con open addressing e quadratic probing\st.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"Item.h"
+	"ST.h"
+
+1426247764 source:c:\users\paolo\current\didattica\02mno algoritmi e programmazione\aa 2015 16\adt i categoria\hash table\hash con open addressing e quadratic probing\item.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<math.h>
+	"Item.h"
+
+1426247738 c:\users\paolo\current\didattica\02mno algoritmi e programmazione\aa 2015 16\adt i categoria\hash table\hash con open addressing e quadratic probing\item.h
+
+1426257942 source:c:\users\paolo\current\didattica\02mno algoritmi e programmazione\aa 2015 16\adt i categoria\hash table\hash con open addressing e quadratic probing\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<math.h>
+	"Item.h"
+	"ST.h"
+
+1426500504 c:\users\paolo\current\didattica\02mno algoritmi e programmazione\aa 2015 16\adt i categoria\hash table\hash con open addressing e quadratic probing\st.h
+
+1452248064 source:c:\users\paolo\current\didattica\02mno algoritmi e programmazione\aa 2015 16\adt i categoria\hash table\hash con open addressing e quadratic probing\st.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"Item.h"
+	"ST.h"
+
+1426251364 source:c:\users\alfa\current\didattica\02mno algoritmi e programmazione\aa 2015 16\adt i categoria\hash table\hash con open addressing e quadratic probing\item.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<math.h>
+	"Item.h"
+
+1426251338 c:\users\alfa\current\didattica\02mno algoritmi e programmazione\aa 2015 16\adt i categoria\hash table\hash con open addressing e quadratic probing\item.h
+
+1426261542 source:c:\users\alfa\current\didattica\02mno algoritmi e programmazione\aa 2015 16\adt i categoria\hash table\hash con open addressing e quadratic probing\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<math.h>
+	"Item.h"
+	"ST.h"
+
+1426504104 c:\users\alfa\current\didattica\02mno algoritmi e programmazione\aa 2015 16\adt i categoria\hash table\hash con open addressing e quadratic probing\st.h
+
+1432283740 source:c:\users\alfa\current\didattica\02mno algoritmi e programmazione\aa 2015 16\adt i categoria\hash table\hash con open addressing e quadratic probing\st.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"Item.h"
+	"ST.h"
+
+1426247764 source:c:\users\paolo\current\didattica\03mno algoritmi e programmazione\aa 2016 17\adt i categoria\hash table\hash con open addressing e quadratic probing\item.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<math.h>
+	"Item.h"
+
+1426247738 c:\users\paolo\current\didattica\03mno algoritmi e programmazione\aa 2016 17\adt i categoria\hash table\hash con open addressing e quadratic probing\item.h
+
+1426257942 source:c:\users\paolo\current\didattica\03mno algoritmi e programmazione\aa 2016 17\adt i categoria\hash table\hash con open addressing e quadratic probing\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<math.h>
+	"Item.h"
+	"ST.h"
+
+1426500504 c:\users\paolo\current\didattica\03mno algoritmi e programmazione\aa 2016 17\adt i categoria\hash table\hash con open addressing e quadratic probing\st.h
+
+1484402134 source:c:\users\paolo\current\didattica\03mno algoritmi e programmazione\aa 2016 17\adt i categoria\hash table\hash con open addressing e quadratic probing\st.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"Item.h"
+	"ST.h"
+
+1537784433 source:c:\users\paolo\current\didattica\03mno algoritmi e programmazione\aa 2018 19\adt i categoria\hash tables\hash con open addressing e quadratic probing\item.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"Item.h"
+
+1537783521 c:\users\paolo\current\didattica\03mno algoritmi e programmazione\aa 2018 19\adt i categoria\hash tables\hash con open addressing e quadratic probing\item.h
+
+1537792564 source:c:\users\paolo\current\didattica\03mno algoritmi e programmazione\aa 2018 19\adt i categoria\hash tables\hash con open addressing e quadratic probing\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<math.h>
+	"Item.h"
+	"ST.h"
+
+1537793204 c:\users\paolo\current\didattica\03mno algoritmi e programmazione\aa 2018 19\adt i categoria\hash tables\hash con open addressing e quadratic probing\st.h
+
+1537890964 source:c:\users\paolo\current\didattica\03mno algoritmi e programmazione\aa 2018 19\adt i categoria\hash tables\hash con open addressing e quadratic probing\st.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"Item.h"
+	"ST.h"
+
