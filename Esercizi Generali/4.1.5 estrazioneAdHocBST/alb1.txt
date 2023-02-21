@@ -1,0 +1,7 @@
+Gaa 5 1 1
+	Af 2 1 0
+		Aez 3 0 0
+	Moo 4 1 1
+		H 5 0 1
+			Jik 1 0 0
+		Zzz 7 0 0

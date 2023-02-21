@@ -1,0 +1,17 @@
+acqua 1.81
+vino 5.50
+arance 0.76
+mele 0.66
+fusilli 1.12
+cola 1.99
+latte 1.79
+pane_bianco 1.19
+pane_integrale 1.29
+passata_pomodoro 1.59
+salmone_affumicato 4.59
+mozzarella 1.09
+zucchero 0.99
+farina_00 0.79
+sale 0.19
+grana_padano 7.99
+fine

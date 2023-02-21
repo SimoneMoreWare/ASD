@@ -1,0 +1,13 @@
+CL001 John Smith Private
+
+CL002 Luke Ross Commercial
+
+CL003 Agatha Black Private
+
+CL004 Douglas McAllister Privato
+
+CL005 Mary Green Commercial
+CL006 Albert Einstein Academic
+CL007 Robert Sedgewick Academic
+none
+

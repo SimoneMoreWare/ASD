@@ -1,0 +1,9 @@
+4
+A
+Bb
+CcC
+dDd
+A Bb 3
+Bb CcC 2
+dDd A 4
+CcC dDd -3
