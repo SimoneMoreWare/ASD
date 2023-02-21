@@ -1,0 +1,67 @@
+# depslib dependency file v1.0
+1426842709 source:c:\users\paolo\current\didattica\02mno algoritmi e programmazione\aa 2015 16\adt i categoria\symbol table\st sorted array\item.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"Item.h"
+
+1426842709 c:\users\paolo\current\didattica\02mno algoritmi e programmazione\aa 2015 16\adt i categoria\symbol table\st sorted array\item.h
+
+1425746159 source:c:\users\paolo\current\didattica\02mno algoritmi e programmazione\aa 2015 16\adt i categoria\symbol table\st sorted array\main.c
+	<stdio.h>
+	<stdlib.h>
+	"Item.h"
+	"ST.h"
+
+1425386972 c:\users\paolo\current\didattica\02mno algoritmi e programmazione\aa 2015 16\adt i categoria\symbol table\st sorted array\st.h
+
+1426842853 source:c:\users\paolo\current\didattica\02mno algoritmi e programmazione\aa 2015 16\adt i categoria\symbol table\st sorted array\st.c
+	<stdio.h>
+	<stdlib.h>
+	"Item.h"
+	"ST.h"
+
+1525960728 source:d:\users\paolo\current\didattica\03mno algoritmi e programmazione\aa 2018 19\adt i categoria\symbol tables\st sorted array\item.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"Item.h"
+
+1525960748 d:\users\paolo\current\didattica\03mno algoritmi e programmazione\aa 2018 19\adt i categoria\symbol tables\st sorted array\item.h
+
+1525960825 source:d:\users\paolo\current\didattica\03mno algoritmi e programmazione\aa 2018 19\adt i categoria\symbol tables\st sorted array\st.c
+	<stdio.h>
+	<stdlib.h>
+	"Item.h"
+	"ST.h"
+
+1525960169 d:\users\paolo\current\didattica\03mno algoritmi e programmazione\aa 2018 19\adt i categoria\symbol tables\st sorted array\st.h
+
+1525960633 source:d:\users\paolo\current\didattica\03mno algoritmi e programmazione\aa 2018 19\adt i categoria\symbol tables\st sorted array\main.c
+	<stdio.h>
+	<stdlib.h>
+	"Item.h"
+	"ST.h"
+
+1537194600 source:c:\users\paolo\current\didattica\03mno algoritmi e programmazione\aa 2018 19\adt i categoria\symbol tables\st sorted array\main.c
+	<stdio.h>
+	<stdlib.h>
+	"Item.h"
+	"ST.h"
+
+1537781660 c:\users\paolo\current\didattica\03mno algoritmi e programmazione\aa 2018 19\adt i categoria\symbol tables\st sorted array\item.h
+
+1526391544 c:\users\paolo\current\didattica\03mno algoritmi e programmazione\aa 2018 19\adt i categoria\symbol tables\st sorted array\st.h
+
+1537262951 source:c:\users\paolo\current\didattica\03mno algoritmi e programmazione\aa 2018 19\adt i categoria\symbol tables\st sorted array\st.c
+	<stdio.h>
+	<stdlib.h>
+	"Item.h"
+	"ST.h"
+
+1537262710 source:c:\users\paolo\current\didattica\03mno algoritmi e programmazione\aa 2018 19\adt i categoria\symbol tables\st sorted array\item.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"Item.h"
+

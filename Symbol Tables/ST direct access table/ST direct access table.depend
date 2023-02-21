@@ -1,0 +1,67 @@
+# depslib dependency file v1.0
+1425723920 source:c:\users\paolo\current\didattica\02mno algoritmi e programmazione\aa 2015 16\adt i categoria\symbol table\st direct access table\item.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"Item.h"
+
+1425723666 c:\users\paolo\current\didattica\02mno algoritmi e programmazione\aa 2015 16\adt i categoria\symbol table\st direct access table\item.h
+
+1425375416 source:c:\users\paolo\current\didattica\02mno algoritmi e programmazione\aa 2015 16\adt i categoria\symbol table\st direct access table\main.c
+	<stdio.h>
+	<stdlib.h>
+	"Item.h"
+	"ST.h"
+
+1425310139 c:\users\paolo\current\didattica\02mno algoritmi e programmazione\aa 2015 16\adt i categoria\symbol table\st direct access table\st.h
+
+1425731361 source:c:\users\paolo\current\didattica\02mno algoritmi e programmazione\aa 2015 16\adt i categoria\symbol table\st direct access table\st.c
+	<stdio.h>
+	<stdlib.h>
+	"Item.h"
+	"ST.h"
+
+1525958780 source:d:\users\paolo\current\didattica\03mno algoritmi e programmazione\aa 2018 19\adt i categoria\symbol tables\st direct access table\st.c
+	<stdio.h>
+	<stdlib.h>
+	"Item.h"
+	"ST.h"
+
+1525873283 d:\users\paolo\current\didattica\03mno algoritmi e programmazione\aa 2018 19\adt i categoria\symbol tables\st direct access table\item.h
+
+1525957185 d:\users\paolo\current\didattica\03mno algoritmi e programmazione\aa 2018 19\adt i categoria\symbol tables\st direct access table\st.h
+
+1525957941 source:d:\users\paolo\current\didattica\03mno algoritmi e programmazione\aa 2018 19\adt i categoria\symbol tables\st direct access table\item.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"Item.h"
+
+1525958596 source:d:\users\paolo\current\didattica\03mno algoritmi e programmazione\aa 2018 19\adt i categoria\symbol tables\st direct access table\main.c
+	<stdio.h>
+	<stdlib.h>
+	"Item.h"
+	"ST.h"
+
+1536913133 source:c:\users\paolo\current\didattica\03mno algoritmi e programmazione\aa 2018 19\adt i categoria\symbol tables\st direct access table\main.c
+	<stdio.h>
+	<stdlib.h>
+	"Item.h"
+	"ST.h"
+
+1537781476 c:\users\paolo\current\didattica\03mno algoritmi e programmazione\aa 2018 19\adt i categoria\symbol tables\st direct access table\item.h
+
+1526389494 c:\users\paolo\current\didattica\03mno algoritmi e programmazione\aa 2018 19\adt i categoria\symbol tables\st direct access table\st.h
+
+1536760499 source:c:\users\paolo\current\didattica\03mno algoritmi e programmazione\aa 2018 19\adt i categoria\symbol tables\st direct access table\st.c
+	<stdio.h>
+	<stdlib.h>
+	"Item.h"
+	"ST.h"
+
+1536830702 source:c:\users\paolo\current\didattica\03mno algoritmi e programmazione\aa 2018 19\adt i categoria\symbol tables\st direct access table\item.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"Item.h"
+
