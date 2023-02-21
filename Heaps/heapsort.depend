@@ -1,0 +1,142 @@
+# depslib dependency file v1.0
+1369834321 source:c:\users\paolo camurati\current\didattica\02mno algoritmi e programmazione\aa 2013 14\lucidi 2013 14\09 gli heap\heapsort\pqueue.c
+	<stdlib.h>
+	"Item.h"
+	"PQUEUE.h"
+
+1369904164 c:\users\paolo camurati\current\didattica\02mno algoritmi e programmazione\aa 2013 14\lucidi 2013 14\09 gli heap\heapsort\item.h
+	<stdio.h>
+	<stdlib.h>
+
+1369833689 c:\users\paolo camurati\current\didattica\02mno algoritmi e programmazione\aa 2013 14\lucidi 2013 14\09 gli heap\heapsort\pqueue.h
+
+1369836141 source:c:\users\paolo camurati\current\didattica\02mno algoritmi e programmazione\aa 2013 14\lucidi 2013 14\09 gli heap\heapsort\main (2).c
+	<stdio.h>
+	<stdlib.h>
+
+1369896277 source:c:\users\paolo camurati\current\didattica\02mno algoritmi e programmazione\aa 2013 14\lucidi 2013 14\09 gli heap\heapsort\main.c
+	<stdio.h>
+	<stdlib.h>
+	"Item.h"
+	"HEAP.h"
+
+1369896277 c:\users\paolo camurati\current\didattica\02mno algoritmi e programmazione\aa 2013 14\lucidi 2013 14\09 gli heap\heapsort\heap.h
+
+1369904224 source:c:\users\paolo camurati\current\didattica\02mno algoritmi e programmazione\aa 2013 14\lucidi 2013 14\09 gli heap\heapsort\item.c
+	<stdio.h>
+	<stdlib.h>
+	"Item.h"
+
+1369896297 source:c:\users\paolo camurati\current\didattica\02mno algoritmi e programmazione\aa 2013 14\lucidi 2013 14\09 gli heap\heapsort\heap.c
+	<stdlib.h>
+	"Item.h"
+	"HEAP.h"
+
+1369900696 source:c:\users\paolo\current\didattica\02mno algoritmi e programmazione\aa 2014 15\lucidi pc 2014 15\09 gli heap\heapsort\item.c
+	<stdio.h>
+	<stdlib.h>
+	"Item.h"
+
+1369900566 c:\users\paolo\current\didattica\02mno algoritmi e programmazione\aa 2014 15\lucidi pc 2014 15\09 gli heap\heapsort\item.h
+	<stdio.h>
+	<stdlib.h>
+
+1369892678 source:c:\users\paolo\current\didattica\02mno algoritmi e programmazione\aa 2014 15\lucidi pc 2014 15\09 gli heap\heapsort\main.c
+	<stdio.h>
+	<stdlib.h>
+	"Item.h"
+	"HEAP.h"
+
+1415796107 c:\users\paolo\current\didattica\02mno algoritmi e programmazione\aa 2014 15\lucidi pc 2014 15\09 gli heap\heapsort\heap.h
+
+1415955408 source:c:\users\paolo\current\didattica\02mno algoritmi e programmazione\aa 2014 15\lucidi pc 2014 15\09 gli heap\heapsort\heap.c
+	<stdlib.h>
+	"Item.h"
+	"HEAP.h"
+
+1426583713 source:c:\users\paolo\current\didattica\02mno algoritmi e programmazione\aa 2015 16\lucidi pc 2015 16\12 gli heap e le code a priorità\heapsort\heap.c
+	<stdio.h>
+	<stdlib.h>
+	"Item.h"
+	"Heap.h"
+
+1426584552 c:\users\paolo\current\didattica\02mno algoritmi e programmazione\aa 2015 16\lucidi pc 2015 16\12 gli heap e le code a priorità\heapsort\item.h
+
+1426583519 c:\users\paolo\current\didattica\02mno algoritmi e programmazione\aa 2015 16\lucidi pc 2015 16\12 gli heap e le code a priorità\heapsort\heap.h
+
+1426584552 source:c:\users\paolo\current\didattica\02mno algoritmi e programmazione\aa 2015 16\lucidi pc 2015 16\12 gli heap e le code a priorità\heapsort\item.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<math.h>
+	"Item.h"
+
+1426583599 source:c:\users\paolo\current\didattica\02mno algoritmi e programmazione\aa 2015 16\lucidi pc 2015 16\12 gli heap e le code a priorità\heapsort\main.c
+	<stdio.h>
+	<stdlib.h>
+	"Item.h"
+	"Heap.h"
+
+1426586762 source:c:\users\paolo\current\didattica\02mno algoritmi e programmazione\aa 2015 16\adt i categoria\heap\heap.c
+	<stdio.h>
+	<stdlib.h>
+	"Item.h"
+	"Heap.h"
+
+1426841294 c:\users\paolo\current\didattica\02mno algoritmi e programmazione\aa 2015 16\adt i categoria\heap\item.h
+
+1426579920 c:\users\paolo\current\didattica\02mno algoritmi e programmazione\aa 2015 16\adt i categoria\heap\heap.h
+
+1426841294 source:c:\users\paolo\current\didattica\02mno algoritmi e programmazione\aa 2015 16\adt i categoria\heap\item.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<math.h>
+	"Item.h"
+
+1426580000 source:c:\users\paolo\current\didattica\02mno algoritmi e programmazione\aa 2015 16\adt i categoria\heap\main.c
+	<stdio.h>
+	<stdlib.h>
+	"Item.h"
+	"Heap.h"
+
+1426841294 source:c:\users\paolo\current\didattica\03mno algoritmi e programmazione\aa 2016 17\adt i categoria\heap\item.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<math.h>
+	"Item.h"
+
+1426841294 c:\users\paolo\current\didattica\03mno algoritmi e programmazione\aa 2016 17\adt i categoria\heap\item.h
+
+1426580000 source:c:\users\paolo\current\didattica\03mno algoritmi e programmazione\aa 2016 17\adt i categoria\heap\main.c
+	<stdio.h>
+	<stdlib.h>
+	"Item.h"
+	"Heap.h"
+
+1426579920 c:\users\paolo\current\didattica\03mno algoritmi e programmazione\aa 2016 17\adt i categoria\heap\heap.h
+
+1537873031 source:c:\users\paolo\current\didattica\03mno algoritmi e programmazione\aa 2018 19\adt i categoria\heaps\main.c
+	<stdio.h>
+	<stdlib.h>
+	"Item.h"
+	"Heap.h"
+
+1537879507 c:\users\paolo\current\didattica\03mno algoritmi e programmazione\aa 2018 19\adt i categoria\heaps\item.h
+
+1537879507 c:\users\paolo\current\didattica\03mno algoritmi e programmazione\aa 2018 19\adt i categoria\heaps\heap.h
+
+1537799721 source:c:\users\paolo\current\didattica\03mno algoritmi e programmazione\aa 2018 19\adt i categoria\heaps\item.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<math.h>
+	"Item.h"
+
+1537872927 source:c:\users\paolo\current\didattica\03mno algoritmi e programmazione\aa 2018 19\adt i categoria\heaps\heap.c
+	<stdio.h>
+	<stdlib.h>
+	"Item.h"
+	"Heap.h"
+
