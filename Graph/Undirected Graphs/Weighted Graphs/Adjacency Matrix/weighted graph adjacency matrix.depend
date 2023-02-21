@@ -1,0 +1,361 @@
+# depslib dependency file v1.0
+1356081126 source:c:\users\paolo camurati\current\didattica\02mno algoritmi e programmazione\aa 2012 13\lucidi 2012 13\16 gli alberi ricoprenti minimi\weighted graph adjacency matrix\main.c
+	<stdio.h>
+	<stdlib.h>
+	"Graph.h"
+
+1356081145 c:\users\paolo camurati\current\didattica\02mno algoritmi e programmazione\aa 2012 13\lucidi 2012 13\16 gli alberi ricoprenti minimi\weighted graph adjacency matrix\graph.h
+
+1356081255 source:c:\users\paolo camurati\current\didattica\02mno algoritmi e programmazione\aa 2012 13\lucidi 2012 13\16 gli alberi ricoprenti minimi\weighted graph adjacency matrix\graph.c
+	<stdlib.h>
+	<stdio.h>
+	"Graph.h"
+
+1356084726 source:c:\users\paolo camurati\current\didattica\02mno algoritmi e programmazione\aa 2013 14\lucidi 2013 14\17 gli alberi ricoprenti minimi\weighted graph adjacency matrix\main.c
+	<stdio.h>
+	<stdlib.h>
+	"Graph.h"
+
+1356084745 c:\users\paolo camurati\current\didattica\02mno algoritmi e programmazione\aa 2013 14\lucidi 2013 14\17 gli alberi ricoprenti minimi\weighted graph adjacency matrix\graph.h
+
+1356084855 source:c:\users\paolo camurati\current\didattica\02mno algoritmi e programmazione\aa 2013 14\lucidi 2013 14\17 gli alberi ricoprenti minimi\weighted graph adjacency matrix\graph.c
+	<stdlib.h>
+	<stdio.h>
+	"Graph.h"
+
+1372676292 source:c:\users\paolo camurati\current\didattica\02mno algoritmi e programmazione\aa 2013 14\adt i categoria\undirected graph\weighted\weighted graph adjacency matrix\graph.c
+	<stdlib.h>
+	<stdio.h>
+	"Graph.h"
+	"UF.h"
+
+1372665136 c:\users\paolo camurati\current\didattica\02mno algoritmi e programmazione\aa 2013 14\adt i categoria\undirected graph\weighted\weighted graph adjacency matrix\graph.h
+
+1372664807 source:c:\users\paolo camurati\current\didattica\02mno algoritmi e programmazione\aa 2013 14\adt i categoria\undirected graph\weighted\weighted graph adjacency matrix\main.c
+	<stdio.h>
+	<stdlib.h>
+	"Graph.h"
+	"UF.h"
+
+1372430199 c:\users\paolo camurati\current\didattica\02mno algoritmi e programmazione\aa 2013 14\adt i categoria\undirected graph\weighted\weighted graph adjacency matrix\uf.h
+
+1372430320 source:c:\users\paolo camurati\current\didattica\02mno algoritmi e programmazione\aa 2013 14\adt i categoria\undirected graph\weighted\weighted graph adjacency matrix\uf.c
+	<stdlib.h>
+	"UF.h"
+
+1427714309 source:c:\users\alfa\current\didattica\02mno algoritmi e programmazione\aa 2015 16\adt i categoria\undirected graph\weighted\weighted graph adjacency matrix\edge.c
+	<stdio.h>
+	<stdlib.h>
+	"Edge.h"
+
+1427714309 c:\users\alfa\current\didattica\02mno algoritmi e programmazione\aa 2015 16\adt i categoria\undirected graph\weighted\weighted graph adjacency matrix\edge.h
+
+1427809314 source:c:\users\alfa\current\didattica\02mno algoritmi e programmazione\aa 2015 16\adt i categoria\undirected graph\weighted\weighted graph adjacency matrix\graph.c
+	<stdlib.h>
+	<stdio.h>
+	"Graph.h"
+
+1427789458 c:\users\alfa\current\didattica\02mno algoritmi e programmazione\aa 2015 16\adt i categoria\undirected graph\weighted\weighted graph adjacency matrix\graph.h
+	"Edge.h"
+	"UF.h"
+	"ST.h"
+
+1372426600 c:\users\alfa\current\didattica\02mno algoritmi e programmazione\aa 2015 16\adt i categoria\undirected graph\weighted\weighted graph adjacency matrix\uf.h
+
+1427464724 c:\users\alfa\current\didattica\02mno algoritmi e programmazione\aa 2015 16\adt i categoria\undirected graph\weighted\weighted graph adjacency matrix\st.h
+
+1427724916 source:c:\users\alfa\current\didattica\02mno algoritmi e programmazione\aa 2015 16\adt i categoria\undirected graph\weighted\weighted graph adjacency matrix\main.c
+	<stdio.h>
+	<stdlib.h>
+	"Graph.h"
+
+1427465044 source:c:\users\alfa\current\didattica\02mno algoritmi e programmazione\aa 2015 16\adt i categoria\undirected graph\weighted\weighted graph adjacency matrix\st.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"ST.h"
+
+1427720240 source:c:\users\alfa\current\didattica\02mno algoritmi e programmazione\aa 2015 16\adt i categoria\undirected graph\weighted\weighted graph adjacency matrix\uf.c
+	<stdlib.h>
+	"UF.h"
+
+1427465044 source:f:\aa 2015 16\adt i categoria\graph\undirected graph\weighted\weighted graph adjacency matrix\st.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"ST.h"
+
+1427464724 f:\aa 2015 16\adt i categoria\graph\undirected graph\weighted\weighted graph adjacency matrix\st.h
+
+1427720242 source:f:\aa 2015 16\adt i categoria\graph\undirected graph\weighted\weighted graph adjacency matrix\uf.c
+	<stdlib.h>
+	"UF.h"
+
+1372426600 f:\aa 2015 16\adt i categoria\graph\undirected graph\weighted\weighted graph adjacency matrix\uf.h
+
+1427724918 source:f:\aa 2015 16\adt i categoria\graph\undirected graph\weighted\weighted graph adjacency matrix\main.c
+	<stdio.h>
+	<stdlib.h>
+	"Graph.h"
+
+1427789460 f:\aa 2015 16\adt i categoria\graph\undirected graph\weighted\weighted graph adjacency matrix\graph.h
+	"Edge.h"
+	"UF.h"
+	"ST.h"
+
+1427714310 f:\aa 2015 16\adt i categoria\graph\undirected graph\weighted\weighted graph adjacency matrix\edge.h
+
+1427714310 source:f:\aa 2015 16\adt i categoria\graph\undirected graph\weighted\weighted graph adjacency matrix\edge.c
+	<stdio.h>
+	<stdlib.h>
+	"Edge.h"
+
+1428053088 source:f:\aa 2015 16\adt i categoria\graph\undirected graph\weighted\weighted graph adjacency matrix\graph.c
+	<stdlib.h>
+	<stdio.h>
+	"Graph.h"
+
+1427714310 source:c:\users\alfa\current\didattica\02mno algoritmi e programmazione\aa 2015 16\adt i categoria\graph\undirected graph\weighted\weighted graph adjacency matrix\edge.c
+	<stdio.h>
+	<stdlib.h>
+	"Edge.h"
+
+1427714310 c:\users\alfa\current\didattica\02mno algoritmi e programmazione\aa 2015 16\adt i categoria\graph\undirected graph\weighted\weighted graph adjacency matrix\edge.h
+
+1427724918 source:c:\users\alfa\current\didattica\02mno algoritmi e programmazione\aa 2015 16\adt i categoria\graph\undirected graph\weighted\weighted graph adjacency matrix\main.c
+	<stdio.h>
+	<stdlib.h>
+	"Graph.h"
+
+1427789460 c:\users\alfa\current\didattica\02mno algoritmi e programmazione\aa 2015 16\adt i categoria\graph\undirected graph\weighted\weighted graph adjacency matrix\graph.h
+	"Edge.h"
+	"UF.h"
+	"ST.h"
+
+1372426600 c:\users\alfa\current\didattica\02mno algoritmi e programmazione\aa 2015 16\adt i categoria\graph\undirected graph\weighted\weighted graph adjacency matrix\uf.h
+
+1427464724 c:\users\alfa\current\didattica\02mno algoritmi e programmazione\aa 2015 16\adt i categoria\graph\undirected graph\weighted\weighted graph adjacency matrix\st.h
+
+1427465044 source:c:\users\alfa\current\didattica\02mno algoritmi e programmazione\aa 2015 16\adt i categoria\graph\undirected graph\weighted\weighted graph adjacency matrix\st.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"ST.h"
+
+1427720242 source:c:\users\alfa\current\didattica\02mno algoritmi e programmazione\aa 2015 16\adt i categoria\graph\undirected graph\weighted\weighted graph adjacency matrix\uf.c
+	<stdlib.h>
+	"UF.h"
+
+1429194897 source:c:\users\alfa\current\didattica\02mno algoritmi e programmazione\aa 2015 16\adt i categoria\graph\undirected graph\weighted\weighted graph adjacency matrix\graph.c
+	<stdlib.h>
+	<stdio.h>
+	<limits.h>
+	"Graph.h"
+
+1427710710 source:c:\users\paolo\current\didattica\02mno algoritmi e programmazione\aa 2015 16\adt i categoria\graph\undirected graph\weighted\weighted graph adjacency matrix\edge.c
+	<stdio.h>
+	<stdlib.h>
+	"Edge.h"
+
+1427710710 c:\users\paolo\current\didattica\02mno algoritmi e programmazione\aa 2015 16\adt i categoria\graph\undirected graph\weighted\weighted graph adjacency matrix\edge.h
+
+1427721318 source:c:\users\paolo\current\didattica\02mno algoritmi e programmazione\aa 2015 16\adt i categoria\graph\undirected graph\weighted\weighted graph adjacency matrix\main.c
+	<stdio.h>
+	<stdlib.h>
+	"Graph.h"
+
+1427785860 c:\users\paolo\current\didattica\02mno algoritmi e programmazione\aa 2015 16\adt i categoria\graph\undirected graph\weighted\weighted graph adjacency matrix\graph.h
+	"Edge.h"
+	"UF.h"
+	"ST.h"
+
+1372423000 c:\users\paolo\current\didattica\02mno algoritmi e programmazione\aa 2015 16\adt i categoria\graph\undirected graph\weighted\weighted graph adjacency matrix\uf.h
+
+1427461124 c:\users\paolo\current\didattica\02mno algoritmi e programmazione\aa 2015 16\adt i categoria\graph\undirected graph\weighted\weighted graph adjacency matrix\st.h
+
+1427461444 source:c:\users\paolo\current\didattica\02mno algoritmi e programmazione\aa 2015 16\adt i categoria\graph\undirected graph\weighted\weighted graph adjacency matrix\st.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"ST.h"
+
+1427716642 source:c:\users\paolo\current\didattica\02mno algoritmi e programmazione\aa 2015 16\adt i categoria\graph\undirected graph\weighted\weighted graph adjacency matrix\uf.c
+	<stdlib.h>
+	"UF.h"
+
+1452506378 source:c:\users\paolo\current\didattica\02mno algoritmi e programmazione\aa 2015 16\adt i categoria\graph\undirected graph\weighted\weighted graph adjacency matrix\graph.c
+	<stdlib.h>
+	<stdio.h>
+	<limits.h>
+	"Graph.h"
+
+1427714310 source:c:\users\paolo\current\didattica\03mno algoritmi e programmazione\aa 2017 18\adt i categoria\graphs\undirected graph\weighted\weighted graph adjacency matrix\edge.c
+	<stdio.h>
+	<stdlib.h>
+	"Edge.h"
+
+1427714310 c:\users\paolo\current\didattica\03mno algoritmi e programmazione\aa 2017 18\adt i categoria\graphs\undirected graph\weighted\weighted graph adjacency matrix\edge.h
+
+1427724918 source:c:\users\paolo\current\didattica\03mno algoritmi e programmazione\aa 2017 18\adt i categoria\graphs\undirected graph\weighted\weighted graph adjacency matrix\main.c
+	<stdio.h>
+	<stdlib.h>
+	"Graph.h"
+
+1427789460 c:\users\paolo\current\didattica\03mno algoritmi e programmazione\aa 2017 18\adt i categoria\graphs\undirected graph\weighted\weighted graph adjacency matrix\graph.h
+	"Edge.h"
+	"UF.h"
+	"ST.h"
+
+1372426600 c:\users\paolo\current\didattica\03mno algoritmi e programmazione\aa 2017 18\adt i categoria\graphs\undirected graph\weighted\weighted graph adjacency matrix\uf.h
+
+1427461124 c:\users\paolo\current\didattica\03mno algoritmi e programmazione\aa 2017 18\adt i categoria\graphs\undirected graph\weighted\weighted graph adjacency matrix\st.h
+
+1427461444 source:c:\users\paolo\current\didattica\03mno algoritmi e programmazione\aa 2017 18\adt i categoria\graphs\undirected graph\weighted\weighted graph adjacency matrix\st.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"ST.h"
+
+1427720242 source:c:\users\paolo\current\didattica\03mno algoritmi e programmazione\aa 2017 18\adt i categoria\graphs\undirected graph\weighted\weighted graph adjacency matrix\uf.c
+	<stdlib.h>
+	"UF.h"
+
+1516437134 source:c:\users\paolo\current\didattica\03mno algoritmi e programmazione\aa 2017 18\adt i categoria\graphs\undirected graph\weighted\weighted graph adjacency matrix\graph.c
+	<stdlib.h>
+	<stdio.h>
+	<limits.h>
+	"Graph.h"
+
+1427717910 source:c:\users\paolo\current\didattica\03mno algoritmi e programmazione\aa 2018 19\adt i categoria\graphs\undirected graph\weighted\weighted graph adjacency matrix\edge.c
+	<stdio.h>
+	<stdlib.h>
+	"Edge.h"
+
+1427717910 c:\users\paolo\current\didattica\03mno algoritmi e programmazione\aa 2018 19\adt i categoria\graphs\undirected graph\weighted\weighted graph adjacency matrix\edge.h
+
+1529655388 source:c:\users\paolo\current\didattica\03mno algoritmi e programmazione\aa 2018 19\adt i categoria\graphs\undirected graph\weighted\weighted graph adjacency matrix\graph.c
+	<stdlib.h>
+	<stdio.h>
+	<limits.h>
+	"Graph.h"
+
+1529655388 c:\users\paolo\current\didattica\03mno algoritmi e programmazione\aa 2018 19\adt i categoria\graphs\undirected graph\weighted\weighted graph adjacency matrix\graph.h
+	"Edge.h"
+	"UF.h"
+	"ST.h"
+
+1529655388 c:\users\paolo\current\didattica\03mno algoritmi e programmazione\aa 2018 19\adt i categoria\graphs\undirected graph\weighted\weighted graph adjacency matrix\uf.h
+
+1427464724 c:\users\paolo\current\didattica\03mno algoritmi e programmazione\aa 2018 19\adt i categoria\graphs\undirected graph\weighted\weighted graph adjacency matrix\st.h
+
+1529655388 source:c:\users\paolo\current\didattica\03mno algoritmi e programmazione\aa 2018 19\adt i categoria\graphs\undirected graph\weighted\weighted graph adjacency matrix\main.c
+	<stdio.h>
+	<stdlib.h>
+	"Graph.h"
+
+1529655388 source:c:\users\paolo\current\didattica\03mno algoritmi e programmazione\aa 2018 19\adt i categoria\graphs\undirected graph\weighted\weighted graph adjacency matrix\st.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"ST.h"
+
+1529655388 source:c:\users\paolo\current\didattica\03mno algoritmi e programmazione\aa 2018 19\adt i categoria\graphs\undirected graph\weighted\weighted graph adjacency matrix\uf.c
+	<stdlib.h>
+	"UF.h"
+
+1427717910 source:c:\users\paolo\current\didattica\03mno algoritmi e programmazione\aa 2018 19\adt i categoria\graphs\undirected graph\weighted\adjacency matrix\edge.c
+	<stdio.h>
+	<stdlib.h>
+	"Edge.h"
+
+1427717910 c:\users\paolo\current\didattica\03mno algoritmi e programmazione\aa 2018 19\adt i categoria\graphs\undirected graph\weighted\adjacency matrix\edge.h
+
+1529655388 source:c:\users\paolo\current\didattica\03mno algoritmi e programmazione\aa 2018 19\adt i categoria\graphs\undirected graph\weighted\adjacency matrix\uf.c
+	<stdlib.h>
+	"UF.h"
+
+1532097792 c:\users\paolo\current\didattica\03mno algoritmi e programmazione\aa 2018 19\adt i categoria\graphs\undirected graph\weighted\adjacency matrix\uf.h
+
+1532100142 source:c:\users\paolo\current\didattica\03mno algoritmi e programmazione\aa 2018 19\adt i categoria\graphs\undirected graph\weighted\adjacency matrix\graph.c
+	<stdlib.h>
+	<stdio.h>
+	<limits.h>
+	"Graph.h"
+
+1532100161 c:\users\paolo\current\didattica\03mno algoritmi e programmazione\aa 2018 19\adt i categoria\graphs\undirected graph\weighted\adjacency matrix\graph.h
+	"UF.h"
+	"ST.h"
+
+1532096532 c:\users\paolo\current\didattica\03mno algoritmi e programmazione\aa 2018 19\adt i categoria\graphs\undirected graph\weighted\adjacency matrix\st.h
+
+1530359029 source:c:\users\paolo\current\didattica\03mno algoritmi e programmazione\aa 2018 19\adt i categoria\graphs\undirected graph\weighted\adjacency matrix\main.c
+	<stdio.h>
+	<stdlib.h>
+	"Graph.h"
+
+1532098269 source:c:\users\paolo\current\didattica\03mno algoritmi e programmazione\aa 2018 19\adt i categoria\graphs\undirected graph\weighted\adjacency matrix\st.c
+	<stdlib.h>
+	<stdio.h>
+	<string.h>
+	"ST.h"
+
+1427717910 source:c:\users\paolo\current\didattica\03mno algoritmi e programmazione\aa 2018 19\adt i categoria\graphs\undirected graph\weighted\adjacency matrix ok\edge.c
+	<stdio.h>
+	<stdlib.h>
+	"Edge.h"
+
+1427717910 c:\users\paolo\current\didattica\03mno algoritmi e programmazione\aa 2018 19\adt i categoria\graphs\undirected graph\weighted\adjacency matrix ok\edge.h
+
+1529999942 source:c:\users\paolo\current\didattica\03mno algoritmi e programmazione\aa 2018 19\adt i categoria\graphs\undirected graph\weighted\adjacency matrix ok\graph.c
+	<stdlib.h>
+	<stdio.h>
+	<limits.h>
+	"Graph.h"
+
+1529999942 c:\users\paolo\current\didattica\03mno algoritmi e programmazione\aa 2018 19\adt i categoria\graphs\undirected graph\weighted\adjacency matrix ok\graph.h
+	"Edge.h"
+	"UF.h"
+	"ST.h"
+
+1529655388 c:\users\paolo\current\didattica\03mno algoritmi e programmazione\aa 2018 19\adt i categoria\graphs\undirected graph\weighted\adjacency matrix ok\uf.h
+
+1529943579 c:\users\paolo\current\didattica\03mno algoritmi e programmazione\aa 2018 19\adt i categoria\graphs\undirected graph\weighted\adjacency matrix ok\st.h
+
+1529999962 source:c:\users\paolo\current\didattica\03mno algoritmi e programmazione\aa 2018 19\adt i categoria\graphs\undirected graph\weighted\adjacency matrix ok\main.c
+	<stdio.h>
+	<stdlib.h>
+	"Graph.h"
+
+1529943579 source:c:\users\paolo\current\didattica\03mno algoritmi e programmazione\aa 2018 19\adt i categoria\graphs\undirected graph\weighted\adjacency matrix ok\st.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"ST.h"
+
+1529655388 source:c:\users\paolo\current\didattica\03mno algoritmi e programmazione\aa 2018 19\adt i categoria\graphs\undirected graph\weighted\adjacency matrix ok\uf.c
+	<stdlib.h>
+	"UF.h"
+
+1530359029 source:c:\users\paolo\current\didattica\03mno algoritmi e programmazione\aa 2018 19\adt i categoria\graphs\undirected graphs\weighted graphs\adjacency matrix\main.c
+	<stdio.h>
+	<stdlib.h>
+	"Graph.h"
+
+1532100161 c:\users\paolo\current\didattica\03mno algoritmi e programmazione\aa 2018 19\adt i categoria\graphs\undirected graphs\weighted graphs\adjacency matrix\graph.h
+	"UF.h"
+	"ST.h"
+
+1532097792 c:\users\paolo\current\didattica\03mno algoritmi e programmazione\aa 2018 19\adt i categoria\graphs\undirected graphs\weighted graphs\adjacency matrix\uf.h
+
+1532096532 c:\users\paolo\current\didattica\03mno algoritmi e programmazione\aa 2018 19\adt i categoria\graphs\undirected graphs\weighted graphs\adjacency matrix\st.h
+
+1532098269 source:c:\users\paolo\current\didattica\03mno algoritmi e programmazione\aa 2018 19\adt i categoria\graphs\undirected graphs\weighted graphs\adjacency matrix\st.c
+	<stdlib.h>
+	<stdio.h>
+	<string.h>
+	"ST.h"
+
+1529655388 source:c:\users\paolo\current\didattica\03mno algoritmi e programmazione\aa 2018 19\adt i categoria\graphs\undirected graphs\weighted graphs\adjacency matrix\uf.c
+	<stdlib.h>
+	"UF.h"
+

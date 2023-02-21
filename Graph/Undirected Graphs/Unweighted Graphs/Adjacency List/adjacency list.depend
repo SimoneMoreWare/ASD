@@ -1,0 +1,274 @@
+# depslib dependency file v1.0
+1355757535 source:c:\users\paolo camurati\current\didattica\02mno algoritmi e programmazione\aa 2013 14\quasi adt\graph\adjacency list\main.c
+	<stdio.h>
+	<stdlib.h>
+	"Graph.h"
+
+1371129277 c:\users\paolo camurati\current\didattica\02mno algoritmi e programmazione\aa 2013 14\quasi adt\graph\adjacency list\graph.h
+
+1354891803 source:c:\users\paolo camurati\current\didattica\02mno algoritmi e programmazione\aa 2013 14\quasi adt\graph\adjacency list\graph.c
+	<stdlib.h>
+	<stdio.h>
+	"Graph.h"
+
+1371133151 source:c:\users\paolo camurati\current\didattica\02mno algoritmi e programmazione\aa 2013 14\adt i categoria\graph\adjacency list\main.c
+	<stdio.h>
+	<stdlib.h>
+	"Graph.h"
+
+1371132690 c:\users\paolo camurati\current\didattica\02mno algoritmi e programmazione\aa 2013 14\adt i categoria\graph\adjacency list\graph.h
+
+1371132846 source:c:\users\paolo camurati\current\didattica\02mno algoritmi e programmazione\aa 2013 14\adt i categoria\graph\adjacency list\graph.c
+	<stdlib.h>
+	<stdio.h>
+	"Graph.h"
+
+1371474228 source:c:\users\paolo camurati\current\didattica\02mno algoritmi e programmazione\aa 2013 14\adt i categoria\undirected graph\adjacency list\main.c
+	<stdio.h>
+	<stdlib.h>
+	"Graph.h"
+
+1371473921 c:\users\paolo camurati\current\didattica\02mno algoritmi e programmazione\aa 2013 14\adt i categoria\undirected graph\adjacency list\graph.h
+
+1371474228 source:c:\users\paolo camurati\current\didattica\02mno algoritmi e programmazione\aa 2013 14\adt i categoria\undirected graph\adjacency list\graph.c
+	<stdlib.h>
+	<stdio.h>
+	"Graph.h"
+
+1372409732 source:c:\users\paolo camurati\current\didattica\02mno algoritmi e programmazione\aa 2013 14\adt i categoria\undirected graph\unweighted\adjacency list\main.c
+	<stdio.h>
+	<stdlib.h>
+	"Graph.h"
+
+1372409732 c:\users\paolo camurati\current\didattica\02mno algoritmi e programmazione\aa 2013 14\adt i categoria\undirected graph\unweighted\adjacency list\graph.h
+
+1372410375 source:c:\users\paolo camurati\current\didattica\02mno algoritmi e programmazione\aa 2013 14\adt i categoria\undirected graph\unweighted\adjacency list\graph.c
+	<stdlib.h>
+	<stdio.h>
+	"Graph.h"
+
+1427536972 source:c:\users\alfa\current\didattica\02mno algoritmi e programmazione\aa 2015 16\adt i categoria\undirected graph\unweighted\adjacency list\edge.c
+	<stdio.h>
+	<stdlib.h>
+	"Edge.h"
+
+1427718984 c:\users\alfa\current\didattica\02mno algoritmi e programmazione\aa 2015 16\adt i categoria\undirected graph\unweighted\adjacency list\edge.h
+
+1427895799 source:c:\users\alfa\current\didattica\02mno algoritmi e programmazione\aa 2015 16\adt i categoria\undirected graph\unweighted\adjacency list\main.c
+	<stdio.h>
+	<stdlib.h>
+	"Graph.h"
+
+1427895771 c:\users\alfa\current\didattica\02mno algoritmi e programmazione\aa 2015 16\adt i categoria\undirected graph\unweighted\adjacency list\graph.h
+	"Edge.h"
+	"ST.h"
+
+1427464724 c:\users\alfa\current\didattica\02mno algoritmi e programmazione\aa 2015 16\adt i categoria\undirected graph\unweighted\adjacency list\st.h
+
+1427465044 source:c:\users\alfa\current\didattica\02mno algoritmi e programmazione\aa 2015 16\adt i categoria\undirected graph\unweighted\adjacency list\st.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"ST.h"
+
+1427895771 source:c:\users\alfa\current\didattica\02mno algoritmi e programmazione\aa 2015 16\adt i categoria\undirected graph\unweighted\adjacency list\graph.c
+	<stdlib.h>
+	<stdio.h>
+	<string.h>
+	"Graph.h"
+
+1427465044 source:f:\aa 2015 16\adt i categoria\graph\undirected graph\unweighted\adjacency list\st.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"ST.h"
+
+1427464724 f:\aa 2015 16\adt i categoria\graph\undirected graph\unweighted\adjacency list\st.h
+
+1427895800 source:f:\aa 2015 16\adt i categoria\graph\undirected graph\unweighted\adjacency list\main.c
+	<stdio.h>
+	<stdlib.h>
+	"Graph.h"
+
+1427895772 f:\aa 2015 16\adt i categoria\graph\undirected graph\unweighted\adjacency list\graph.h
+	"Edge.h"
+	"ST.h"
+
+1427718986 f:\aa 2015 16\adt i categoria\graph\undirected graph\unweighted\adjacency list\edge.h
+
+1427536972 source:f:\aa 2015 16\adt i categoria\graph\undirected graph\unweighted\adjacency list\edge.c
+	<stdio.h>
+	<stdlib.h>
+	"Edge.h"
+
+1428052340 source:f:\aa 2015 16\adt i categoria\graph\undirected graph\unweighted\adjacency list\graph.c
+	<stdlib.h>
+	<stdio.h>
+	<string.h>
+	"Graph.h"
+
+1427536972 source:c:\users\alfa\current\didattica\02mno algoritmi e programmazione\aa 2015 16\adt i categoria\graph\undirected graph\unweighted\adjacency list\edge.c
+	<stdio.h>
+	<stdlib.h>
+	"Edge.h"
+
+1427718986 c:\users\alfa\current\didattica\02mno algoritmi e programmazione\aa 2015 16\adt i categoria\graph\undirected graph\unweighted\adjacency list\edge.h
+
+1429085276 source:c:\users\alfa\current\didattica\02mno algoritmi e programmazione\aa 2015 16\adt i categoria\graph\undirected graph\unweighted\adjacency list\graph.c
+	<stdlib.h>
+	<stdio.h>
+	<string.h>
+	"Graph.h"
+
+1427895772 c:\users\alfa\current\didattica\02mno algoritmi e programmazione\aa 2015 16\adt i categoria\graph\undirected graph\unweighted\adjacency list\graph.h
+	"Edge.h"
+	"ST.h"
+
+1427464724 c:\users\alfa\current\didattica\02mno algoritmi e programmazione\aa 2015 16\adt i categoria\graph\undirected graph\unweighted\adjacency list\st.h
+
+1429085702 source:c:\users\alfa\current\didattica\02mno algoritmi e programmazione\aa 2015 16\adt i categoria\graph\undirected graph\unweighted\adjacency list\main.c
+	<stdio.h>
+	<stdlib.h>
+	"Graph.h"
+
+1427465044 source:c:\users\alfa\current\didattica\02mno algoritmi e programmazione\aa 2015 16\adt i categoria\graph\undirected graph\unweighted\adjacency list\st.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"ST.h"
+
+1427533372 source:c:\users\paolo\current\didattica\02mno algoritmi e programmazione\aa 2015 16\adt i categoria\graph\undirected graph\unweighted\adjacency list\edge.c
+	<stdio.h>
+	<stdlib.h>
+	"Edge.h"
+
+1427715386 c:\users\paolo\current\didattica\02mno algoritmi e programmazione\aa 2015 16\adt i categoria\graph\undirected graph\unweighted\adjacency list\edge.h
+
+1452596941 source:c:\users\paolo\current\didattica\02mno algoritmi e programmazione\aa 2015 16\adt i categoria\graph\undirected graph\unweighted\adjacency list\graph.c
+	<stdlib.h>
+	<stdio.h>
+	<string.h>
+	"Graph.h"
+
+1427892172 c:\users\paolo\current\didattica\02mno algoritmi e programmazione\aa 2015 16\adt i categoria\graph\undirected graph\unweighted\adjacency list\graph.h
+	"Edge.h"
+	"ST.h"
+
+1427461124 c:\users\paolo\current\didattica\02mno algoritmi e programmazione\aa 2015 16\adt i categoria\graph\undirected graph\unweighted\adjacency list\st.h
+
+1429082104 source:c:\users\paolo\current\didattica\02mno algoritmi e programmazione\aa 2015 16\adt i categoria\graph\undirected graph\unweighted\adjacency list\main.c
+	<stdio.h>
+	<stdlib.h>
+	"Graph.h"
+
+1427461444 source:c:\users\paolo\current\didattica\02mno algoritmi e programmazione\aa 2015 16\adt i categoria\graph\undirected graph\unweighted\adjacency list\st.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"ST.h"
+
+1427533372 source:c:\users\paolo\current\didattica\03mno algoritmi e programmazione\aa 2016 17\adt i categoria\graph\undirected graph\unweighted\adjacency list\edge.c
+	<stdio.h>
+	<stdlib.h>
+	"Edge.h"
+
+1427715386 c:\users\paolo\current\didattica\03mno algoritmi e programmazione\aa 2016 17\adt i categoria\graph\undirected graph\unweighted\adjacency list\edge.h
+
+1484121677 source:c:\users\paolo\current\didattica\03mno algoritmi e programmazione\aa 2016 17\adt i categoria\graph\undirected graph\unweighted\adjacency list\graph.c
+	<stdlib.h>
+	<stdio.h>
+	<string.h>
+	"Graph.h"
+
+1427892172 c:\users\paolo\current\didattica\03mno algoritmi e programmazione\aa 2016 17\adt i categoria\graph\undirected graph\unweighted\adjacency list\graph.h
+	"Edge.h"
+	"ST.h"
+
+1427461124 c:\users\paolo\current\didattica\03mno algoritmi e programmazione\aa 2016 17\adt i categoria\graph\undirected graph\unweighted\adjacency list\st.h
+
+1429082104 source:c:\users\paolo\current\didattica\03mno algoritmi e programmazione\aa 2016 17\adt i categoria\graph\undirected graph\unweighted\adjacency list\main.c
+	<stdio.h>
+	<stdlib.h>
+	"Graph.h"
+
+1427461444 source:c:\users\paolo\current\didattica\03mno algoritmi e programmazione\aa 2016 17\adt i categoria\graph\undirected graph\unweighted\adjacency list\st.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"ST.h"
+
+1427536972 source:c:\users\paolo\current\didattica\03mno algoritmi e programmazione\aa 2018 19\adt i categoria\graphs\undirected graph\unweighted\adjacency list\edge.c
+	<stdio.h>
+	<stdlib.h>
+	"Edge.h"
+
+1427722586 c:\users\paolo\current\didattica\03mno algoritmi e programmazione\aa 2018 19\adt i categoria\graphs\undirected graph\unweighted\adjacency list\edge.h
+
+1532098200 source:c:\users\paolo\current\didattica\03mno algoritmi e programmazione\aa 2018 19\adt i categoria\graphs\undirected graph\unweighted\adjacency list\st.c
+	<stdlib.h>
+	<stdio.h>
+	<string.h>
+	"ST.h"
+
+1532096532 c:\users\paolo\current\didattica\03mno algoritmi e programmazione\aa 2018 19\adt i categoria\graphs\undirected graph\unweighted\adjacency list\st.h
+
+1532096741 source:c:\users\paolo\current\didattica\03mno algoritmi e programmazione\aa 2018 19\adt i categoria\graphs\undirected graph\unweighted\adjacency list\graph.c
+	<stdlib.h>
+	<stdio.h>
+	<string.h>
+	"Graph.h"
+
+1532097335 c:\users\paolo\current\didattica\03mno algoritmi e programmazione\aa 2018 19\adt i categoria\graphs\undirected graph\unweighted\adjacency list\graph.h
+	"ST.h"
+
+1530356212 source:c:\users\paolo\current\didattica\03mno algoritmi e programmazione\aa 2018 19\adt i categoria\graphs\undirected graph\unweighted\adjacency list\main.c
+	<stdio.h>
+	<stdlib.h>
+	"Graph.h"
+
+1427536972 source:c:\users\paolo\current\didattica\03mno algoritmi e programmazione\aa 2018 19\adt i categoria\graphs\undirected graph\unweighted\adjacency list ok\edge.c
+	<stdio.h>
+	<stdlib.h>
+	"Edge.h"
+
+1427722586 c:\users\paolo\current\didattica\03mno algoritmi e programmazione\aa 2018 19\adt i categoria\graphs\undirected graph\unweighted\adjacency list ok\edge.h
+
+1530005478 source:c:\users\paolo\current\didattica\03mno algoritmi e programmazione\aa 2018 19\adt i categoria\graphs\undirected graph\unweighted\adjacency list ok\main.c
+	<stdio.h>
+	<stdlib.h>
+	"Graph.h"
+
+1530000534 c:\users\paolo\current\didattica\03mno algoritmi e programmazione\aa 2018 19\adt i categoria\graphs\undirected graph\unweighted\adjacency list ok\graph.h
+	"Edge.h"
+	"ST.h"
+
+1529943579 c:\users\paolo\current\didattica\03mno algoritmi e programmazione\aa 2018 19\adt i categoria\graphs\undirected graph\unweighted\adjacency list ok\st.h
+
+1529943579 source:c:\users\paolo\current\didattica\03mno algoritmi e programmazione\aa 2018 19\adt i categoria\graphs\undirected graph\unweighted\adjacency list ok\st.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"ST.h"
+
+1530352612 source:c:\users\paolo\current\didattica\03mno algoritmi e programmazione\aa 2018 19\adt i categoria\graphs\undirected graphs\unweighted graphs\adjacency list\main.c
+	<stdio.h>
+	<stdlib.h>
+	"Graph.h"
+
+1532093735 c:\users\paolo\current\didattica\03mno algoritmi e programmazione\aa 2018 19\adt i categoria\graphs\undirected graphs\unweighted graphs\adjacency list\graph.h
+	"ST.h"
+
+1532092932 c:\users\paolo\current\didattica\03mno algoritmi e programmazione\aa 2018 19\adt i categoria\graphs\undirected graphs\unweighted graphs\adjacency list\st.h
+
+1532094600 source:c:\users\paolo\current\didattica\03mno algoritmi e programmazione\aa 2018 19\adt i categoria\graphs\undirected graphs\unweighted graphs\adjacency list\st.c
+	<stdlib.h>
+	<stdio.h>
+	<string.h>
+	"ST.h"
+
+1537950864 source:c:\users\paolo\current\didattica\03mno algoritmi e programmazione\aa 2018 19\adt i categoria\graphs\undirected graphs\unweighted graphs\adjacency list\graph.c
+	<stdlib.h>
+	<stdio.h>
+	<string.h>
+	"Graph.h"
+
