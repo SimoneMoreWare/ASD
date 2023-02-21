@@ -36,6 +36,9 @@ https://github.com/SimoneMoreWare/ASD/blob/main/asdslide.pdf
 # esami
 * https://github.com/SimoneMoreWare/ASD/tree/main/temidiesame
 
+# orale 
+* https://geode-rat-694.notion.site/Domande-orale-1-568961822ab547c9b3bad0f36f8792bf
+
 # Altre repo
   completi
 * https://github.com/grilloandrea6/algoritmi-strutture-dati
