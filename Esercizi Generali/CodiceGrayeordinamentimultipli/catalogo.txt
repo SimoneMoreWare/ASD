@@ -1,0 +1,7 @@
+6
+cod000003 white 5.50
+cod000005 red 4.50
+cod000004 green 3.50
+cod000001 pink 6.50
+cod000000 blue 2.50
+cod000002 brown 7.50
