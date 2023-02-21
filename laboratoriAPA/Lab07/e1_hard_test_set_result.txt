@@ -1,0 +1,45 @@
+TEST #1
+zaffiro = 19, rubino = 6, topazio = 8, smeraldo = 5, TOT = 38
+Collana massima di lunghezza 37
+TEST #2
+zaffiro = 19, rubino = 14, topazio = 5, smeraldo = 11, TOT = 49
+Collana massima di lunghezza 41
+TEST #3
+zaffiro = 14, rubino = 14, topazio = 5, smeraldo = 8, TOT = 41
+Collana massima di lunghezza 33
+TEST #4
+zaffiro = 12, rubino = 16, topazio = 5, smeraldo = 14, TOT = 47
+Collana massima di lunghezza 37
+TEST #5
+zaffiro = 12, rubino = 17, topazio = 20, smeraldo = 20, TOT = 69
+Collana massima di lunghezza 67
+TEST #6
+zaffiro = 13, rubino = 11, topazio = 14, smeraldo = 18, TOT = 56
+Collana massima di lunghezza 54
+TEST #7
+zaffiro = 7, rubino = 14, topazio = 12, smeraldo = 10, TOT = 43
+Collana massima di lunghezza 42
+TEST #8
+zaffiro = 13, rubino = 20, topazio = 12, smeraldo = 17, TOT = 62
+Collana massima di lunghezza 55
+TEST #9
+zaffiro = 17, rubino = 18, topazio = 6, smeraldo = 9, TOT = 50
+Collana massima di lunghezza 39
+TEST #10
+zaffiro = 5, rubino = 5, topazio = 15, smeraldo = 19, TOT = 44
+Collana massima di lunghezza 35
+TEST #11
+zaffiro = 18, rubino = 12, topazio = 20, smeraldo = 17, TOT = 67
+Collana massima di lunghezza 60
+TEST #12
+zaffiro = 13, rubino = 6, topazio = 19, smeraldo = 6, TOT = 44
+Collana massima di lunghezza 32
+TEST #13
+zaffiro = 17, rubino = 20, topazio = 15, smeraldo = 19, TOT = 71
+Collana massima di lunghezza 67
+TEST #14
+zaffiro = 12, rubino = 18, topazio = 17, smeraldo = 8, TOT = 55
+Collana massima di lunghezza 55
+TEST #15
+zaffiro = 7, rubino = 20, topazio = 12, smeraldo = 7, TOT = 46
+Collana massima di lunghezza 39

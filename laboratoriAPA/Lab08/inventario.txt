@@ -1,0 +1,16 @@
+15
+Excalibur Spada2M 0 0 120 0 0 50
+Filatterio Accessorio -100 20 -30 -30 25 25
+ArmillaDiDiamante Accessorio 0 0 25 0 25
+Escutcheon Scudo 1000 50 0 75 0 0
+MantoElfico Vesti 0 50 0 10 10 10
+Pendragon Scudo 250 0 0 45 0 30
+Oricalco Reliquia 0 0 0 0 15 15
+TalismanoNero Accessorio -500 150 0 0 100 50
+AmmazzaDraghi Spada2M 0 0 80 -20 0 -20
+Fiocco Accessorio 0 0 1 1 1 1
+CorazzaAdamantina ArmaturaPesante 3333 333 -15 33 -15 33
+DagaRunica Pugnale 0 50 10 0 35 0
+Tempesta Spada1M 0 0 40 0 -5 0
+Maximillian ArmaturaLeggera 500 0 0 30 0 15
+Ametista Reliquia 0 0 15 15 0 0

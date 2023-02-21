@@ -1,0 +1,80 @@
+TEST #1
+zaffiro = 8 [6], rubino = 1 [6], topazio = 10 [20], smeraldo = 5 [8], TOT = 24 {max_rip = 3}
+Soluzione ottima di valore 116 usando 13 gemma/e
+Composizione collana: sstzzrssstzzz
+TEST #2
+zaffiro = 6 [2], rubino = 5 [15], topazio = 7 [2], smeraldo = 2 [21], TOT = 20 {max_rip = 5}
+Soluzione ottima di valore 133 usando 15 gemma/e
+Composizione collana: trtrtrtrtrsstzz
+TEST #3
+zaffiro = 10 [17], rubino = 7 [16], topazio = 8 [18], smeraldo = 10 [17], TOT = 35 {max_rip = 3}
+Soluzione ottima di valore 596 usando 35 gemma/e
+Composizione collana: trtrtrtrstzrssstzzzrssstzzzrssstzzz
+TEST #4
+zaffiro = 7 [10], rubino = 1 [13], topazio = 9 [16], smeraldo = 2 [20], TOT = 19 {max_rip = 5}
+Soluzione ottima di valore 105 usando 7 gemma/e
+Composizione collana: trsstzz
+TEST #5
+zaffiro = 6 [8], rubino = 6 [25], topazio = 8 [20], smeraldo = 10 [10], TOT = 30 {max_rip = 7}
+Soluzione ottima di valore 438 usando 29 gemma/e
+Composizione collana: trtrtrtrtrssstzzzrssssssstzzz
+TEST #6
+zaffiro = 5 [21], rubino = 6 [7], topazio = 1 [13], smeraldo = 5 [1], TOT = 17 {max_rip = 9}
+Soluzione ottima di valore 137 usando 13 gemma/e
+Composizione collana: rssssstzzzzzr
+TEST #7
+zaffiro = 9 [7], rubino = 5 [3], topazio = 3 [10], smeraldo = 8 [8], TOT = 25 {max_rip = 6}
+Soluzione ottima di valore 162 usando 23 gemma/e
+Composizione collana: rtrsstzzrsssssstzzzzzzr
+TEST #8
+zaffiro = 7 [5], rubino = 8 [5], topazio = 6 [12], smeraldo = 8 [15], TOT = 29 {max_rip = 5}
+Soluzione ottima di valore 262 usando 28 gemma/e
+Composizione collana: rtrtrtrtrsstzzrssssstzzzzzrs
+TEST #9
+zaffiro = 4 [1], rubino = 8 [19], topazio = 8 [13], smeraldo = 6 [19], TOT = 26 {max_rip = 1}
+Soluzione ottima di valore 374 usando 26 gemma/e
+Composizione collana: rtrtrstzrstzrstzrstzrstrst
+TEST #10
+zaffiro = 9 [17], rubino = 3 [11], topazio = 9 [3], smeraldo = 9 [5], TOT = 30 {max_rip = 7}
+Soluzione ottima di valore 243 usando 25 gemma/e
+Composizione collana: trtrsstzzrssssssstzzzzzzz
+TEST #11
+zaffiro = 1 [15], rubino = 1 [12], topazio = 5 [14], smeraldo = 10 [15], TOT = 17 {max_rip = 6}
+Soluzione ottima di valore 205 usando 14 gemma/e
+Composizione collana: sssstzrsssssst
+TEST #12
+zaffiro = 2 [19], rubino = 9 [14], topazio = 3 [6], smeraldo = 5 [19], TOT = 19 {max_rip = 3}
+Soluzione ottima di valore 207 usando 14 gemma/e
+Composizione collana: rtrtrsstzzrsss
+TEST #13
+zaffiro = 4 [21], rubino = 5 [10], topazio = 2 [16], smeraldo = 7 [5], TOT = 18 {max_rip = 10}
+Soluzione ottima di valore 181 usando 16 gemma/e
+Composizione collana: rtrsssstzzzzrsss
+TEST #14
+zaffiro = 5 [20], rubino = 6 [14], topazio = 9 [3], smeraldo = 6 [17], TOT = 26 {max_rip = 4}
+Soluzione ottima di valore 307 usando 24 gemma/e
+Composizione collana: trtrtrtrtrsstzzrsssstzzz
+TEST #15
+zaffiro = 9 [17], rubino = 8 [5], topazio = 9 [21], smeraldo = 2 [11], TOT = 28 {max_rip = 9}
+Soluzione ottima di valore 285 usando 21 gemma/e
+Composizione collana: trtrtrtrtrtrtrtrsstzz
+TEST #16
+zaffiro = 7 [25], rubino = 1 [19], topazio = 3 [3], smeraldo = 6 [20], TOT = 17 {max_rip = 8}
+Soluzione ottima di valore 295 usando 15 gemma/e
+Composizione collana: trsssssstzzzzzz
+TEST #17
+zaffiro = 6 [19], rubino = 2 [22], topazio = 5 [3], smeraldo = 4 [11], TOT = 17 {max_rip = 8}
+Soluzione ottima di valore 173 usando 13 gemma/e
+Composizione collana: trtrsssstzzzz
+TEST #18
+zaffiro = 9 [3], rubino = 3 [1], topazio = 5 [2], smeraldo = 3 [24], TOT = 20 {max_rip = 9}
+Soluzione ottima di valore 92 usando 13 gemma/e
+Composizione collana: trtrtrssstzzz
+TEST #19
+zaffiro = 5 [19], rubino = 10 [1], topazio = 7 [6], smeraldo = 9 [5], TOT = 31 {max_rip = 1}
+Soluzione ottima di valore 185 usando 28 gemma/e
+Composizione collana: rstzrstzrstzrstzrstzrstrstrs
+TEST #20
+zaffiro = 4 [13], rubino = 8 [1], topazio = 2 [8], smeraldo = 10 [23], TOT = 24 {max_rip = 3}
+Soluzione ottima di valore 278 usando 18 gemma/e
+Composizione collana: rssstzzzrssstzrsss
