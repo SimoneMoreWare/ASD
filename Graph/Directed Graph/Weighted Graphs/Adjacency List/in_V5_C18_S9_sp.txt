@@ -1,0 +1,10 @@
+s u 3
+s x 5
+u x 2
+u v 6
+x u 1
+x v 4
+x y 6
+v y 2
+y s 1
+y v 7

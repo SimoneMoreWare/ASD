@@ -1,0 +1,17 @@
+7
+A
+B
+C
+E
+J
+L 
+M
+B A -1
+B C  2
+C E -1
+E A  2
+J A  3
+J L  2
+L B  4
+L M  3
+M J -6
