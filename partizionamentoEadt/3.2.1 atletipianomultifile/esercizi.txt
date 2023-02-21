@@ -1,0 +1,21 @@
+20
+v_up addominali potenziamento_dinamico
+plank addominali potenziamento_statico
+side_plank_up_down addominali potenziamento_dinamico
+side_plank_in_out addominali potenziamento_dinamico
+l_hold addominali potenziamento_statico
+bicep_curl braccia potenziamento_dinamico
+deadhang braccia potenziamento_statico
+pistol_squat gambe potenziamento_dinamico
+lunge_hops gambe potenziamento_dinamico
+butterfly petto potenziamento_dinamico
+shrugs spalle potenziamento_dinamico
+high_kicks gambe riscaldamento
+inchworm fullbody riscaldamento
+burpees fullbody riscaldamento
+pike gambe_schiena stretching_statico 
+staccata_frontale gambe stretching_statico
+staccata_sagittale gambe stretching_statico
+downward_dog fullbody cooldown
+child_pose fullbody cooldown
+vinyasa fullbody riscaldamento 

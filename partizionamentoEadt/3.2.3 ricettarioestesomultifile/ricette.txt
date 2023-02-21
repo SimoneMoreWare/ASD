@@ -1,0 +1,31 @@
+4
+Sacher 120 8
+	Farina00 180
+	CioccolatoFondente 550
+	Zucchero 260
+	Burro 180
+	Panna 250
+	SaleFino 5
+	Uova 360
+	MarmellataAlbicocche 350
+PanDiSpagna 55 4
+	Farina00 160
+	Uova 240
+	Zucchero 160
+	Sale 3
+	Ganache 15 3
+	Burro 80
+	Panna 260
+	CioccolatoFondente 400
+Nocciolata 75 7
+	Nocciole 200
+	Farina00 150
+	Maizena 50
+	Burro 200
+	Zucchero 200
+	Uova 120
+	Lievito 8
+Minimuffin 30 3
+	Farina00 250
+	Uova 120
+	Nutella 100

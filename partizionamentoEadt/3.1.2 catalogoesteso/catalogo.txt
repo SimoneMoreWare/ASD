@@ -1,0 +1,7 @@
+6
+cod000003 white smalto 5.50 2 7/11/2016
+cod000005 red rossetto 4.50 5 7/11/2016
+cod000004 green smalto 3.50 7 7/11/2016
+cod000001 pink rossetto 6.50 6 7/11/2016
+cod000000 blue smalto 2.50 3 7/11/2016
+cod000002 brown rossetto 7.50 1 7/11/2016

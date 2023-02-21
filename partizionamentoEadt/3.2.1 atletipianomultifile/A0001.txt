@@ -1,0 +1,8 @@
+vinyasa 1 10 
+lunge_hops 2 30
+v_up 3 15
+side_plank_in_out 4 20
+inchworm 1 10
+staccata_frontale 2 1
+staccata_sagittale 1 1 
+child_pose 1 1
