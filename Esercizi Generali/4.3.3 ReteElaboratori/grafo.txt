@@ -1,0 +1,36 @@
+14
+Cloud FF7 
+Noctis FF15 
+Vivi FF9 
+RedXIII FF7 
+Tidus FF10 
+Auron FF10 
+Rydia FF4 
+Yuna FF10 
+Aerith FF7 
+Prompto FF15 
+Kain FF4 
+Ignis FF15 
+Gladio FF15 
+Cecil FF4 
+Noctis Ignis 99
+Noctis Cloud 45
+Cloud Tidus 67
+Tidus Ignis 33
+Cloud RedXIII 42
+Cloud Vivi 18
+Tidus Prompto 12
+Tidus Rydia 2
+Tidus Kain 111
+Prompto Rydia 46
+Vivi Auron 45
+Prompto Yuna 98
+Rydia Yuna 13
+Kain Yuna 9
+Kain Gladio 23
+RedXIII Cecil 13
+Prompto Cecil 1
+Prompto Aerith 17
+Cecil Aerith 20
+Yuna Aerith 20
+Cecil Gladio 9

@@ -1,0 +1,38 @@
+13
+Ingresso 0 0
+SalaDelFuoco 25 5
+SalaDelTuono 18 8
+SalaDelGelo 21 4
+Chiostro 1 5
+ViaDellAscensione 5 3
+CorridoioEterno 5 10
+AntroDiBahamut 39 18
+Sacrario 8 12
+Naos 20 7
+Abisso 5 10
+Cripta 3 10
+Uscita 0 0
+Ingresso SalaDelFuoco
+Ingresso SalaDelTuono
+Ingresso SalaDelGelo
+SalaDelFuoco ViaDellAscensione
+SalaDelTuono ViaDellAscensione
+SalaDelTuono Chiostro
+SalaDelTuono CorridoioEterno
+SalaDelGelo CorridoioEterno
+Chiostro ViaDellAscensione
+Chiostro CorridoioEterno
+ViaDellAscensione AntroDiBahamut
+ViaDellAscensione Sacrario
+ViaDellAscensione Naos
+CorridoioEterno AntroDiBahamut
+CorridoioEterno Abisso
+CorridoioEterno Cripta
+AntroDiBahamut Naos
+AntroDiBahamut Abisso
+Sacrario Naos
+Sacrario Uscita
+Naos Uscita
+Cripta Abisso
+Cripta Uscita
+Abisso Uscita

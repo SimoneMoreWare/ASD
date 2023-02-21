@@ -1,0 +1,8 @@
+nodo1 nodo3
+nodo2 nodo3
+nodo1 nodo4
+nodo4 nodo5
+nodo4 nodo2
+nodo2 nodo1
+nodo1 nodo5
+nodo5 nodo3

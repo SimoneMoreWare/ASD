@@ -1,0 +1,14 @@
+nodo0 nodo4
+nodo1 nodo0
+nodo2 nodo1
+nodo2 nodo3
+nodo3 nodo2
+nodo4 nodo1
+nodo5 nodo1
+nodo5 nodo4
+nodo5 nodo6
+nodo6 nodo5
+nodo6 nodo2
+nodo7 nodo3
+nodo7 nodo6
+nodo7 nodo7

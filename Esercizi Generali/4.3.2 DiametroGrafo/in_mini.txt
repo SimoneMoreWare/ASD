@@ -1,0 +1,18 @@
+5
+Alfa 23
+Beta 12
+Gamma 9
+Omega -4
+Tau 45
+Alfa Beta 1
+Alfa Gamma 4
+Alfa Omega 6
+Beta Alfa 12
+Beta Omega 56
+Beta Tau 99
+Gamma Omega -12
+Gamma Tau 2
+Tau Alfa 34
+Tau Omega -199
+Omega Tau 8
+Omega Alfa 12

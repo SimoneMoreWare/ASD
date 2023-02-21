@@ -1,0 +1,23 @@
+6 10 3
+Torino
+Milano
+Genova
+Bologna
+Venezia
+Firenze
+Torino Milano 5
+Bologna Torino -1
+Bologna Milano 6
+Milano Bologna -4
+Venezia Milano -7
+Bologna Venezia 8
+Genova Bologna -6
+Firenze Genova -2
+Bologna Firenze -9
+Torino Genova -12
+Genova Rosso 9
+Venezia Verde 12
+Milano Rosso  8
+Genova Blu 7
+Venezia Rosso 4
+Bologna Rosso 5

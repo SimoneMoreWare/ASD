@@ -1,0 +1,37 @@
+12
+Castor 12 
+Pollux 3 
+Aldebaran -9 
+Sirius -149 
+Altair 1 
+Betelgeuse 42 
+Polaris 19 
+Rigel 23 
+Vega -34 
+Arcturus 88 
+Antares -39 
+Bellatrix -4 
+
+Castor Aldebaran 45 
+Castor Polaris -3 
+Castor Sirius 99 
+Rigel Castor  17  
+Rigel Arcturus 22  
+Arcturus Rigel 61  
+Arcturus Castor -5  
+Vega Polaris -18  
+Vega Castor 7  
+Aldebaran Vega -4  
+Aldebaran Pollux 33 
+Aldebaran Altair 1  
+Polaris Aldebaran -7  
+Pollux Betelgeuse 11  
+Pollux Castor 141  
+Pollux Antares -1  
+Betelgeuse Sirius -23  
+Betelgeuse Antares 22  
+Betelgeuse Castor 71  
+Bellatrix Altair 269  
+Bellatrix Aldebaran 12  
+Antares Bellatrix -18  
+Sirius Antares 3  
