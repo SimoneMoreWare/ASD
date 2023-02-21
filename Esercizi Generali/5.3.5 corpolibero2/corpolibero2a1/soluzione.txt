@@ -1,0 +1,32 @@
+Connessioni
+  Axel x0 [0.60/0.55]
+  WolfJump x0 [0.40/0.45]
+  SplitLeap x1 [0.30/0.25]
+  StraddleLeap x0 [0.30/0.25]
+  Butterfly x0 [0.50/0.60]
+Equilibrio
+  Attitude x1 [0.10/0.15]
+  Planche x1 [0.30/0.25]
+  VSit x0 [0.60/0.55]
+  LSit x0 [0.40/0.35]
+  Manna x0 [0.90/0.85]
+  StraddlePike x0 [0.10/0.40]
+Potenza
+  Menichelli x0 [1.15/0.95]
+  Gogoladze x0 [2.20/1.25]
+  Fedorchenko x1 [1.50/1.00]
+  Alvarino x0 [2.60/2.00]
+  LSitToHandstand x1 [0.75/0.80]
+ElementiAcrobaticiAvanti
+  Shirai2 x0 [3.00/2.75]
+  Marinich x0 [1.50/1.15]
+  AerialWalkoverFwd x1 [1.25/1.00]
+ElementiAcrobaticiIndietro
+  Tsukahara x0 [4.00/3.60]
+  Kolyvanov x0 [5.50/6.00]
+  BackHandspring x3 [0.70/0.85]
+  Liukin x0 [5.00/5.35]
+  Tamayo x0 [3.75/4.00]
+  Shirai3 x0 [5.25/5.60]
+  TempoBwd x0 [1.00/1.05]
+TOT p = 5.25 d = 6.00

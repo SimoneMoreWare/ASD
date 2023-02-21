@@ -1,0 +1,7 @@
+6 
+Latte 1.29
+Pane 0.99
+Biscotti 3.50
+Nutella 5.49
+Zucchero 0.78
+Caffe 1.29 

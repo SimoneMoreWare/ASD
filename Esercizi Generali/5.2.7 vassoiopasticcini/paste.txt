@@ -1,0 +1,7 @@
+6
+bigne_zabaione 28 5
+bigne_panna 40 10
+cannoncino 28 10
+tartufo_cioccolato 26 10
+crostatina_frutta 40 20
+bigne_crema 28 20

@@ -1,0 +1,14 @@
+A B 1
+A C 100
+C B 1
+C D 1
+D E 2
+E F 2
+F G 2
+G D 2
+D F 2
+G E 3
+A Z 9
+Z Y 100
+Z X 200
+Y X 1

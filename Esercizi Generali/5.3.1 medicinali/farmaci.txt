@@ -1,0 +1,9 @@
+Antiipertensivi	Doxazosina	Teva
+Antiipertensivi	Doxazosina	Mylan
+Antiacidi	Alka-Seltzer	Bayer
+Antiipertensivi	Cardura		Pfizer
+Antiacidi	Magnesia	Pfizer
+Antipiretici	Zerinol		Boehringer
+Antipiretici	Paracetamolo	Mylan
+Antiipertensivi Catapresan	Boehringer
+Antipiretici 	Aspirina	Bayer

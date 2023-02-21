@@ -1,0 +1,21 @@
+20
+	Excalibur arma 7 2 20
+	FiltroDiPetri pozione 2 1 1
+	SandaliDiHermes accessorio 2 2 3
+	PiumaDiFenice consumabile 3 1 2
+	Elisir pozione 4 4 20
+	ArmillaDiDiamante accessorio 1 3 8
+	Escutcheon scudo 6 6 15
+	MantoElfico armatura 4 2 18
+	Pendragon scudo 6 3 12
+	Oricalco reliquia 3 3 45
+	DecottoDiRaffard pozione 4 2 11 
+	Talismano accessorio 3 2 5
+	AmmazzaDraghi arma 2 4 15
+	Fiocco accessorio 2 2 10
+	Panacea consumabile 1 1 1
+	CorazzaAdamantina armatura 8 4 26
+	Daga arma 3 2 6
+	Tempesta arma 6 1 20
+	Maximillian armatura 4 3 30
+	Ametista reliquia 4 1 50

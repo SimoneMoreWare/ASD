@@ -1,0 +1,15 @@
+Connessioni
+  SplitLeap [0.30/0.25]
+Equilibrio
+  Attitude [0.10/0.15]
+  Planche [0.30/0.25]
+Potenza
+  Fedorchenko [1.50/1.00]
+  LSitToHandstand [0.75/0.80]
+ElementiAcrobaticiAvanti
+  AerialWalkoverFwd [1.25/1.00]
+ElementiAcrobaticiIndietro
+  BackHandspring [0.70/0.85]
+  BackHandspring [0.70/0.85]
+  BackHandspring [0.70/0.85]
+TOT p = 5.25 d = 6.00

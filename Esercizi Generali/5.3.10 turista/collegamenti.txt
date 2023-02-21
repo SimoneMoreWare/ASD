@@ -1,0 +1,7 @@
+Torino-Milano 70
+Roma-Pescara 300
+Milano-Firenze 110
+Firenze-Torino 140
+Roma-Firenze 340
+Firenze-Ancona 90
+Pescara-Ancona 60

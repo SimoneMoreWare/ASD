@@ -1,0 +1,64 @@
+\documentclass{article}
+
+\usepackage[english,italian]{babel}
+\selectlanguage{italian}
+\usepackage{amsmath, amssymb}
+\usepackage{caption}
+\usepackage{subcaption}
+\captionsetup{compatibility=false}
+\usepackage{array}
+\usepackage{graphicx}
+\usepackage{tikz}
+\usetikzlibrary{matrix,arrows,positioning,decorations.markings,decorations.pathreplacing,shapes.multipart,calc, shapes.geometric}
+
+\begin{document}
+
+
+
+\begin{figure}[!ht]
+
+\def\ship#1#2#3{
+\begin{scope}[shift={#1}]
+\pgfmathsetmacro\topBound{.5*(#2-1)}
+\fill [black!70] (0,0) rectangle (.5,\topBound);
+\fill [fill=black!70](0, \topBound) -- (.25, \topBound+.35) -- (.5, \topBound) ;
+\node [color=white, anchor=south] at (0.25,0) {\bf #3};
+\end{scope}
+}
+
+\begin{center}
+\resizebox{.9\linewidth}{!}{
+  \begin{tikzpicture}
+    \foreach \i in {0,0.25,...,7}
+{
+        \draw (\i, 0) -- ++(-0.3,0.3) ;
+}
+
+\foreach \x in {2,5}{
+    \node [draw, rectangle, minimum height=.5cm, minimum width=.5cm] (n\x0) at (\x, -0.25) {0};
+}
+
+\foreach \x [] in {2,5}{
+\foreach \y [remember=\y as \lasty (initially 0)] in {1,...,9}{
+    \node [draw, rectangle, minimum height=.5cm, minimum width=.5cm, below =0cm of n\x\lasty] (n\x\y) {\y};
+}
+}
+
+\draw (0,0) -- (7,0) ;
+    \ship{(1,-4)}{8}{0}
+    \ship{(1,-5)}{2}{3}
+    \ship{(2.5,-1.5)}{3}{1}
+    \ship{(2.5,-5)}{5}{2}
+    \ship{(2.5,-2.5)}{2}{5}
+        \ship{(5.5,-4.5)}{9}{6}
+        \ship{(4,-2.5)}{5}{4}
+
+  \end{tikzpicture}
+}
+\end{center}
+%\caption{Una soluzione per il posizionamento delle navi a fronte del minor numero di moli possibili.}
+\label{fig:s3}
+\end{figure}
+
+
+\end{document}

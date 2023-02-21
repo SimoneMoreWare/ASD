@@ -1,0 +1,10 @@
+Museo_Egizio,Torino,4,5
+Colosseo,Roma,4,6
+Duomo,Milano,3,7
+Uffizi,Firenze,5,10
+Castello_Sforzesco,Milano,3,4
+Giardino_dei_Boboli,Firenze,5,8
+Villa_Borghese,Roma,4,7
+Basilica_Superga,Torino,1,3
+Basilica_San_Pietro,Roma,5,1
+Palazzo_Reale,Torino,2,4
