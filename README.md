@@ -7,6 +7,14 @@ Corso di Algortimi e strutture dati - Polito
 * https://visualgo.net/en
 * https://pythontutor.com/visualize.html#mode=edit
 * https://algorithm-visualizer.org/
+* https://www.techiedelight.com/list-of-problems/
+*	https://codeforces.com/
+*	https://www.hackerrank.com/
+*	https://www.coderbyte.com/
+*	https://leetcode.com/
+*	https://exercism.io/my/tracks/c
+*	https://medium.com/better-programming/the-software-engineering-study-guide-bac25b8b61eb
+
 
 # comprendere il merge sort e come le chiamate ricorsive vanno nello stack
 
