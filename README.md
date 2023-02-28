@@ -1,5 +1,5 @@
 # ASD
-Corso di Algortimi e strutture dati - Polito
+Corso di Algortimi e strutture dati - Polito | Politecnico di TOrino
 
 # siti utili
 
