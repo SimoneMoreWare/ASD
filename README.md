@@ -18,7 +18,7 @@ Corso di Algortimi e strutture dati - Polito | Politecnico di TOrino
 
 # comprendere il merge sort e come le chiamate ricorsive vanno nello stack
 
-https://www.youtube.com/watch?v=i56B0xN7jSc
+* https://www.youtube.com/watch?v=i56B0xN7jSc
 
 # Calcolo combinatorio
 
@@ -31,7 +31,10 @@ https://www.youtube.com/watch?v=i56B0xN7jSc
 * https://www.youtube.com/watch?v=Zq4upTEaQyM
 
 # slide unite
-https://github.com/SimoneMoreWare/ASD/blob/main/asdslide.pdf
+* https://github.com/SimoneMoreWare/ASD/blob/main/asdslide.pdf
+
+# Tool per risolvere le equazioni alle ricorrenze
+* https://www.wolframalpha.com/examples/mathematics/discrete-mathematics/recurrences
 
 # esami
 * https://github.com/SimoneMoreWare/ASD/tree/main/temidiesame
