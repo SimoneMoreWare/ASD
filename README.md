@@ -1,6 +1,8 @@
 # ASD
 Corso di Algortimi e strutture dati - Polito | Politecnico di TOrino
 
+# Bibbia
+* https://github.com/TheAlgorithms/C
 # siti utili
 
 * https://neetcode.io/practice
