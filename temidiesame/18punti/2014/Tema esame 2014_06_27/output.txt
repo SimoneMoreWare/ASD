@@ -1,0 +1,70 @@
+FIAT
+	---MODELLI---
+	Cinquecento
+		---ACCESSORI---
+		Barre_portasurf 150.00
+		Cerchi_lega 75.25
+		Sensori_parcheggio 700.50
+		Spoiler 220.50
+		Vivavoce 450.50
+
+	CinquecentoL
+		---ACCESSORI---
+		Barre_portasurf 150.00
+		Cerchi_lega 75.25
+		Sensori_parcheggio 700.50
+		Spoiler 220.50
+		Vivavoce 450.50
+
+	Panda
+		---ACCESSORI---
+		Barre_portasurf 150.00
+		Cerchi_lega 75.25
+		Sensori_parcheggio 700.50
+		Spoiler 220.50
+		Vivavoce 450.50
+
+	Punto
+		---ACCESSORI---
+		Barre_portasurf 150.00
+		Cerchi_lega 75.25
+		Sensori_parcheggio 700.50
+		Spoiler 220.50
+		Vivavoce 450.50
+
+
+Renault
+	---MODELLI---
+	Clio
+		---ACCESSORI---
+		Barre_portasurf 150.00
+		Cerchi_lega 75.25
+		Sensori_parcheggio 700.50
+		Spoiler 220.50
+		Vivavoce 450.50
+
+	Megane
+		---ACCESSORI---
+		Barre_portasurf 150.00
+		Cerchi_lega 75.25
+		Sensori_parcheggio 700.50
+		Spoiler 220.50
+		Vivavoce 450.50
+
+	Scenic
+		---ACCESSORI---
+		Barre_portasurf 150.00
+		Cerchi_lega 75.25
+		Sensori_parcheggio 700.50
+		Spoiler 220.50
+		Vivavoce 450.50
+
+	Twingo
+		---ACCESSORI---
+		Barre_portasurf 150.00
+		Cerchi_lega 75.25
+		Sensori_parcheggio 700.50
+		Spoiler 220.50
+		Vivavoce 450.50
+
+
