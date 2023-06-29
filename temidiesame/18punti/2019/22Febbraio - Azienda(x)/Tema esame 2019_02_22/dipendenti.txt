@@ -1,0 +1,14 @@
+8
+1234 Rossi Mario 10 60 30 80 
+5678 Efron Zac 60 10 80 30 
+4321 Taylor Eliza 20 50 40 90 
+8765 Bianchi Lucia 50 20 90 40 
+1324 Smith John 20 70 40 90 
+5768 Argentero Luna 50 20 90 40 
+4231 Chillemi Francesca 30 60 50 100 
+8675 Evans Mary 60 30 100 50 
+
+
+
+
+
