@@ -3,6 +3,8 @@ Corso di Algortimi e strutture dati - Polito | Politecnico di TOrino
 
 # Bibbia
 * https://github.com/TheAlgorithms/C
+* Sedgewick Algorithms in C (libro)
+
 # siti utili
 
 * https://neetcode.io/practice
@@ -40,6 +42,8 @@ Corso di Algortimi e strutture dati - Polito | Politecnico di TOrino
 
 # esami
 * https://github.com/SimoneMoreWare/ASD/tree/main/temidiesame
+* Ringrazio Aly 🎭 per aver contributo a caricare alcune tracce da 18 pt
+* Ringrazio gli studenti passati delle loro repository precedenti, che ho deciso di tenerle aggiornate.
 
 # orale 
 * https://geode-rat-694.notion.site/Domande-orale-1-568961822ab547c9b3bad0f36f8792bf
