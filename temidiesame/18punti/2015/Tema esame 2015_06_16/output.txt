@@ -1,0 +1,33 @@
+---SKILIFT---
+Skilift S001 (intervallo: 15 minuti):
+	---PASSAGGI---
+	Sciatore: 1000 - Numero Volte: 2
+	Sciatore: 1001 - Numero Volte: 1
+	Sciatore: 1002 - Numero Volte: 1
+Skilift S002 (intervallo: 30 minuti):
+	---PASSAGGI---
+	Sciatore: 1000 - Numero Volte: 1
+	Sciatore: 1001 - Numero Volte: 2
+	Sciatore: 1002 - Numero Volte: 1
+Skilift S003 (intervallo: 20 minuti):
+	---PASSAGGI---
+	Sciatore: 1000 - Numero Volte: 1
+	Sciatore: 1001 - Numero Volte: 1
+	Sciatore: 1002 - Numero Volte: 2
+
+---SCIATORI---
+Sciatore 1000:
+	---PASSAGGI---
+	Skilift: S001 - Ora: 08:25
+	Skilift: S002 - Ora: 08:50
+	Skilift: S003 - Ora: 09:30
+Sciatore 1001:
+	---PASSAGGI---
+	Skilift: S001 - Ora: 09:40
+	Skilift: S002 - Ora: 10:45
+	Skilift: S003 - Ora: 11:25
+Sciatore 1002:
+	---PASSAGGI---
+	Skilift: S001 - Ora: 11:20
+	Skilift: S002 - Ora: 11:45
+	Skilift: S003 - Ora: 12:55
