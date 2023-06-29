@@ -1,0 +1,4 @@
+nodoA nodoC
+nodoA nodoD
+nodoB nodoC
+nodoB nodoD
