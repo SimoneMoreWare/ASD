@@ -1,0 +1,6 @@
+5
+Ingresso
+Stanza1 
+Stanza2
+Stanza3
+Stanza1

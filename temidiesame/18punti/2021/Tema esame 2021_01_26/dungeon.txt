@@ -1,0 +1,9 @@
+4
+Ingresso 0 0 0
+Stanza1 1 0 10
+Stanza2 2 5 1
+Stanza3 3 0 5
+Ingresso Stanza1 0 
+Stanza1 Stanza2 0 
+Stanza1 Stanza3 1 
+Stanza2 Stanza3 1 
