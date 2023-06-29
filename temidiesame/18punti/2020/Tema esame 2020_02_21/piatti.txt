@@ -1,0 +1,11 @@
+10 
+Carbonara Primo Pasta 8.50  
+Amatriciana Primo Pasta 7.80  
+Caprese Contorno Vegetariano 5.50  
+VerdureGrigliate Contorno Vegetariano 4  
+Nizzarda Contorno NonVegetariano 8.25  
+FilettoAllaWellington Secondo Carne 17  
+Opera Dessert Dolce 4.50  
+Tiramisu Dessert Dolce 4.00 
+Cotoletta Secondo Carne 6.50 
+VitelloTonnato Antipasto NonVegetariano 4.00 
