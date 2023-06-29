@@ -1,0 +1,4 @@
+Fidenza 27 35
+Modena 185 115
+Faenza 58 193
+Rimini 147 253

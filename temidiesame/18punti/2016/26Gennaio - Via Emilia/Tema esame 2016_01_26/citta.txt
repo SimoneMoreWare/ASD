@@ -1,0 +1,12 @@
+11
+Piacenza 102 0
+Fidenza 27 35
+Parma 190 57
+ReggioEmilia 171 83
+Modena 185 115
+Bologna 386 144
+Imola 69 177
+Faenza 58 193
+Forli' 118 207
+Cesena 97 225
+Rimini 147 253

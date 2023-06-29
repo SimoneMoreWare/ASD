@@ -1,0 +1,4 @@
+Piacenza 102 0
+ReggioEmilia 171 83
+Imola 69 177
+Cesena 97 225
