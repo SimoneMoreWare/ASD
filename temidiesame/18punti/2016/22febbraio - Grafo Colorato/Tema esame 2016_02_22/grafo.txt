@@ -1,0 +1,30 @@
+a ROSSO 9 b NERO
+a ROSSO 5 f NERO
+a ROSSO 3 e ROSSO
+a ROSSO 2 d NERO
+a ROSSO 6 c ROSSO
+a ROSSO 3 h NERO
+b NERO 1 f NERO
+c ROSSO 2 h NERO
+c ROSSO 8 i ROSSO
+c ROSSO 4 g ROSSO
+d NERO 2 e ROSSO
+e ROSSO 6 g ROSSO
+e ROSSO 2 f NERO
+f NERO 5 g ROSSO
+g ROSSO 3 i ROSSO
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
