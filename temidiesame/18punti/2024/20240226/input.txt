@@ -1,0 +1,7 @@
+4 2
+Act1 1 1 50
+Act2 3 2 20
+Act4 2 98 200
+Act3 6 13 100
+Act4 Act1
+Act3 Act2 Act1
