@@ -5,7 +5,7 @@ Corso di Algortimi e strutture dati - Polito | Politecnico di TOrino
 * https://github.com/TheAlgorithms/C
 * Sedgewick Algorithms in C (libro)
 
-# siti utili
+# Siti utili
 
 * https://neetcode.io/practice
 * https://visualgo.net/en
@@ -18,7 +18,8 @@ Corso di Algortimi e strutture dati - Polito | Politecnico di TOrino
 *	https://leetcode.com/
 *	https://exercism.io/my/tracks/c
 *	https://medium.com/better-programming/the-software-engineering-study-guide-bac25b8b61eb
-
+* https://cmps-people.ok.ubc.ca/ylucet/DS/Huffman.html
+* https://yongdanielliang.github.io/animation/web/BST.html
 
 # comprendere il merge sort e come le chiamate ricorsive vanno nello stack
 
@@ -47,12 +48,14 @@ Corso di Algortimi e strutture dati - Polito | Politecnico di TOrino
 
 # orale 
 * https://geode-rat-694.notion.site/Domande-orale-1-568961822ab547c9b3bad0f36f8792bf
-
+* https://docs.google.com/document/d/1dfhwlRLLY4DpAuEqlaBdegRom7yB1LhiF8nVq2EM_Xw/edit
+  
 # Altre repo
   completi
 * https://github.com/grilloandrea6/algoritmi-strutture-dati
 * https://github.com/RisingZero/asd-2022
 * https://github.com/Vitocuc/Laboratori-ASD
+* https://github.com/giacomodandolo/Algoritmi_e_Strutture_Dati
   
   completi apa
 * https://github.com/lucaceriani/polito-c-apa
