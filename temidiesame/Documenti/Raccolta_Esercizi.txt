@@ -1,0 +1,71 @@
+11/05/2023
+	#1 = Equazione alle ricorrenze
+	#2 = Trasformazione in heap
+	#3 = Parentesizzazione
+	#4 = Forma prefissa, infissa, postfissa
+	#5 = Partizione del BST su chiave X
+	#6 = Algoritmo di Prim
+
+07/02/2023
+	#1 = LIS
+	#2 = Visite di BST
+	#3 = Hash con Quadratic Probing
+	#4 = Selezione in BST con chiave di rango r
+	#5 = Punti di articolazione
+	#6 = Cammini massimi DAG
+	#7 = Algoritmo di Bellman-Ford
+
+02/09/2022
+	#4 = Order Statistic-BST
+	#5 = Ordinamento Topologico DAG
+
+27/06/2022
+	#1 = Codice di Huffman
+	#2 = Hash con Linear Chaining
+	#3 = Ricerca BST
+	#4 = Cancellazione chiave BST
+	#5 = Grafo come lista delle adiacenze e matrice delle adiacenze, con visita in ampiezza
+	#6 = Algoritmo di Bellman-Ford
+
+09/02/2022
+	#5 = Algoritmo di Kosaraju
+
+27/01/2022
+	#3 = Hash con Linear Probing
+	#5 = Visita in profondità
+
+21/02/2020
+	#4 = Inserimento in coda a priorità
+	#6 = Algoritmo di Djikstra
+
+28/01/2020
+	#1 = QuickSort
+	#3 = Albero binario da visite
+
+18/09/2019
+	#4 = Visita in ampiezza
+
+22/02/2019
+	#4 = Hash con Double Hashing
+	#6 = Algoritmo di Kruskal
+
+02/07/2019
+	#6 = Algoritmo di Bellman-Ford con potenziale ciclo a peso negativo
+
+13/09/2018
+	#3 = Inserimento in IBST
+
+13/02/2018
+	#1 = Heap con tabella di hash
+
+26/06/2017
+	#2 = MergeSort
+
+26/01/2016
+	#5 = Inserimento in radice in BST vuoto
+
+02/09/2015
+	#2 = Insieme di attività
+
+03/09/2014
+	#3 = Inserimento in foglia e partizionamento in BST su chiave mediana
